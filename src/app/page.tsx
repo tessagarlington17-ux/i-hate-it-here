@@ -7,55 +7,54 @@ import {
   Star,
   ArrowRight,
   Users,
-  CheckCircle,
 } from "lucide-react";
 
 const stats = [
-  { icon: Globe, value: "29", label: "Countries Visited" },
-  { icon: MapPin, value: "100+", label: "Trips Planned" },
-  { icon: Users, value: "3K+", label: "Community Members" },
-  { icon: Star, value: "5★", label: "Client Rating" },
+  { icon: Globe, value: "29", label: "Countries" },
+  { icon: MapPin, value: "100+", label: "Trips Curated" },
+  { icon: Users, value: "3K+", label: "Happy Travelers" },
+  { icon: Star, value: "5.0", label: "Client Rating" },
 ];
 
 const strengths = [
   {
     icon: Calendar,
-    title: "Flexible Itineraries",
+    title: "Unhurried Itineraries",
     description:
-      "Every trip includes built-in breathing room. No rigid schedules — just smart planning that lets you wander when inspiration strikes.",
+      "Every journey includes space to breathe. No rigid timelines — just thoughtful structure that leaves room for spontaneity.",
   },
   {
     icon: Utensils,
-    title: "Local Food Finds",
+    title: "Culinary Discovery",
     description:
-      "Skip the tourist traps. I'll point you to the street stalls, hidden bistros, and local favorites that make a trip unforgettable.",
+      "From Michelin-starred restaurants to hidden local gems — every itinerary is woven with unforgettable dining experiences.",
   },
   {
     icon: MapPin,
-    title: "Full-Spectrum Budgets",
+    title: "Every Budget, Elevated",
     description:
-      "From $30/night hostels to luxury villas for 17 — I plan across every budget with the same attention to detail.",
+      "Whether it's a boutique hostel or a private villa for 17 — every trip is planned with the same meticulous care and attention.",
   },
 ];
 
 const testimonials = [
   {
     quote:
-      "She planned a 2-week Southeast Asia trip for our group of 8, and every single detail was perfect. The villa in Thailand was a dream.",
+      "She planned a two-week Southeast Asia journey for our group of eight. Every detail was impeccable — the villa in Thailand was absolutely breathtaking.",
     author: "Sarah M.",
-    trip: "Thailand & Vietnam, Group Trip",
+    trip: "Thailand & Vietnam",
   },
   {
     quote:
-      "I gave her a shoestring budget and she turned it into the best solo trip I've ever taken. The food recommendations alone were worth it.",
+      "I gave her a modest budget and she crafted the most incredible solo adventure. The dining recommendations alone transformed the entire experience.",
     author: "James K.",
-    trip: "Portugal, Solo Budget Trip",
+    trip: "Portugal",
   },
   {
     quote:
-      "Our honeymoon itinerary had the perfect mix of adventure and relaxation. We never felt rushed but saw everything we wanted.",
+      "Our honeymoon struck the perfect balance of adventure and tranquility. We never felt rushed, yet experienced everything on our list.",
     author: "The Nguyens",
-    trip: "Italy & Greece, Honeymoon",
+    trip: "Italy & Greece",
   },
 ];
 
@@ -63,66 +62,76 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary via-primary-light to-primary overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
-        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white pt-16">
-          <p className="text-accent-light font-medium tracking-wider uppercase text-sm mb-4">
-            29 Countries &middot; Every Budget &middot; Zero Stress
+      <section className="relative min-h-screen flex items-center justify-center bg-primary overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary via-primary-light/50 to-primary" />
+        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white pt-20">
+          <p className="text-accent font-medium tracking-[0.3em] uppercase text-xs sm:text-sm mb-8">
+            Bespoke Travel Planning
           </p>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
-            Travel Planning by Someone Who&apos;s{" "}
-            <span className="text-accent-light">Actually Been There</span>
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl font-semibold leading-[1.1] mb-8">
+            The World is Waiting.
+            <br />
+            <span className="text-accent italic">Stop Scrolling.</span>
           </h1>
-          <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Personalized itineraries with built-in flexibility, killer food
-            spots, and the logistics handled — so you can just enjoy the trip.
+          <p className="text-lg sm:text-xl text-white/60 max-w-2xl mx-auto mb-12 leading-relaxed font-light">
+            Personalized itineraries crafted with intention — from culinary
+            adventures to hidden escapes, designed for travelers who want more
+            than a checklist.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/packages"
-              className="bg-accent hover:bg-accent-light text-white px-8 py-3.5 rounded-full font-semibold text-lg transition-colors inline-flex items-center justify-center gap-2"
+              className="bg-accent hover:bg-accent-light text-primary px-10 py-4 font-medium text-sm tracking-widest uppercase transition-colors inline-flex items-center justify-center gap-3"
             >
-              View Packages <ArrowRight className="h-5 w-5" />
+              View Packages <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href="/portfolio"
-              className="border-2 border-white/30 hover:border-white/60 text-white px-8 py-3.5 rounded-full font-semibold text-lg transition-colors inline-flex items-center justify-center"
+              className="border border-white/20 hover:border-white/40 text-white px-10 py-4 font-medium text-sm tracking-widest uppercase transition-colors inline-flex items-center justify-center"
             >
               See My Work
             </Link>
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[var(--background)] to-transparent" />
       </section>
 
       {/* Stats */}
-      <section className="py-16 bg-white">
-        <div className="max-w-5xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <section className="py-20 bg-[var(--background)]">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <stat.icon className="h-8 w-8 text-accent mx-auto mb-3" />
-                <div className="text-3xl font-bold text-primary">
+                <stat.icon className="h-6 w-6 text-accent mx-auto mb-4" />
+                <div className="font-serif text-4xl font-semibold text-primary mb-1">
                   {stat.value}
                 </div>
-                <div className="text-sm text-text-light mt-1">{stat.label}</div>
+                <div className="text-xs text-text-light tracking-wider uppercase">
+                  {stat.label}
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Divider */}
+      <div className="max-w-24 mx-auto border-t border-warm-dark" />
+
       {/* What I Do Best */}
-      <section className="py-20 bg-warm/40">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
-              What I Do Best
+      <section className="py-24 bg-[var(--background)]">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <p className="text-accent text-xs tracking-[0.3em] uppercase mb-4">
+              The Experience
+            </p>
+            <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-primary mb-5">
+              What Sets Us Apart
             </h2>
-            <p className="text-text-light max-w-2xl mx-auto">
-              Years of personal travel across every budget level — distilled
-              into planning that actually works.
+            <p className="text-text-light max-w-xl mx-auto leading-relaxed">
+              Years of personal travel across every continent and budget —
+              distilled into planning that feels effortless.
             </p>
           </div>
 
@@ -130,15 +139,15 @@ export default function Home() {
             {strengths.map((item) => (
               <div
                 key={item.title}
-                className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow"
+                className="bg-warm rounded-sm p-10 hover:shadow-lg transition-shadow"
               >
-                <div className="bg-accent/10 w-12 h-12 rounded-xl flex items-center justify-center mb-5">
-                  <item.icon className="h-6 w-6 text-accent" />
+                <div className="w-12 h-12 border border-accent/30 flex items-center justify-center mb-6">
+                  <item.icon className="h-5 w-5 text-accent" />
                 </div>
-                <h3 className="text-xl font-semibold text-primary mb-3">
+                <h3 className="font-serif text-xl font-semibold text-primary mb-3">
                   {item.title}
                 </h3>
-                <p className="text-text-light leading-relaxed">
+                <p className="text-text-light leading-relaxed text-sm">
                   {item.description}
                 </p>
               </div>
@@ -148,49 +157,54 @@ export default function Home() {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
-              How It Works
+      <section className="py-24 bg-warm">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <p className="text-accent text-xs tracking-[0.3em] uppercase mb-4">
+              The Process
+            </p>
+            <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-primary mb-5">
+              From Vision to Voyage
             </h2>
             <p className="text-text-light">
-              From first chat to boarding pass — a simple process.
+              A refined, four-step process designed to make planning effortless.
             </p>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-10">
             {[
               {
                 step: "01",
-                title: "Tell Me Your Dream Trip",
-                desc: "Fill out a quick form with your destination ideas, budget, travel style, and must-haves.",
+                title: "Share Your Vision",
+                desc: "Tell me about your dream destination, travel style, budget, and the moments that matter most to you.",
               },
               {
                 step: "02",
-                title: "Get Your Custom Itinerary",
-                desc: "I'll build a detailed day-by-day plan with restaurants, activities, logistics, and breathing room built in.",
+                title: "Receive Your Itinerary",
+                desc: "A meticulously crafted day-by-day plan with curated dining, experiences, logistics, and breathing room built in.",
               },
               {
                 step: "03",
-                title: "Refine & Book",
-                desc: "We'll fine-tune together until it's perfect. Higher tiers include full booking assistance.",
+                title: "Refine Together",
+                desc: "We fine-tune every detail until it feels perfect. Higher tiers include full booking assistance.",
               },
               {
                 step: "04",
                 title: "Travel with Confidence",
-                desc: "Head out with a polished itinerary, local tips, and support if anything changes on the ground.",
+                desc: "Depart with a polished itinerary, insider knowledge, and support should anything change along the way.",
               },
             ].map((item) => (
-              <div key={item.step} className="flex gap-6 items-start">
-                <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-sm">
+              <div key={item.step} className="flex gap-8 items-start">
+                <div className="flex-shrink-0 font-serif text-3xl font-semibold text-accent/40">
                   {item.step}
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-primary mb-1">
+                  <h3 className="font-serif text-lg font-semibold text-primary mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-text-light">{item.desc}</p>
+                  <p className="text-text-light leading-relaxed text-sm">
+                    {item.desc}
+                  </p>
                 </div>
               </div>
             ))}
@@ -199,11 +213,14 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-warm/40">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
-              What Travelers Say
+      <section className="py-24 bg-[var(--background)]">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <p className="text-accent text-xs tracking-[0.3em] uppercase mb-4">
+              Testimonials
+            </p>
+            <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-primary">
+              Words from Fellow Travelers
             </h2>
           </div>
 
@@ -211,22 +228,26 @@ export default function Home() {
             {testimonials.map((t) => (
               <div
                 key={t.author}
-                className="bg-white rounded-2xl p-8 shadow-sm"
+                className="border border-warm-dark p-8 sm:p-10"
               >
-                <div className="flex gap-1 mb-4">
+                <div className="flex gap-1 mb-6">
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
-                      className="h-4 w-4 fill-accent text-accent"
+                      className="h-3.5 w-3.5 fill-accent text-accent"
                     />
                   ))}
                 </div>
-                <p className="text-text-light leading-relaxed mb-6 italic">
+                <p className="text-text-light leading-relaxed mb-8 text-sm italic">
                   &ldquo;{t.quote}&rdquo;
                 </p>
-                <div>
-                  <p className="font-semibold text-primary">{t.author}</p>
-                  <p className="text-sm text-text-light">{t.trip}</p>
+                <div className="border-t border-warm-dark pt-5">
+                  <p className="font-medium text-primary text-sm">
+                    {t.author}
+                  </p>
+                  <p className="text-xs text-text-light tracking-wider uppercase mt-1">
+                    {t.trip}
+                  </p>
                 </div>
               </div>
             ))}
@@ -235,50 +256,31 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-primary text-white text-center">
-        <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-            Ready to Plan Your Next Adventure?
+      <section className="py-24 bg-primary text-white text-center">
+        <div className="max-w-3xl mx-auto px-6">
+          <p className="text-accent text-xs tracking-[0.3em] uppercase mb-6">
+            Begin Your Journey
+          </p>
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-semibold mb-6">
+            Ready to See the World Differently?
           </h2>
-          <p className="text-white/80 text-lg mb-8 max-w-xl mx-auto">
-            Whether it&apos;s a weekend getaway or a month-long expedition,
-            let&apos;s make it happen.
+          <p className="text-white/50 text-lg mb-10 max-w-xl mx-auto font-light">
+            Whether it&apos;s a weekend escape or a month-long odyssey —
+            let&apos;s craft something extraordinary.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-accent hover:bg-accent-light text-white px-8 py-3.5 rounded-full font-semibold text-lg transition-colors inline-flex items-center justify-center gap-2"
+              className="bg-accent hover:bg-accent-light text-primary px-10 py-4 font-medium text-sm tracking-widest uppercase transition-colors inline-flex items-center justify-center gap-3"
             >
-              Start Planning <ArrowRight className="h-5 w-5" />
+              Start Planning <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href="/packages"
-              className="border-2 border-white/30 hover:border-white/60 text-white px-8 py-3.5 rounded-full font-semibold text-lg transition-colors inline-flex items-center justify-center"
+              className="border border-white/20 hover:border-white/40 text-white px-10 py-4 font-medium text-sm tracking-widest uppercase transition-colors inline-flex items-center justify-center"
             >
-              Compare Packages
+              View Packages
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Trust bar */}
-      <section className="py-10 bg-white border-t border-warm-dark/20">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm text-text-light">
-            <span className="flex items-center gap-1.5">
-              <CheckCircle className="h-4 w-4 text-success" /> 29 Countries of
-              Experience
-            </span>
-            <span className="flex items-center gap-1.5">
-              <CheckCircle className="h-4 w-4 text-success" /> Budget to Luxury
-            </span>
-            <span className="flex items-center gap-1.5">
-              <CheckCircle className="h-4 w-4 text-success" /> Flexible
-              Itineraries
-            </span>
-            <span className="flex items-center gap-1.5">
-              <CheckCircle className="h-4 w-4 text-success" /> Local Food Expert
-            </span>
           </div>
         </div>
       </section>

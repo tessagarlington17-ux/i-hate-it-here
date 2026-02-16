@@ -4,9 +4,9 @@ import { useState } from "react";
 import { Send, Mail, Instagram, MapPin } from "lucide-react";
 
 const packageOptions = [
-  "Explorer ($250–$400)",
-  "Navigator ($600–$1,200)",
-  "Concierge ($1,500–$3,000)",
+  "Explorer ($250\u2013$400)",
+  "Navigator ($600\u2013$1,200)",
+  "Concierge ($1,500\u2013$3,000)",
   "Not sure yet",
 ];
 
@@ -74,81 +74,88 @@ export default function ContactPage() {
   return (
     <>
       {/* Header */}
-      <section className="pt-28 pb-16 bg-gradient-to-b from-primary to-primary-light text-white text-center">
-        <div className="max-w-3xl mx-auto px-4">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-            Let&apos;s Plan Your Trip
+      <section className="pt-32 pb-20 bg-primary text-white text-center">
+        <div className="max-w-3xl mx-auto px-6">
+          <p className="text-accent text-xs tracking-[0.3em] uppercase mb-6">
+            Get in Touch
+          </p>
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-semibold mb-6">
+            Let&apos;s Plan Your Journey
           </h1>
-          <p className="text-white/80 text-lg max-w-xl mx-auto">
-            Tell me about your dream trip and I&apos;ll get back to you within
-            24 hours with a plan.
+          <p className="text-white/50 text-lg max-w-xl mx-auto font-light">
+            Share your vision and I&apos;ll respond within 24 hours with a
+            personalized plan.
           </p>
         </div>
       </section>
 
-      <section className="py-20 bg-warm/30">
-        <div className="max-w-5xl mx-auto px-4">
+      <section className="py-24 bg-warm">
+        <div className="max-w-5xl mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-12">
             {/* Contact Info */}
             <div className="md:col-span-1">
-              <h2 className="text-xl font-bold text-primary mb-6">
-                Get in Touch
+              <h2 className="font-serif text-xl font-semibold text-primary mb-8">
+                Contact Details
               </h2>
 
-              <div className="space-y-5">
-                <div className="flex items-start gap-3">
-                  <Mail className="h-5 w-5 text-accent mt-0.5" />
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <Mail className="h-4 w-4 text-accent mt-1" />
                   <div>
-                    <p className="font-medium text-primary text-sm">Email</p>
+                    <p className="text-xs font-medium text-primary tracking-wider uppercase mb-1">
+                      Email
+                    </p>
                     <p className="text-text-light text-sm">
-                      hello@wanderlusttravelco.com
+                      hello@tiredofbeingathome.com
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3">
-                  <Instagram className="h-5 w-5 text-accent mt-0.5" />
+                <div className="flex items-start gap-4">
+                  <Instagram className="h-4 w-4 text-accent mt-1" />
                   <div>
-                    <p className="font-medium text-primary text-sm">
+                    <p className="text-xs font-medium text-primary tracking-wider uppercase mb-1">
                       Instagram
                     </p>
                     <p className="text-text-light text-sm">
-                      @wanderlusttravelco
+                      @tiredofbeinghungry
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3">
-                  <MapPin className="h-5 w-5 text-accent mt-0.5" />
+                <div className="flex items-start gap-4">
+                  <MapPin className="h-4 w-4 text-accent mt-1" />
                   <div>
-                    <p className="font-medium text-primary text-sm">Based In</p>
+                    <p className="text-xs font-medium text-primary tracking-wider uppercase mb-1">
+                      Based In
+                    </p>
                     <p className="text-text-light text-sm">
-                      Remote — planning trips worldwide
+                      Remote — planning worldwide
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-8 bg-white rounded-xl p-5">
-                <h3 className="font-semibold text-primary text-sm mb-3">
+              <div className="mt-10 bg-white p-6">
+                <h3 className="font-serif text-sm font-semibold text-primary mb-4">
                   What happens next?
                 </h3>
-                <ol className="space-y-2 text-sm text-text-light">
-                  <li className="flex gap-2">
-                    <span className="font-bold text-accent">1.</span>
+                <ol className="space-y-3 text-sm text-text-light">
+                  <li className="flex gap-3">
+                    <span className="font-serif text-accent">1.</span>
                     I review your trip details
                   </li>
-                  <li className="flex gap-2">
-                    <span className="font-bold text-accent">2.</span>
-                    We hop on a quick call or chat
+                  <li className="flex gap-3">
+                    <span className="font-serif text-accent">2.</span>
+                    We connect for a brief consultation
                   </li>
-                  <li className="flex gap-2">
-                    <span className="font-bold text-accent">3.</span>
-                    I send you a custom quote
+                  <li className="flex gap-3">
+                    <span className="font-serif text-accent">3.</span>
+                    I send a custom quote
                   </li>
-                  <li className="flex gap-2">
-                    <span className="font-bold text-accent">4.</span>
-                    We start planning your trip
+                  <li className="flex gap-3">
+                    <span className="font-serif text-accent">4.</span>
+                    We begin crafting your journey
                   </li>
                 </ol>
               </div>
@@ -158,13 +165,13 @@ export default function ContactPage() {
             <div className="md:col-span-2">
               <form
                 onSubmit={handleSubmit}
-                className="bg-white rounded-2xl p-8 shadow-sm"
+                className="bg-white p-8 sm:p-10"
               >
-                <div className="grid sm:grid-cols-2 gap-5">
+                <div className="grid sm:grid-cols-2 gap-6">
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-medium text-primary mb-1.5"
+                      className="block text-xs font-medium text-primary tracking-wider uppercase mb-2"
                     >
                       Your Name *
                     </label>
@@ -175,7 +182,7 @@ export default function ContactPage() {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-2.5 rounded-lg border border-warm-dark/40 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent text-sm"
+                      className="w-full px-4 py-3 border border-warm-dark focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm bg-transparent"
                       placeholder="Jane Doe"
                     />
                   </div>
@@ -183,7 +190,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium text-primary mb-1.5"
+                      className="block text-xs font-medium text-primary tracking-wider uppercase mb-2"
                     >
                       Email Address *
                     </label>
@@ -194,7 +201,7 @@ export default function ContactPage() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-2.5 rounded-lg border border-warm-dark/40 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent text-sm"
+                      className="w-full px-4 py-3 border border-warm-dark focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm bg-transparent"
                       placeholder="jane@email.com"
                     />
                   </div>
@@ -202,7 +209,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="packageTier"
-                      className="block text-sm font-medium text-primary mb-1.5"
+                      className="block text-xs font-medium text-primary tracking-wider uppercase mb-2"
                     >
                       Interested Package
                     </label>
@@ -211,7 +218,7 @@ export default function ContactPage() {
                       name="packageTier"
                       value={formData.packageTier}
                       onChange={handleChange}
-                      className="w-full px-4 py-2.5 rounded-lg border border-warm-dark/40 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent text-sm bg-white"
+                      className="w-full px-4 py-3 border border-warm-dark focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm bg-white"
                     >
                       <option value="">Select a package</option>
                       {packageOptions.map((opt) => (
@@ -225,7 +232,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="travelStyle"
-                      className="block text-sm font-medium text-primary mb-1.5"
+                      className="block text-xs font-medium text-primary tracking-wider uppercase mb-2"
                     >
                       Travel Style
                     </label>
@@ -234,7 +241,7 @@ export default function ContactPage() {
                       name="travelStyle"
                       value={formData.travelStyle}
                       onChange={handleChange}
-                      className="w-full px-4 py-2.5 rounded-lg border border-warm-dark/40 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent text-sm bg-white"
+                      className="w-full px-4 py-3 border border-warm-dark focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm bg-white"
                     >
                       <option value="">Select your style</option>
                       {travelStyles.map((opt) => (
@@ -248,7 +255,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="destination"
-                      className="block text-sm font-medium text-primary mb-1.5"
+                      className="block text-xs font-medium text-primary tracking-wider uppercase mb-2"
                     >
                       Destination(s)
                     </label>
@@ -258,7 +265,7 @@ export default function ContactPage() {
                       name="destination"
                       value={formData.destination}
                       onChange={handleChange}
-                      className="w-full px-4 py-2.5 rounded-lg border border-warm-dark/40 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent text-sm"
+                      className="w-full px-4 py-3 border border-warm-dark focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm bg-transparent"
                       placeholder="e.g. Japan, Portugal, open to ideas"
                     />
                   </div>
@@ -266,7 +273,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="travelDates"
-                      className="block text-sm font-medium text-primary mb-1.5"
+                      className="block text-xs font-medium text-primary tracking-wider uppercase mb-2"
                     >
                       Travel Dates
                     </label>
@@ -276,7 +283,7 @@ export default function ContactPage() {
                       name="travelDates"
                       value={formData.travelDates}
                       onChange={handleChange}
-                      className="w-full px-4 py-2.5 rounded-lg border border-warm-dark/40 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent text-sm"
+                      className="w-full px-4 py-3 border border-warm-dark focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm bg-transparent"
                       placeholder="e.g. March 2026, flexible"
                     />
                   </div>
@@ -284,7 +291,7 @@ export default function ContactPage() {
                   <div className="sm:col-span-2">
                     <label
                       htmlFor="groupSize"
-                      className="block text-sm font-medium text-primary mb-1.5"
+                      className="block text-xs font-medium text-primary tracking-wider uppercase mb-2"
                     >
                       Group Size
                     </label>
@@ -294,7 +301,7 @@ export default function ContactPage() {
                       name="groupSize"
                       value={formData.groupSize}
                       onChange={handleChange}
-                      className="w-full px-4 py-2.5 rounded-lg border border-warm-dark/40 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent text-sm"
+                      className="w-full px-4 py-3 border border-warm-dark focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm bg-transparent"
                       placeholder="e.g. Just me, couple, group of 6"
                     />
                   </div>
@@ -302,7 +309,7 @@ export default function ContactPage() {
                   <div className="sm:col-span-2">
                     <label
                       htmlFor="message"
-                      className="block text-sm font-medium text-primary mb-1.5"
+                      className="block text-xs font-medium text-primary tracking-wider uppercase mb-2"
                     >
                       Tell Me About Your Dream Trip *
                     </label>
@@ -313,17 +320,17 @@ export default function ContactPage() {
                       rows={5}
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-2.5 rounded-lg border border-warm-dark/40 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent text-sm resize-none"
-                      placeholder="What are you looking for? Any must-haves, dietary needs, accessibility requirements, or special occasions?"
+                      className="w-full px-4 py-3 border border-warm-dark focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm resize-none bg-transparent"
+                      placeholder="What are you envisioning? Any must-haves, dietary preferences, accessibility needs, or special occasions?"
                     />
                   </div>
                 </div>
 
-                <div className="mt-6">
+                <div className="mt-8">
                   <button
                     type="submit"
                     disabled={status === "sending"}
-                    className="bg-accent hover:bg-accent-light disabled:opacity-60 text-white px-8 py-3 rounded-full font-semibold transition-colors inline-flex items-center gap-2"
+                    className="bg-primary hover:bg-primary-light disabled:opacity-60 text-white px-10 py-3.5 font-medium text-sm tracking-widest uppercase transition-colors inline-flex items-center gap-3"
                   >
                     {status === "sending" ? (
                       "Sending..."
@@ -336,16 +343,16 @@ export default function ContactPage() {
                 </div>
 
                 {status === "success" && (
-                  <div className="mt-4 bg-green-50 text-green-700 px-4 py-3 rounded-lg text-sm">
-                    Your inquiry has been sent! I&apos;ll get back to you within
-                    24 hours.
+                  <div className="mt-6 bg-success/10 text-success px-5 py-4 text-sm">
+                    Your inquiry has been sent. I&apos;ll be in touch within 24
+                    hours.
                   </div>
                 )}
 
                 {status === "error" && (
-                  <div className="mt-4 bg-red-50 text-red-700 px-4 py-3 rounded-lg text-sm">
+                  <div className="mt-6 bg-red-50 text-red-700 px-5 py-4 text-sm">
                     Something went wrong. Please try again or email me directly
-                    at hello@wanderlusttravelco.com.
+                    at hello@tiredofbeingathome.com.
                   </div>
                 )}
               </form>

@@ -25,8 +25,6 @@ const trips = [
       "Night market food crawl in Bangkok",
       "Island-hopping day trip to Ang Thong",
     ],
-    color: "bg-amber-50",
-    accent: "text-amber-600",
   },
   {
     title: "Portugal Solo Adventure",
@@ -36,15 +34,13 @@ const trips = [
     groupSize: "Solo traveler",
     budget: "Budget-Friendly",
     description:
-      "Designed a budget-friendly route through Portugal's best cities and coastline, with hostel picks, free walking tours, and the best pastéis de nata spots.",
+      "Designed a budget-friendly route through Portugal's best cities and coastline, with hostel picks, free walking tours, and the best past\u00e9is de nata spots.",
     highlights: [
       "Under $60/day average including food",
       "Curated neighborhood food guides",
       "Day trip to Sintra's palaces",
       "Hidden beach recommendations in Algarve",
     ],
-    color: "bg-blue-50",
-    accent: "text-blue-600",
   },
   {
     title: "Italy & Greece Honeymoon",
@@ -61,8 +57,6 @@ const trips = [
       "Mix of boutique hotels & luxury stays",
       "Built-in free mornings for spontaneity",
     ],
-    color: "bg-rose-50",
-    accent: "text-rose-600",
   },
   {
     title: "Southeast Asia Backpacking Route",
@@ -72,18 +66,17 @@ const trips = [
     groupSize: "Group of 4",
     budget: "Budget",
     description:
-      "A 3-week backpacking route through three countries, optimized for cost without sacrificing experiences. Focused on local food, overnight buses, and off-the-beaten-path stops.",
+      "A three-week backpacking route through three countries, optimized for cost without sacrificing experiences. Focused on local food, overnight buses, and off-the-beaten-path stops.",
     highlights: [
       "Full route with transport between cities",
       "Street food guide for every city",
       "Ha Long Bay overnight on a budget",
       "Angkor Wat sunrise strategy",
     ],
-    color: "bg-emerald-50",
-    accent: "text-emerald-600",
   },
   {
     title: "Mexico City Long Weekend",
+    image: undefined,
     location: "CDMX, Mexico",
     duration: "4 days",
     groupSize: "Group of 6",
@@ -96,11 +89,10 @@ const trips = [
       "Xochimilco boat trip",
       "Rooftop bars with volcano views",
     ],
-    color: "bg-orange-50",
-    accent: "text-orange-600",
   },
   {
     title: "Japan Cherry Blossom Season",
+    image: undefined,
     location: "Tokyo, Kyoto, Osaka & Hakone",
     duration: "16 days",
     groupSize: "Couple",
@@ -113,8 +105,6 @@ const trips = [
       "Ramen & sushi restaurant picks per city",
       "Ryokan stay with onsen in Hakone",
     ],
-    color: "bg-pink-50",
-    accent: "text-pink-600",
   },
 ];
 
@@ -154,67 +144,72 @@ export default function PortfolioPage() {
   return (
     <>
       {/* Header */}
-      <section className="pt-28 pb-16 bg-gradient-to-b from-primary to-primary-light text-white text-center">
-        <div className="max-w-3xl mx-auto px-4">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4">Portfolio</h1>
-          <p className="text-white/80 text-lg max-w-xl mx-auto">
-            A sampling of trips I&apos;ve planned — from budget backpacking to
-            luxury honeymoons, solo adventures to groups of 17.
+      <section className="pt-32 pb-20 bg-primary text-white text-center">
+        <div className="max-w-3xl mx-auto px-6">
+          <p className="text-accent text-xs tracking-[0.3em] uppercase mb-6">
+            Our Work
+          </p>
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-semibold mb-6">
+            Portfolio
+          </h1>
+          <p className="text-white/50 text-lg max-w-xl mx-auto font-light">
+            A curated selection of journeys — from budget backpacking to
+            luxury honeymoons, solo adventures to groups of seventeen.
           </p>
         </div>
       </section>
 
       {/* Trip Showcases */}
-      <section className="py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-4">
-          <div className="space-y-12">
-            {trips.map((trip, index) => (
+      <section className="py-24 bg-[var(--background)]">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="space-y-16">
+            {trips.map((trip) => (
               <div
                 key={trip.title}
-                className={`${trip.color} rounded-2xl p-8 md:p-10`}
+                className="bg-warm p-8 md:p-12"
               >
-                <div className="flex flex-col md:flex-row md:items-start gap-8">
+                <div className="flex flex-col md:flex-row md:items-start gap-10">
                   <div className="flex-1">
-                    <h2 className="text-2xl font-bold text-primary mb-2">
+                    <h2 className="font-serif text-2xl font-semibold text-primary mb-4">
                       {trip.title}
                     </h2>
 
-                    <div className="flex flex-wrap gap-4 text-sm text-text-light mb-4">
-                      <span className="flex items-center gap-1">
-                        <MapPin className="h-3.5 w-3.5" /> {trip.location}
+                    <div className="flex flex-wrap gap-5 text-xs text-text-light tracking-wider uppercase mb-6">
+                      <span className="flex items-center gap-1.5">
+                        <MapPin className="h-3 w-3 text-accent" /> {trip.location}
                       </span>
-                      <span className="flex items-center gap-1">
-                        <Calendar className="h-3.5 w-3.5" /> {trip.duration}
+                      <span className="flex items-center gap-1.5">
+                        <Calendar className="h-3 w-3 text-accent" /> {trip.duration}
                       </span>
-                      <span className="flex items-center gap-1">
-                        <Users className="h-3.5 w-3.5" /> {trip.groupSize}
+                      <span className="flex items-center gap-1.5">
+                        <Users className="h-3 w-3 text-accent" /> {trip.groupSize}
                       </span>
-                      <span className="flex items-center gap-1">
-                        <DollarSign className="h-3.5 w-3.5" /> {trip.budget}
+                      <span className="flex items-center gap-1.5">
+                        <DollarSign className="h-3 w-3 text-accent" /> {trip.budget}
                       </span>
                     </div>
 
-                    <p className="text-text-light leading-relaxed mb-5">
+                    <p className="text-text-light leading-relaxed mb-8 text-sm">
                       {trip.description}
                     </p>
 
-                    <h3 className="text-sm font-semibold text-primary mb-3 uppercase tracking-wide">
+                    <h3 className="text-xs font-medium text-accent tracking-[0.2em] uppercase mb-4">
                       Trip Highlights
                     </h3>
-                    <ul className="grid sm:grid-cols-2 gap-2">
+                    <ul className="grid sm:grid-cols-2 gap-2.5">
                       {trip.highlights.map((h) => (
                         <li
                           key={h}
-                          className="flex items-start gap-2 text-sm text-text"
+                          className="flex items-start gap-2.5 text-sm text-text-light"
                         >
-                          <span className={`${trip.accent} mt-1`}>&#9679;</span>
+                          <span className="text-accent text-xs mt-1">&#9670;</span>
                           {h}
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="flex-shrink-0 w-full md:w-64 h-48 rounded-xl overflow-hidden relative">
+                  <div className="flex-shrink-0 w-full md:w-64 h-48 overflow-hidden relative bg-warm-dark">
                     {trip.image ? (
                       <Image
                         src={trip.image}
@@ -224,8 +219,8 @@ export default function PortfolioPage() {
                         sizes="(max-width: 768px) 100vw, 256px"
                       />
                     ) : (
-                      <div className="w-full h-full bg-white/60 flex items-center justify-center">
-                        <Camera className="h-12 w-12 text-text-light/30" />
+                      <div className="w-full h-full flex items-center justify-center">
+                        <Camera className="h-10 w-10 text-text-light/20" />
                       </div>
                     )}
                   </div>
@@ -236,14 +231,17 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      {/* Countries Map */}
-      <section className="py-20 bg-warm/40">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-primary mb-4">
+      {/* Countries */}
+      <section className="py-24 bg-warm">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <p className="text-accent text-xs tracking-[0.3em] uppercase mb-4">
+            Destinations
+          </p>
+          <h2 className="font-serif text-3xl font-semibold text-primary mb-5">
             29 Countries & Counting
           </h2>
-          <p className="text-text-light mb-10 max-w-xl mx-auto">
-            Every destination I plan for is informed by real experience. Here
+          <p className="text-text-light mb-12 max-w-xl mx-auto text-sm leading-relaxed">
+            Every destination I plan for is informed by lived experience. Here
             are the places I&apos;ve personally explored.
           </p>
 
@@ -251,7 +249,7 @@ export default function PortfolioPage() {
             {destinations.map((dest) => (
               <span
                 key={dest}
-                className="bg-white px-4 py-2 rounded-full text-sm font-medium text-primary shadow-sm"
+                className="bg-white px-5 py-2 text-xs font-medium text-primary tracking-wider uppercase"
               >
                 {dest}
               </span>
@@ -261,20 +259,23 @@ export default function PortfolioPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-primary text-white text-center">
-        <div className="max-w-2xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-4">
-            Want a Trip Like These?
+      <section className="py-24 bg-primary text-white text-center">
+        <div className="max-w-2xl mx-auto px-6">
+          <p className="text-accent text-xs tracking-[0.3em] uppercase mb-6">
+            Your Turn
+          </p>
+          <h2 className="font-serif text-3xl sm:text-4xl font-semibold mb-5">
+            Ready for a Journey Like These?
           </h2>
-          <p className="text-white/80 mb-8">
-            Every itinerary is custom-built. Tell me where you want to go and
-            I&apos;ll make it happen.
+          <p className="text-white/50 mb-10 font-light">
+            Every itinerary is bespoke. Tell me where you dream of going and
+            I&apos;ll bring it to life.
           </p>
           <Link
             href="/contact"
-            className="bg-accent hover:bg-accent-light text-white px-8 py-3.5 rounded-full font-semibold text-lg transition-colors inline-flex items-center justify-center gap-2"
+            className="bg-accent hover:bg-accent-light text-primary px-10 py-4 font-medium text-sm tracking-widest uppercase transition-colors inline-flex items-center justify-center gap-3"
           >
-            Plan My Trip <ArrowRight className="h-5 w-5" />
+            Plan My Trip <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </section>
