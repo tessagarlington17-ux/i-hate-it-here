@@ -44,14 +44,14 @@ export default function Footer() {
             <h3 className="font-semibold mb-4 text-accent-light">Connect</h3>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.instagram.com/tiredofbeinghungry"
                 className="text-white/70 hover:text-white transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" />
               </a>
               <a
-                href="mailto:hello@wanderlusttravelco.com"
+                href="mailto:tessa.garlington@gmail.com"
                 className="text-white/70 hover:text-white transition-colors"
                 aria-label="Email"
               >
