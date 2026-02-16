@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   MapPin,
   Calendar,
@@ -11,6 +12,7 @@ import {
 const trips = [
   {
     title: "Thailand Villa Retreat",
+    image: "/trips/thailand-beach.jpg",
     location: "Koh Samui & Bangkok, Thailand",
     duration: "10 days",
     groupSize: "17 people",
@@ -28,6 +30,7 @@ const trips = [
   },
   {
     title: "Portugal Solo Adventure",
+    image: "/trips/ocean-path.jpg",
     location: "Lisbon, Porto & The Algarve",
     duration: "12 days",
     groupSize: "Solo traveler",
@@ -45,6 +48,7 @@ const trips = [
   },
   {
     title: "Italy & Greece Honeymoon",
+    image: "/trips/coastal-villas.jpg",
     location: "Rome, Amalfi Coast, Santorini & Athens",
     duration: "14 days",
     groupSize: "Couple",
@@ -62,6 +66,7 @@ const trips = [
   },
   {
     title: "Southeast Asia Backpacking Route",
+    image: "/trips/sea-boats.jpg",
     location: "Vietnam, Cambodia & Laos",
     duration: "21 days",
     groupSize: "Group of 4",
@@ -209,9 +214,20 @@ export default function PortfolioPage() {
                     </ul>
                   </div>
 
-                  <div className="flex-shrink-0 w-full md:w-48 h-48 bg-white/60 rounded-xl flex items-center justify-center">
-                    <Camera className="h-12 w-12 text-text-light/30" />
-                    <span className="sr-only">Trip photo placeholder</span>
+                  <div className="flex-shrink-0 w-full md:w-64 h-48 rounded-xl overflow-hidden relative">
+                    {trip.image ? (
+                      <Image
+                        src={trip.image}
+                        alt={trip.title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 256px"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-white/60 flex items-center justify-center">
+                        <Camera className="h-12 w-12 text-text-light/30" />
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
