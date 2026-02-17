@@ -62,8 +62,15 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-screen flex items-center justify-center bg-primary overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary via-primary-light/50 to-primary" />
+      <section
+        className="relative min-h-screen flex items-center justify-center bg-primary overflow-hidden"
+        style={{
+          backgroundImage: "url('/trips/ocean-path.jpeg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/65 to-primary/85" />
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white pt-20">
           <p className="text-accent font-medium tracking-[0.3em] uppercase text-xs sm:text-sm mb-8">
             Tired of Planning
@@ -157,8 +164,17 @@ export default function Home() {
       </section>
 
       {/* How It Works */}
-      <section className="py-24 bg-warm">
-        <div className="max-w-4xl mx-auto px-6">
+      <section className="py-24 bg-warm relative overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: "url('/trips/thailand-beach.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+        <div className="absolute inset-0 bg-warm/90" />
+        <div className="relative z-10 max-w-4xl mx-auto px-6">
           <div className="text-center mb-16">
             <p className="text-accent text-xs tracking-[0.3em] uppercase mb-4">
               The Process
@@ -256,8 +272,16 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-primary text-white text-center">
-        <div className="max-w-3xl mx-auto px-6">
+      <section
+        className="py-24 bg-primary text-white text-center relative overflow-hidden"
+        style={{
+          backgroundImage: "url('/trips/coastal-villas.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-primary/80" />
+        <div className="relative z-10 max-w-3xl mx-auto px-6">
           <p className="text-accent text-xs tracking-[0.3em] uppercase mb-6">
             Begin Your Journey
           </p>

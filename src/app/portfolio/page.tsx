@@ -144,8 +144,16 @@ export default function PortfolioPage() {
   return (
     <>
       {/* Header */}
-      <section className="pt-32 pb-20 bg-primary text-white text-center">
-        <div className="max-w-3xl mx-auto px-6">
+      <section
+        className="pt-32 pb-20 text-white text-center relative overflow-hidden"
+        style={{
+          backgroundImage: "url('/trips/ocean-path.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-primary/75" />
+        <div className="relative z-10 max-w-3xl mx-auto px-6">
           <p className="text-accent text-xs tracking-[0.3em] uppercase mb-6">
             Our Work
           </p>
