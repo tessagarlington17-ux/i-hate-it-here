@@ -12,7 +12,7 @@ import {
 const trips = [
   {
     title: "Thailand Villa Retreat",
-    image: "/trips/thailand-beach.jpg",
+    image: "/trips/thailand-beach.png",
     location: "Koh Samui & Bangkok, Thailand",
     duration: "10 days",
     groupSize: "17 people",
@@ -28,7 +28,7 @@ const trips = [
   },
   {
     title: "Portugal Solo Adventure",
-    image: "/trips/ocean-path.jpg",
+    image: "/trips/ocean-path.png",
     location: "Lisbon, Porto & The Algarve",
     duration: "12 days",
     groupSize: "Solo traveler",
@@ -44,7 +44,7 @@ const trips = [
   },
   {
     title: "Italy & Greece Honeymoon",
-    image: "/trips/coastal-villas.jpg",
+    image: "/trips/coastal-villas.png",
     location: "Rome, Amalfi Coast, Santorini & Athens",
     duration: "14 days",
     groupSize: "Couple",
@@ -60,7 +60,7 @@ const trips = [
   },
   {
     title: "Southeast Asia Backpacking Route",
-    image: "/trips/sea-boats.jpg",
+    image: "/trips/sea-boats.png",
     location: "Vietnam, Cambodia & Laos",
     duration: "21 days",
     groupSize: "Group of 4",
