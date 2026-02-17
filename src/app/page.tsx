@@ -66,7 +66,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-primary via-primary-light/50 to-primary" />
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white pt-20">
           <p className="text-accent font-medium tracking-[0.3em] uppercase text-xs sm:text-sm mb-8">
-            Bespoke Travel Planning
+            Tired of Planning
           </p>
           <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl font-semibold leading-[1.1] mb-8">
             The World is Waiting.
@@ -127,7 +127,7 @@ export default function Home() {
               The Experience
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-primary mb-5">
-              What Sets Us Apart
+              Why Tired of Planning
             </h2>
             <p className="text-text-light max-w-xl mx-auto leading-relaxed">
               Years of personal travel across every continent and budget —

@@ -49,7 +49,7 @@ export default function AboutPage() {
               occupation.
             </p>
             <p>
-              So I made it official. Tired of Being at Home is built on the
+              So I made it official. Tired of Planning is built on the
               same philosophy I follow for my own travels: research deeply,
               plan with intention, and always leave room to breathe.
             </p>

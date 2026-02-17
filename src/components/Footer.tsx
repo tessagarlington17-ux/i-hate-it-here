@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
             <span className="font-serif text-2xl font-semibold block mb-4">
-              Tired of Being at Home
+              Tired of Planning
             </span>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">
               Bespoke travel planning for those who believe the world is best
@@ -45,7 +45,7 @@ export default function Footer() {
             </h3>
             <div className="flex gap-5">
               <a
-                href="https://www.instagram.com/tiredofbeinghungry"
+                href="https://www.instagram.com/tiredofplanning"
                 className="text-white/50 hover:text-accent transition-colors"
                 aria-label="Instagram"
               >
@@ -60,16 +60,16 @@ export default function Footer() {
               </a>
             </div>
             <p className="text-white/30 text-sm mt-6">
-              hello@tiredofbeingathome.com
+              hello@tiredofplanning.com
             </p>
           </div>
         </div>
 
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-white/30 text-xs tracking-wider">
           <span>
-            &copy; {new Date().getFullYear()} Tired of Being at Home
+            &copy; {new Date().getFullYear()} Tired of Planning
           </span>
-          <span>Crafted with wanderlust</span>
+          <span>Designed for calmer travel</span>
         </div>
       </div>
     </footer>
