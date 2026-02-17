@@ -21,7 +21,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="group">
             <span className="font-serif text-xl sm:text-2xl font-semibold text-primary tracking-tight">
-              Tired of Being at Home
+              Tired of Planning
             </span>
           </Link>
 

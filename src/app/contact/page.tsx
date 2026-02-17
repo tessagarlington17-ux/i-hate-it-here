@@ -106,7 +106,7 @@ export default function ContactPage() {
                       Email
                     </p>
                     <p className="text-text-light text-sm">
-                      hello@tiredofbeingathome.com
+                      hello@tiredofplanning.com
                     </p>
                   </div>
                 </div>
@@ -118,7 +118,7 @@ export default function ContactPage() {
                       Instagram
                     </p>
                     <p className="text-text-light text-sm">
-                      @tiredofbeinghungry
+                      @tiredofplanning
                     </p>
                   </div>
                 </div>
@@ -352,7 +352,7 @@ export default function ContactPage() {
                 {status === "error" && (
                   <div className="mt-6 bg-red-50 text-red-700 px-5 py-4 text-sm">
                     Something went wrong. Please try again or email me directly
-                    at hello@tiredofbeingathome.com.
+                    at hello@tiredofplanning.com.
                   </div>
                 )}
               </form>

@@ -4,9 +4,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Tired of Being at Home | Luxury Travel Planning",
+  title: "Tired of Planning | Modern Travel Design",
   description:
-    "Bespoke travel experiences crafted with intention. From intimate getaways to grand adventures — personalized itineraries for the discerning traveler.",
+    "A modern travel planning studio creating clean, personalized itineraries for image-first, detail-focused travelers.",
 };
 
 export default function RootLayout({
@@ -24,7 +24,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </head>

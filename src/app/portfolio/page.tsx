@@ -76,7 +76,7 @@ const trips = [
   },
   {
     title: "Mexico City Long Weekend",
-    image: undefined,
+    image: "/trips/ocean-path.jpeg",
     location: "CDMX, Mexico",
     duration: "4 days",
     groupSize: "Group of 6",
@@ -92,7 +92,7 @@ const trips = [
   },
   {
     title: "Japan Cherry Blossom Season",
-    image: undefined,
+    image: "/trips/thailand-beach.png",
     location: "Tokyo, Kyoto, Osaka & Hakone",
     duration: "16 days",
     groupSize: "Couple",
