@@ -28,7 +28,7 @@ const trips = [
   },
   {
     title: "Portugal Solo Adventure",
-    image: "/trips/ocean-path.png",
+    image: "/trips/ocean-path.jpeg",
     location: "Lisbon, Porto & The Algarve",
     duration: "12 days",
     groupSize: "Solo traveler",
@@ -76,7 +76,7 @@ const trips = [
   },
   {
     title: "Mexico City Long Weekend",
-    image: "/trips/ocean-path.jpeg",
+    image: undefined,
     location: "CDMX, Mexico",
     duration: "4 days",
     groupSize: "Group of 6",
