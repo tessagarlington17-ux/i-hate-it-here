@@ -212,7 +212,7 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          <div className="flex flex-wrap justify-center gap-3">
             {[
               "USA",
               "Canada",
@@ -244,12 +244,12 @@ export default function AboutPage() {
               "Croatia",
               "United Kingdom",
             ].map((country) => (
-              <div
+              <span
                 key={country}
-                className="bg-white px-5 py-4 text-center text-sm text-primary font-medium"
+                className="bg-white px-4 py-2 rounded-full text-xs text-primary font-medium tracking-wide border border-warm-dark/20"
               >
                 {country}
-              </div>
+              </span>
             ))}
           </div>
         </div>

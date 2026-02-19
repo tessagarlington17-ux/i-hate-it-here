@@ -4,9 +4,9 @@ import { useState } from "react";
 import { Send, Mail, Instagram, MapPin } from "lucide-react";
 
 const packageOptions = [
-  "Explorer ($250\u2013$400)",
-  "Navigator ($600\u2013$1,200)",
-  "Concierge ($1,500\u2013$3,000)",
+  "Explorer (Starting at $350)",
+  "Navigator (Starting at $800)",
+  "Concierge (Starting at $2,000)",
   "Not sure yet",
 ];
 
@@ -113,9 +113,12 @@ export default function ContactPage() {
                     <p className="text-xs font-medium text-primary tracking-wider uppercase mb-1">
                       Email
                     </p>
-                    <p className="text-text-light text-sm">
+                    <a
+                      href="mailto:hello@tiredofplanning.com"
+                      className="text-text-light text-sm hover:text-accent transition-colors"
+                    >
                       hello@tiredofplanning.com
-                    </p>
+                    </a>
                   </div>
                 </div>
 
@@ -360,7 +363,14 @@ export default function ContactPage() {
                 {status === "error" && (
                   <div className="mt-6 bg-red-50 text-red-700 px-5 py-4 text-sm">
                     Something went wrong. Please try again or email me directly
-                    at hello@tiredofplanning.com.
+                    at{" "}
+                    <a
+                      href="mailto:hello@tiredofplanning.com"
+                      className="underline hover:text-red-900 transition-colors"
+                    >
+                      hello@tiredofplanning.com
+                    </a>
+                    .
                   </div>
                 )}
               </form>

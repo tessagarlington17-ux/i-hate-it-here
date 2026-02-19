@@ -59,9 +59,12 @@ export default function Footer() {
                 <Mail className="h-5 w-5" />
               </a>
             </div>
-            <p className="text-white/30 text-sm mt-6">
+            <a
+              href="mailto:hello@tiredofplanning.com"
+              className="text-white/30 hover:text-accent text-sm mt-6 block transition-colors"
+            >
               hello@tiredofplanning.com
-            </p>
+            </a>
           </div>
         </div>
 
