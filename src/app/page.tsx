@@ -271,6 +271,37 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Trip Photos */}
+      <section className="py-24 bg-warm">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <p className="text-accent text-xs tracking-[0.3em] uppercase mb-4">
+              Snapshots
+            </p>
+            <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-primary">
+              From the Road
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              "/trips/IMG_1550.jpeg",
+              "/trips/IMG_1729.jpeg",
+              "/trips/IMG_2463 3.jpeg",
+              "/trips/IMG_2670.jpeg",
+            ].map((src) => (
+              <div key={src} className="aspect-square overflow-hidden">
+                <img
+                  src={src}
+                  alt="Travel snapshot"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section
         className="py-24 bg-primary text-white text-center relative overflow-hidden"

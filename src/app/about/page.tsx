@@ -94,47 +94,62 @@ export default function AboutPage() {
                 icon: Globe,
                 title: "Lived Experience, Not Research",
                 desc: "I've personally visited the places I recommend. I know the difference between a hotel that photographs well and one that truly delivers.",
+                image: "/trips/ocean-path.jpeg",
               },
               {
                 icon: Utensils,
                 title: "Culinary-First Planning",
                 desc: "Food is the soul of travel. Every itinerary features curated dining — from acclaimed restaurants to neighborhood gems only locals know.",
+                image: "/trips/IMG_8200 3.jpeg",
               },
               {
                 icon: Calendar,
                 title: "Built-In Breathing Room",
                 desc: "My itineraries aren't checklists. I design unstructured time because the finest moments happen when you're not rushing.",
+                image: "/trips/thailand-beach.png",
               },
               {
                 icon: Users,
                 title: "Group Travel Specialist",
                 desc: "Planning for two is different from planning for seventeen. I know how to balance group harmony with personal freedom.",
+                image: "/trips/IMG_3154.jpeg",
               },
               {
                 icon: Heart,
                 title: "Genuinely Invested",
                 desc: "This isn't a volume business. Every journey receives the same dedication I'd pour into my own travels. Your trip matters to me.",
+                image: "/trips/IMG_6550.jpeg",
               },
               {
                 icon: MapPin,
                 title: "Transparent on Budget",
                 desc: "I'll share the real cost of things — not inflated tourist pricing. I find authentic value at every level.",
+                image: "/trips/coastal-villas.png",
               },
             ].map((item) => (
               <div
                 key={item.title}
-                className="bg-white p-8 flex gap-5"
+                className="bg-white overflow-hidden"
               >
-                <div className="w-10 h-10 border border-accent/30 flex items-center justify-center flex-shrink-0">
-                  <item.icon className="h-4 w-4 text-accent" />
+                <div className="h-48 overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <div>
-                  <h3 className="font-serif text-lg font-semibold text-primary mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-text-light text-sm leading-relaxed">
-                    {item.desc}
-                  </p>
+                <div className="p-8 flex gap-5">
+                  <div className="w-10 h-10 border border-accent/30 flex items-center justify-center flex-shrink-0">
+                    <item.icon className="h-4 w-4 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-serif text-lg font-semibold text-primary mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-text-light text-sm leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -179,6 +194,61 @@ export default function AboutPage() {
                 <p className="text-text-light text-sm leading-relaxed">
                   {item.desc}
                 </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Destinations */}
+      <section className="py-24 bg-warm">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <p className="text-accent text-xs tracking-[0.3em] uppercase mb-4">
+              Where I&apos;ve Been
+            </p>
+            <h2 className="font-serif text-3xl font-semibold text-primary">
+              Destinations
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {[
+              "USA",
+              "Canada",
+              "Thailand",
+              "Vietnam",
+              "Cambodia",
+              "Portugal",
+              "Spain",
+              "Italy",
+              "Denmark",
+              "Netherlands",
+              "Germany",
+              "Switzerland",
+              "Costa Rica",
+              "Mexico",
+              "Belize",
+              "Honduras",
+              "Slovenia",
+              "Greece",
+              "Czech Republic",
+              "Puerto Rico",
+              "Barbados",
+              "Morocco",
+              "France",
+              "India",
+              "Norway",
+              "Singapore",
+              "The Bahamas",
+              "Croatia",
+              "United Kingdom",
+            ].map((country) => (
+              <div
+                key={country}
+                className="bg-white px-5 py-4 text-center text-sm text-primary font-medium"
+              >
+                {country}
               </div>
             ))}
           </div>

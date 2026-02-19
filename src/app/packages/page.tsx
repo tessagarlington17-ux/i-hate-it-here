@@ -11,7 +11,7 @@ const packages = [
   {
     name: "Explorer",
     icon: Compass,
-    price: "$250 – $400",
+    price: "Starting at $350",
     tagline: "For the independent traveler who wants a refined game plan.",
     features: [
       "Custom day-by-day itinerary",
@@ -28,7 +28,7 @@ const packages = [
   {
     name: "Navigator",
     icon: Map,
-    price: "$600 – $1,200",
+    price: "Starting at $800",
     tagline: "For travelers who want meticulous planning with ongoing support.",
     features: [
       "Everything in Explorer, plus:",
@@ -47,7 +47,7 @@ const packages = [
   {
     name: "Concierge",
     icon: Crown,
-    price: "$1,500 – $3,000",
+    price: "Starting at $2,000",
     tagline: "White-glove service. I handle everything — you simply arrive.",
     features: [
       "Everything in Navigator, plus:",
@@ -188,7 +188,7 @@ export default function PackagesPage() {
               },
               {
                 q: "What destinations do you cover?",
-                a: "I've personally traveled to 29 countries across Southeast Asia, Europe, Central America, and beyond. Even for destinations I haven't yet visited, I conduct thorough research and leverage my network of fellow travelers.",
+                a: "I've personally traveled to 29 countries across North America, Asia, Europe, Central America, Africa, and beyond. Even for destinations I haven't yet visited, I conduct thorough research and leverage my network of fellow travelers.",
               },
               {
                 q: "How far in advance should I book?",
