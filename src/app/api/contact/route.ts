@@ -1,4 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: NextRequest) {
   try {
@@ -22,17 +25,48 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Log the inquiry (in production, you'd send an email or save to a database)
-    console.log("New travel inquiry:", {
-      name: body.name,
-      email: body.email,
-      packageTier: body.packageTier,
-      destination: body.destination,
-      travelDates: body.travelDates,
-      groupSize: body.groupSize,
-      travelStyle: body.travelStyle,
-      message: body.message,
-      timestamp: new Date().toISOString(),
+    await resend.emails.send({
+      from: "Tired of Planning <onboarding@resend.dev>",
+      to: "hello@tiredofplanning.com",
+      replyTo: email,
+      subject: `New Travel Inquiry from ${name}`,
+      html: `
+        <h2>New Travel Inquiry</h2>
+        <table style="border-collapse: collapse; width: 100%; max-width: 600px;">
+          <tr>
+            <td style="padding: 8px 12px; font-weight: bold; border-bottom: 1px solid #eee;">Name</td>
+            <td style="padding: 8px 12px; border-bottom: 1px solid #eee;">${name}</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px 12px; font-weight: bold; border-bottom: 1px solid #eee;">Email</td>
+            <td style="padding: 8px 12px; border-bottom: 1px solid #eee;">${email}</td>
+          </tr>
+          ${body.packageTier ? `<tr>
+            <td style="padding: 8px 12px; font-weight: bold; border-bottom: 1px solid #eee;">Package</td>
+            <td style="padding: 8px 12px; border-bottom: 1px solid #eee;">${body.packageTier}</td>
+          </tr>` : ""}
+          ${body.travelStyle ? `<tr>
+            <td style="padding: 8px 12px; font-weight: bold; border-bottom: 1px solid #eee;">Travel Style</td>
+            <td style="padding: 8px 12px; border-bottom: 1px solid #eee;">${body.travelStyle}</td>
+          </tr>` : ""}
+          ${body.destination ? `<tr>
+            <td style="padding: 8px 12px; font-weight: bold; border-bottom: 1px solid #eee;">Destination(s)</td>
+            <td style="padding: 8px 12px; border-bottom: 1px solid #eee;">${body.destination}</td>
+          </tr>` : ""}
+          ${body.travelDates ? `<tr>
+            <td style="padding: 8px 12px; font-weight: bold; border-bottom: 1px solid #eee;">Travel Dates</td>
+            <td style="padding: 8px 12px; border-bottom: 1px solid #eee;">${body.travelDates}</td>
+          </tr>` : ""}
+          ${body.groupSize ? `<tr>
+            <td style="padding: 8px 12px; font-weight: bold; border-bottom: 1px solid #eee;">Group Size</td>
+            <td style="padding: 8px 12px; border-bottom: 1px solid #eee;">${body.groupSize}</td>
+          </tr>` : ""}
+          <tr>
+            <td style="padding: 8px 12px; font-weight: bold; border-bottom: 1px solid #eee;">Message</td>
+            <td style="padding: 8px 12px; border-bottom: 1px solid #eee;">${message}</td>
+          </tr>
+        </table>
+      `,
     });
 
     return NextResponse.json(
