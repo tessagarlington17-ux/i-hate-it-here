@@ -16,14 +16,14 @@ const trips = [
     location: "Koh Samui & Bangkok, Thailand",
     duration: "10 days",
     groupSize: "17 people",
-    budget: "Mid-Range to Luxury",
+    budget: "Luxury",
     description:
-      "Coordinated a villa stay for 17 friends with group activities, solo time built in, and a mix of beach days, temple visits, and Bangkok street food tours.",
+      "Coordinated a private villa stay for 17 friends across Koh Samui and Bangkok — blending lazy pool days and golden-hour beach sessions with hands-on cultural experiences and late-night street food crawls through Bangkok's best neighborhoods.",
     highlights: [
-      "Private villa with pool for the full group",
-      "Organized Thai cooking class",
-      "Night market food crawl in Bangkok",
-      "Island-hopping day trip to Ang Thong",
+      "Beachfront villa with infinity pool for the full group",
+      "Private longtail boat tour to Ang Thong Marine Park",
+      "Hands-on Thai cooking class with a local chef",
+      "Guided night market food crawl through Chinatown",
     ],
   },
   {
@@ -34,12 +34,12 @@ const trips = [
     groupSize: "Solo traveler",
     budget: "Budget-Friendly",
     description:
-      "Designed a budget-friendly route through the Amalfi Coast with hostel picks, boat tours, and the best pizza spots.",
+      "A solo traveler's dream route along Italy's most stunning coastline — built around charming hostel stays, cliff-side boat tours, lemon grove walks, and a curated list of the best wood-fired pizza from Sorrento to Salerno.",
     highlights: [
-      "Budget-friendly hostel recommendations",
-      "Boat tours along the Amalfi Coast",
-      "Best pizza spots mapped by neighborhood",
-      "Day trips to Positano and Ravello",
+      "Handpicked hostels with sea views under \u20AC40/night",
+      "Private boat tour along the Amalfi cliffs",
+      "Pizza trail mapped from Sorrento to Salerno",
+      "Golden-hour day trips to Positano and Ravello",
     ],
   },
   {
@@ -50,12 +50,12 @@ const trips = [
     groupSize: "Couple",
     budget: "Luxury",
     description:
-      "A romantic one-week journey through Banff with sunset dinners, scenic hikes, and carefully paced days that balanced sightseeing with relaxation.",
+      "A romantic week in the Canadian Rockies designed for couples who want equal parts adventure and downtime — think alpine hikes to turquoise lakes by day and fireside dinners with mountain views by night.",
     highlights: [
-      "Scenic hikes with mountain views",
-      "Sunset dinners with lake views",
-      "Mix of boutique hotels & cozy stays",
-      "Built-in free mornings for spontaneity",
+      "Guided sunrise hike to Lake Louise overlook",
+      "Fireside dinners at Banff's top-rated lodges",
+      "Scenic drive along the Icefields Parkway",
+      "Couples spa day at a luxury mountain resort",
     ],
   },
   {
@@ -66,12 +66,12 @@ const trips = [
     groupSize: "Group of 4",
     budget: "Budget",
     description:
-      "A two-week backpacking route through three countries, optimized for cost without sacrificing experiences. Focused on local food and off-the-beaten-path stops.",
+      "Two weeks, three countries, zero wasted days. A tightly planned backpacking route that trades tourist traps for hole-in-the-wall street food stalls, overnight trains, and the kind of hidden spots only locals know about.",
     highlights: [
-      "Full route with transport between cities",
-      "Street food guide for every city",
-      "Ha Long Bay overnight on a budget",
-      "Off-the-beaten-path stops in each country",
+      "Overnight sleeper train from Bangkok to Chiang Mai",
+      "Hawker center food crawl through Singapore",
+      "Ha Long Bay overnight cruise on a budget",
+      "Hidden gems and local-only spots in each city",
     ],
   },
   {
@@ -82,12 +82,28 @@ const trips = [
     groupSize: "Group of 6",
     budget: "Mid-Range",
     description:
-      "A packed but breathable long weekend in one of the world's best food cities. Taco tours, mezcal bars, Frida Kahlo museum, and neighborhood walks.",
+      "Four days in one of the world's greatest food cities, paced so nothing feels rushed. Built around neighborhood-hopping, market grazing, and just the right mix of culture, nightlife, and mezcal.",
     highlights: [
-      "Neighborhood-by-neighborhood food map",
-      "Lucha libre night out",
-      "Xochimilco boat trip",
-      "Rooftop bars with volcano views",
+      "Neighborhood-by-neighborhood taco and mezcal map",
+      "Front-row seats at a Friday night lucha libre match",
+      "Xochimilco floating garden boat trip with the crew",
+      "Rooftop cocktail bars with views of the volcanoes",
+    ],
+  },
+  {
+    title: "Costa Rica Girls Trip",
+    image: undefined,
+    location: "Tamarindo, Costa Rica",
+    duration: "7 days",
+    groupSize: "Group of 2",
+    budget: "Mid-Range",
+    description:
+      "An exciting one-week journey through the west coast of Costa Rica, balancing budget-friendly hostels and sunrise surf lessons with luxe daily experiences like beachfront yoga, jungle zip-lining, and golden-hour cocktails.",
+    highlights: [
+      "Beginner-friendly surf lessons on Tamarindo Beach",
+      "Zip-lining through the cloud forest canopy",
+      "Beachfront yoga sessions and sunset happy hours",
+      "Scenic coastal drive to hidden beaches",
     ],
   },
 ];
