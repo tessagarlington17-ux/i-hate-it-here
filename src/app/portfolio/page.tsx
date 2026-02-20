@@ -110,35 +110,35 @@ const trips = [
 ];
 
 const destinations = [
-  "Thailand",
-  "Vietnam",
-  "Cambodia",
-  "Laos",
-  "Japan",
-  "Portugal",
-  "Spain",
-  "Italy",
-  "Greece",
-  "France",
-  "Mexico",
-  "Costa Rica",
-  "Colombia",
-  "Peru",
-  "Morocco",
-  "Turkey",
-  "Croatia",
-  "Czech Republic",
-  "Netherlands",
-  "UK",
-  "Germany",
-  "Austria",
-  "Hungary",
-  "Bali",
-  "Philippines",
-  "South Korea",
-  "Iceland",
-  "Switzerland",
-  "Ireland",
+  { name: "Thailand", code: "th" },
+  { name: "Vietnam", code: "vn" },
+  { name: "Cambodia", code: "kh" },
+  { name: "Laos", code: "la" },
+  { name: "Japan", code: "jp" },
+  { name: "Portugal", code: "pt" },
+  { name: "Spain", code: "es" },
+  { name: "Italy", code: "it" },
+  { name: "Greece", code: "gr" },
+  { name: "France", code: "fr" },
+  { name: "Mexico", code: "mx" },
+  { name: "Costa Rica", code: "cr" },
+  { name: "Colombia", code: "co" },
+  { name: "Peru", code: "pe" },
+  { name: "Morocco", code: "ma" },
+  { name: "Turkey", code: "tr" },
+  { name: "Croatia", code: "hr" },
+  { name: "Czech Republic", code: "cz" },
+  { name: "Netherlands", code: "nl" },
+  { name: "United Kingdom", code: "gb" },
+  { name: "Germany", code: "de" },
+  { name: "Austria", code: "at" },
+  { name: "Hungary", code: "hu" },
+  { name: "Indonesia", code: "id" },
+  { name: "Philippines", code: "ph" },
+  { name: "South Korea", code: "kr" },
+  { name: "Iceland", code: "is" },
+  { name: "Switzerland", code: "ch" },
+  { name: "Ireland", code: "ie" },
 ];
 
 export default function PortfolioPage() {
@@ -257,13 +257,13 @@ export default function PortfolioPage() {
           </ScrollReveal>
 
           <ScrollReveal>
-            <div className="flex flex-wrap justify-center gap-2.5">
-              {destinations.map((dest) => (
+            <div className="flex flex-wrap justify-center gap-3">
+              {destinations.map((country) => (
                 <span
-                  key={dest}
-                  className="bg-[#FAF8F6] px-5 py-2.5 text-xs font-medium text-primary tracking-wider uppercase"
+                  key={country.name}
+                  className="bg-[#FAF8F6] px-4 py-2.5 rounded-full text-xs text-primary font-medium tracking-wide border border-warm-dark/30 inline-flex items-center gap-1.5"
                 >
-                  {dest}
+                  <span className={`fi fi-${country.code}`} />{country.name}
                 </span>
               ))}
             </div>
