@@ -49,7 +49,7 @@ const packages = [
     name: "Concierge",
     icon: Crown,
     price: "Starting at $2,000",
-    tagline: "White-glove service. I handle everything — you simply arrive.",
+    tagline: "White-glove, end-to-end service. Every detail handled — you simply arrive.",
     features: [
       "Everything in Navigator, plus:",
       "Full booking assistance (flights, hotels, experiences)",
@@ -81,7 +81,7 @@ export default function PackagesPage() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/70 to-primary/80" />
         <div className="relative z-10 max-w-3xl mx-auto px-6 pb-16 pt-32">
-          <p className="text-accent text-xs tracking-[0.3em] uppercase mb-7">
+          <p className="text-white/50 text-xs tracking-[0.3em] uppercase mb-7">
             Services
           </p>
           <h1 className="font-serif text-4xl sm:text-5xl md:text-[3.5rem] font-medium mb-6 leading-[1.1]">
@@ -101,7 +101,7 @@ export default function PackagesPage() {
             {packages.map((pkg, i) => (
               <ScrollReveal key={pkg.name} delay={i + 1}>
                 <div
-                  className={`bg-[#FAF8F6] flex flex-col overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg h-full ${
+                  className={`bg-[var(--background)] flex flex-col overflow-hidden transition-shadow duration-300 ease-in-out h-full ${
                     pkg.featured ? "ring-1 ring-accent relative" : ""
                   }`}
                 >
@@ -113,7 +113,7 @@ export default function PackagesPage() {
 
                   <div className="p-8 sm:p-10 flex-1 flex flex-col">
                     <div className="flex items-center gap-3 mb-7">
-                      <div className="w-10 h-10 border border-accent/30 flex items-center justify-center">
+                      <div className="w-10 h-10 border border-accent/20 flex items-center justify-center">
                         <pkg.icon className="h-4 w-4 text-accent" />
                       </div>
                       <h2 className="font-serif text-2xl font-medium text-primary">
@@ -140,7 +140,7 @@ export default function PackagesPage() {
                       ))}
                     </ul>
 
-                    <div className="bg-warm rounded-md p-4 mb-9">
+                    <div className="bg-warm rounded-[4px] p-4 mb-9">
                       <p className="text-xs text-text-light">
                         <span className="font-medium text-primary">
                           Ideal for:
@@ -151,10 +151,10 @@ export default function PackagesPage() {
 
                     <Link
                       href="/contact"
-                      className={`w-full py-3.5 text-[11px] font-medium tracking-[0.08em] uppercase text-center rounded-lg transition-all duration-200 ease-in-out inline-flex items-center justify-center gap-2 ${
+                      className={`w-full py-4 text-[11px] font-medium tracking-[0.08em] uppercase text-center rounded-[6px] transition-all duration-200 ease-in-out inline-flex items-center justify-center gap-2 ${
                         pkg.featured
-                          ? "bg-accent hover:bg-accent-light text-white hover:shadow-[0_4px_16px_rgba(138,116,80,0.3)]"
-                          : "bg-primary hover:bg-primary-light text-[#FAF8F6] hover:shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
+                          ? "bg-accent hover:bg-[#232f3a] text-white hover:shadow-[0_4px_16px_rgba(46,58,70,0.25)]"
+                          : "bg-primary hover:bg-primary-light text-white hover:shadow-[0_2px_8px_rgba(0,0,0,0.1)]"
                       }`}
                     >
                       {pkg.cta} <ArrowRight className="h-4 w-4" />
@@ -189,21 +189,21 @@ export default function PackagesPage() {
               },
               {
                 q: "Can I upgrade my package later?",
-                a: "Absolutely. If you begin with Explorer and decide you'd like booking assistance, we can seamlessly upgrade to Navigator or Concierge — crediting what you've already invested.",
+                a: "Yes. If you begin with Explorer and decide you'd like booking assistance, we can seamlessly upgrade to Navigator or Concierge — crediting what you've already invested.",
               },
               {
                 q: "What destinations do you cover?",
-                a: "I've personally traveled to 29 countries across North America, Asia, Europe, Central America, Africa, and beyond. Even for destinations I haven't yet visited, I conduct thorough research and leverage my network of fellow travelers.",
+                a: "I've personally traveled to 29 countries across North America, Asia, Europe, Central America, Africa, and beyond. For destinations I haven't yet visited, I conduct thorough research and draw on my network of fellow travelers.",
               },
               {
                 q: "How far in advance should I book?",
-                a: "Ideally 4–8 weeks for Explorer or Navigator, and 8–12 weeks for Concierge since booking coordination requires additional time. That said, I've successfully orchestrated last-minute trips as well.",
+                a: "Ideally 4–8 weeks for Explorer or Navigator, and 8–12 weeks for Concierge since booking coordination requires additional lead time. That said, last-minute trips are not out of the question.",
               },
               {
                 q: "Do you handle group trips?",
                 a: "It's one of my specialties. I've planned journeys for groups as large as seventeen. Group pricing falls within the ranges listed above.",
               },
-            ].map((item, i) => (
+            ].map((item) => (
               <ScrollReveal key={item.q}>
                 <div className="border-b border-warm-dark/40 pb-10">
                   <h3 className="font-serif text-lg font-medium text-primary mb-4">
@@ -223,19 +223,19 @@ export default function PackagesPage() {
       <section className="py-32 bg-primary text-white text-center">
         <div className="max-w-2xl mx-auto px-6">
           <ScrollReveal>
-            <p className="text-accent text-xs tracking-[0.3em] uppercase mb-8">
-              Not Sure?
+            <p className="text-white/50 text-xs tracking-[0.3em] uppercase mb-8">
+              Not Sure
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl font-medium mb-6 leading-tight">
               Let Me Recommend the Right Fit
             </h2>
             <p className="text-white/45 mb-12 font-light leading-relaxed">
-              No pressure. Share your trip details and I&apos;ll suggest the
-              package that best serves your vision.
+              Share your trip details and I&apos;ll suggest the package that
+              best serves your vision.
             </p>
             <Link
               href="/contact"
-              className="bg-accent hover:bg-accent-light text-white px-8 py-3.5 text-[11px] font-medium tracking-[0.08em] uppercase rounded-lg transition-all duration-200 ease-in-out inline-flex items-center justify-center gap-3 hover:shadow-[0_4px_16px_rgba(138,116,80,0.3)]"
+              className="bg-accent hover:bg-[#232f3a] text-white px-8 py-4 text-[11px] font-medium tracking-[0.08em] uppercase rounded-[6px] transition-all duration-200 ease-in-out inline-flex items-center justify-center gap-3 hover:shadow-[0_4px_16px_rgba(46,58,70,0.4)]"
             >
               Let&apos;s Chat <ArrowRight className="h-4 w-4" />
             </Link>

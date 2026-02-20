@@ -17,7 +17,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-[10px] font-medium tracking-[0.2em] uppercase text-accent mb-7">
+            <h3 className="text-[10px] font-medium tracking-[0.2em] uppercase text-white/50 mb-7">
               Navigate
             </h3>
             <ul className="space-y-3.5">
@@ -40,20 +40,20 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-[10px] font-medium tracking-[0.2em] uppercase text-accent mb-7">
+            <h3 className="text-[10px] font-medium tracking-[0.2em] uppercase text-white/50 mb-7">
               Connect
             </h3>
             <div className="flex gap-5">
               <a
                 href="https://www.instagram.com/tiredofplanning"
-                className="text-white/40 hover:text-accent transition-colors duration-200"
+                className="text-white/40 hover:text-white transition-colors duration-200"
                 aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" />
               </a>
               <a
                 href="mailto:tessa.garlington@gmail.com"
-                className="text-white/40 hover:text-accent transition-colors duration-200"
+                className="text-white/40 hover:text-white transition-colors duration-200"
                 aria-label="Email"
               >
                 <Mail className="h-5 w-5" />
@@ -61,7 +61,7 @@ export default function Footer() {
             </div>
             <a
               href="mailto:hello@tiredofplanning.com"
-              className="text-white/25 hover:text-accent text-sm mt-7 block transition-colors duration-200"
+              className="text-white/25 hover:text-white text-sm mt-7 block transition-colors duration-200"
             >
               hello@tiredofplanning.com
             </a>

@@ -28,9 +28,14 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-500 ease-in-out ${
         scrolled
-          ? "bg-[#FAF8F6]/85 backdrop-blur-lg shadow-[0_1px_0_rgba(0,0,0,0.04)]"
-          : "bg-[#FAF8F6]/60 backdrop-blur-md"
+          ? "backdrop-blur-[6px] shadow-none"
+          : "bg-transparent"
       }`}
+      style={
+        scrolled
+          ? { background: "rgba(247,245,242,0.85)" }
+          : undefined
+      }
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex justify-between items-center h-20">
@@ -46,7 +51,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="bg-primary hover:bg-primary-light text-[#FAF8F6] px-7 py-2.5 text-[11px] font-medium tracking-[0.08em] uppercase rounded-md transition-all duration-200 ease-in-out hover:shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
+                  className="bg-accent hover:bg-[#232f3a] text-white px-6 py-2.5 text-[11px] font-medium tracking-[0.08em] uppercase rounded-[6px] transition-all duration-200 ease-in-out hover:shadow-[0_2px_8px_rgba(46,58,70,0.2)]"
                 >
                   {link.label}
                 </Link>
@@ -54,7 +59,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="relative text-text-light hover:text-primary text-[11px] font-medium tracking-[0.08em] uppercase transition-colors duration-200 after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-accent after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"
+                  className="relative text-text-light hover:text-primary text-[11px] font-medium tracking-[0.06em] uppercase transition-colors duration-200 after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[1px] after:bg-accent after:opacity-0 after:transition-opacity after:duration-200 hover:after:opacity-100"
                 >
                   {link.label}
                 </Link>
@@ -72,12 +77,12 @@ export default function Navbar() {
         </div>
 
         {isOpen && (
-          <div className="md:hidden py-6 space-y-1">
+          <div className="md:hidden py-6 space-y-1 border-t border-warm-dark/20">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="block py-3 px-2 text-text-light hover:text-primary text-[11px] font-medium tracking-[0.08em] uppercase transition-colors duration-200"
+                className="block py-3 px-2 text-text-light hover:text-primary text-[11px] font-medium tracking-[0.06em] uppercase transition-colors duration-200"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}

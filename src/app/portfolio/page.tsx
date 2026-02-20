@@ -51,7 +51,7 @@ const trips = [
     groupSize: "Couple",
     budget: "Luxury",
     description:
-      "A romantic week in the Canadian Rockies designed for couples who want equal parts adventure and downtime — think alpine hikes to turquoise lakes by day and fireside dinners with mountain views by night.",
+      "A romantic week in the Canadian Rockies designed for couples who want equal parts adventure and downtime — alpine hikes to turquoise lakes by day, fireside dinners with mountain views by night.",
     highlights: [
       "Guided sunrise hike to Lake Louise overlook",
       "Fireside dinners at Banff's top-rated lodges",
@@ -67,7 +67,7 @@ const trips = [
     groupSize: "Group of 4",
     budget: "Budget",
     description:
-      "Two weeks, three countries, zero wasted days. A tightly planned backpacking route that trades tourist traps for hole-in-the-wall street food stalls, overnight trains, and the kind of hidden spots only locals know about.",
+      "Two weeks, three countries, zero wasted days. A tightly planned backpacking route that trades tourist traps for hole-in-the-wall street food stalls, overnight trains, and the kind of hidden spots only locals know.",
     highlights: [
       "Overnight sleeper train from Bangkok to Chiang Mai",
       "Hawker center food crawl through Singapore",
@@ -83,7 +83,7 @@ const trips = [
     groupSize: "Group of 6",
     budget: "Mid-Range",
     description:
-      "Four days in one of the world's greatest food cities, paced so nothing feels rushed. Built around neighborhood-hopping, market grazing, and just the right mix of culture, nightlife, and mezcal.",
+      "Four days in one of the world's greatest food cities, paced so nothing feels rushed. Built around neighborhood-hopping, market grazing, and the right mix of culture, nightlife, and mezcal.",
     highlights: [
       "Neighborhood-by-neighborhood taco and mezcal map",
       "Front-row seats at a Friday night lucha libre match",
@@ -99,7 +99,7 @@ const trips = [
     groupSize: "Group of 2",
     budget: "Mid-Range",
     description:
-      "An exciting one-week journey through the west coast of Costa Rica, balancing budget-friendly hostels and sunrise surf lessons with luxe daily experiences like beachfront yoga, jungle zip-lining, and golden-hour cocktails.",
+      "One week along the west coast of Costa Rica, balancing budget-friendly stays and sunrise surf lessons with beachfront yoga, jungle zip-lining, and golden-hour cocktails at the right spots.",
     highlights: [
       "Beginner-friendly surf lessons on Tamarindo Beach",
       "Zip-lining through the cloud forest canopy",
@@ -156,7 +156,7 @@ export default function PortfolioPage() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/70 to-primary/80" />
         <div className="relative z-10 max-w-3xl mx-auto px-6 pb-16 pt-32">
-          <p className="text-accent text-xs tracking-[0.3em] uppercase mb-7">
+          <p className="text-white/50 text-xs tracking-[0.3em] uppercase mb-7">
             Our Work
           </p>
           <h1 className="font-serif text-4xl sm:text-5xl md:text-[3.5rem] font-medium mb-6 leading-[1.1]">
@@ -225,6 +225,7 @@ export default function PortfolioPage() {
                           fill
                           className="object-cover"
                           sizes="(max-width: 768px) 100vw, 512px"
+                          style={{ filter: "saturate(0.92)" }}
                         />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center">
@@ -252,7 +253,7 @@ export default function PortfolioPage() {
             </h2>
             <p className="text-text-light mb-14 max-w-xl mx-auto text-sm leading-relaxed">
               Every destination I plan for is informed by lived experience and thorough research. Here
-              are the places I&apos;ve personally explored!
+              are the places I&apos;ve personally explored.
             </p>
           </ScrollReveal>
 
@@ -261,7 +262,7 @@ export default function PortfolioPage() {
               {destinations.map((country) => (
                 <span
                   key={country.name}
-                  className="bg-[#FAF8F6] px-4 py-2.5 rounded-full text-xs text-primary font-medium tracking-wide border border-warm-dark/30 inline-flex items-center gap-1.5"
+                  className="bg-[var(--background)] px-4 py-2.5 rounded-full text-xs text-primary font-medium tracking-wide border border-warm-dark/30 inline-flex items-center gap-1.5"
                 >
                   <span className={`fi fi-${country.code}`} />{country.name}
                 </span>
@@ -275,7 +276,7 @@ export default function PortfolioPage() {
       <section className="py-32 bg-primary text-white text-center">
         <div className="max-w-2xl mx-auto px-6">
           <ScrollReveal>
-            <p className="text-accent text-xs tracking-[0.3em] uppercase mb-8">
+            <p className="text-white/50 text-xs tracking-[0.3em] uppercase mb-8">
               Your Turn
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl font-medium mb-6 leading-tight">
@@ -287,7 +288,7 @@ export default function PortfolioPage() {
             </p>
             <Link
               href="/contact"
-              className="bg-accent hover:bg-accent-light text-white px-8 py-3.5 text-[11px] font-medium tracking-[0.08em] uppercase rounded-lg transition-all duration-200 ease-in-out inline-flex items-center justify-center gap-3 hover:shadow-[0_4px_16px_rgba(138,116,80,0.3)]"
+              className="bg-accent hover:bg-[#232f3a] text-white px-8 py-4 text-[11px] font-medium tracking-[0.08em] uppercase rounded-[6px] transition-all duration-200 ease-in-out inline-flex items-center justify-center gap-3 hover:shadow-[0_4px_16px_rgba(46,58,70,0.4)]"
             >
               Plan My Trip <ArrowRight className="h-4 w-4" />
             </Link>

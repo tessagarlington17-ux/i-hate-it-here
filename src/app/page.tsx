@@ -36,7 +36,7 @@ const strengths = [
     icon: MapPin,
     title: "Every Budget, Elevated",
     description:
-      "Whether it's a boutique hostel or a private villa for 17 — every trip is planned with the same meticulous care and attention.",
+      "Whether it's a boutique hostel or a private villa for 17 — every trip is planned with the same meticulous care.",
     image: "/trips/telluride.JPG",
   },
 ];
@@ -50,7 +50,7 @@ const testimonials = [
   },
   {
     quote:
-      "I came to Tired of Planning with a last-minute idea for a Costa Rica trip and a pretty modest budget, and Tessa turned it into one of my favorite trips I've ever taken. She found an amazing boutique hostel in Tamarindo in the best possible location. It felt stylish, safe, and comfortable while still keeping costs low.\n\nWhat really stood out was how thoughtful her recommendations were. Tessa knew the area inside and out. She helped me figure out which nearby beach towns were actually worth the day trips and guided me on where to splurge versus where to save, from incredible meals to easy, low-key days exploring. Even the smaller details, like surf lessons with a Tamarindo local and a lively nighttime food market, ended up being some of my favorite memories.\n\nThe whole trip felt intentional without being overplanned. Everything just worked, and I honestly can't imagine planning something like that on my own.",
+      "I came with a modest budget and a last-minute idea for Costa Rica. Tessa found an amazing boutique hostel in Tamarindo — stylish, safe, and well-located. Her recommendations were thoughtful throughout: which beach towns were worth the day trip, where to splurge versus save. Even the smaller details — surf lessons with a local, a lively food market — became the best memories. The whole trip felt intentional without being overplanned.",
     author: "Madisun M.",
     trip: "Costa Rica",
   },
@@ -67,46 +67,52 @@ export default function Home() {
     <>
       {/* Hero */}
       <section
-        className="relative flex items-center justify-center bg-primary overflow-hidden"
+        className="relative flex items-center justify-center overflow-hidden"
         style={{
-          backgroundImage: "url('/trips/ocean-path.jpeg')",
+          backgroundImage: "url('/trips/amalfi_coast.JPG')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          minHeight: "80vh",
+          height: "80vh",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/55 to-primary/80" />
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white pt-24 pb-16">
-          <p className="text-accent font-medium tracking-[0.3em] uppercase text-xs sm:text-sm mb-10">
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.1))",
+          }}
+        />
+        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white">
+          <p className="text-white/55 font-medium tracking-[0.3em] uppercase text-xs sm:text-sm mb-10">
             Tired of Planning
           </p>
-          <h1 className="font-serif text-5xl sm:text-6xl md:text-[4.5rem] lg:text-[5rem] font-medium leading-[1.08] mb-10">
+          <h1
+            className="font-serif font-medium leading-[1.08] mb-10"
+            style={{ fontSize: "3.8rem", letterSpacing: "0.02em" }}
+          >
             The World is Waiting.
             <br />
-            <span className="text-accent italic">Stop Scrolling.</span>
+            <span className="italic text-white/80">Stop Scrolling.</span>
           </h1>
           <p className="text-lg sm:text-xl text-white/55 max-w-2xl mx-auto mb-14 leading-relaxed font-light">
             Personalized itineraries crafted with intention — from culinary
-            adventures to hidden escapes, designed for travelers who want more
-            than a checklist.
+            adventures to hidden escapes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/packages"
-              className="bg-accent hover:bg-accent-light text-white px-8 py-3.5 text-[11px] font-medium tracking-[0.08em] uppercase rounded-lg transition-all duration-200 ease-in-out inline-flex items-center justify-center gap-3 hover:shadow-[0_4px_16px_rgba(138,116,80,0.3)]"
+              className="bg-accent hover:bg-[#232f3a] text-white px-8 py-4 text-[11px] font-medium tracking-[0.08em] uppercase rounded-[6px] transition-all duration-200 ease-in-out inline-flex items-center justify-center gap-3 hover:shadow-[0_4px_16px_rgba(46,58,70,0.3)]"
             >
               View Packages <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href="/portfolio"
-              className="border border-white/20 hover:border-white/40 text-white px-8 py-3.5 text-[11px] font-medium tracking-[0.08em] uppercase rounded-lg transition-all duration-200 ease-in-out inline-flex items-center justify-center"
+              className="border border-white/30 hover:border-white/60 hover:bg-white/5 text-white px-8 py-4 text-[11px] font-medium tracking-[0.08em] uppercase rounded-[6px] transition-all duration-200 ease-in-out inline-flex items-center justify-center"
             >
               See My Work
             </Link>
           </div>
         </div>
-
-        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[var(--background)] to-transparent" />
       </section>
 
       {/* Trip Photos */}
@@ -124,22 +130,21 @@ export default function Home() {
           </ScrollReveal>
 
           <ScrollReveal>
-            <div className="grid grid-cols-2 gap-3 sm:gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {[
                 "/trips/IMG_1550.jpeg",
                 "/trips/IMG_1729.jpeg",
-                "/trips/IMG_2463 3.jpeg",
                 "/trips/IMG_2670.jpeg",
                 "/trips/india.JPG",
-                "/trips/oslo.JPG",
                 "/trips/thai_temple_colorful.JPG",
                 "/trips/burano.JPG",
               ].map((src) => (
-                <div key={src} className="aspect-[15/13] overflow-hidden">
+                <div key={src} className="aspect-video overflow-hidden">
                   <img
                     src={src}
                     alt="Travel snapshot"
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700 ease-in-out"
+                    className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-700 ease-in-out"
+                    style={{ filter: "saturate(0.9) brightness(0.98)" }}
                   />
                 </div>
               ))}
@@ -169,8 +174,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Soft divider — spacing only */}
-      <div className="max-w-16 mx-auto border-t border-warm-dark/50" />
+      <div className="max-w-16 mx-auto border-t border-warm-dark/40" />
 
       {/* What I Do Best */}
       <section className="py-32 bg-[var(--background)]">
@@ -194,21 +198,21 @@ export default function Home() {
             {strengths.map((item, i) => (
               <ScrollReveal key={item.title} delay={i + 1}>
                 <div
-                  className="overflow-hidden hover:shadow-lg transition-all duration-300 ease-in-out relative"
+                  className="overflow-hidden transition-all duration-300 ease-in-out relative"
                   style={{
                     backgroundImage: `url('${item.image}')`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                   }}
                 >
-                  <div className="bg-primary/70 p-10 sm:p-12">
-                    <div className="w-12 h-12 border border-accent/30 flex items-center justify-center mb-7">
-                      <item.icon className="h-5 w-5 text-accent" />
+                  <div className="bg-primary/72 p-10 sm:p-12">
+                    <div className="w-12 h-12 border border-white/20 flex items-center justify-center mb-7">
+                      <item.icon className="h-5 w-5 text-white/60" />
                     </div>
                     <h3 className="font-serif text-xl font-medium text-white mb-4">
                       {item.title}
                     </h3>
-                    <p className="text-white/75 leading-relaxed text-sm">
+                    <p className="text-white/70 leading-relaxed text-sm">
                       {item.description}
                     </p>
                   </div>
@@ -222,14 +226,14 @@ export default function Home() {
       {/* How It Works */}
       <section className="py-32 bg-warm relative overflow-hidden">
         <div
-          className="absolute inset-0 opacity-[0.07]"
+          className="absolute inset-0 opacity-[0.05]"
           style={{
             backgroundImage: "url('/trips/thailand-beach.png')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         />
-        <div className="absolute inset-0 bg-warm/90" />
+        <div className="absolute inset-0 bg-warm/92" />
         <div className="relative z-10 max-w-3xl mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-20">
@@ -250,7 +254,7 @@ export default function Home() {
               {
                 step: "01",
                 title: "Share Your Vision",
-                desc: "Tell me about your dream destination, travel style, budget, and the moments that matter most to you.",
+                desc: "Tell me about your dream destination, travel style, budget, and the moments that matter most.",
               },
               {
                 step: "02",
@@ -260,7 +264,7 @@ export default function Home() {
               {
                 step: "03",
                 title: "Refine Together",
-                desc: "We fine-tune every detail until it feels perfect. Higher tiers include full booking assistance.",
+                desc: "We fine-tune every detail until it feels right. Higher tiers include full booking assistance.",
               },
               {
                 step: "04",
@@ -270,7 +274,7 @@ export default function Home() {
             ].map((item, i) => (
               <ScrollReveal key={item.step} delay={i < 3 ? (i + 1) as 1 | 2 | 3 : 0}>
                 <div className="flex gap-8 items-start">
-                  <div className="flex-shrink-0 font-serif text-3xl font-medium text-accent/30">
+                  <div className="flex-shrink-0 font-serif text-3xl font-medium text-accent/25">
                     {item.step}
                   </div>
                   <div>
@@ -289,7 +293,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-32 bg-[var(--background)]">
+      <section className="py-36 bg-warm">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-20">
@@ -305,7 +309,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((t, i) => (
               <ScrollReveal key={t.author} delay={i + 1}>
-                <div className="border border-warm-dark/60 p-8 sm:p-10 h-full">
+                <div className="p-8 sm:p-10 h-full border-t border-warm-dark/50">
                   <div className="flex gap-1 mb-7">
                     {[...Array(5)].map((_, j) => (
                       <Star
@@ -314,11 +318,11 @@ export default function Home() {
                       />
                     ))}
                   </div>
-                  <p className="text-text-light leading-relaxed mb-8 text-sm italic">
+                  <p className="font-serif text-base text-text-light leading-relaxed mb-8 italic">
                     &ldquo;{t.quote}&rdquo;
                   </p>
-                  <div className="border-t border-warm-dark/40 pt-6">
-                    <p className="font-medium text-primary text-sm">
+                  <div className="pt-5">
+                    <p className="font-medium text-primary text-sm italic">
                       {t.author}
                     </p>
                     <p className="text-[10px] text-text-light tracking-[0.12em] uppercase mt-1">
@@ -344,7 +348,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-primary/80" />
         <div className="relative z-10 max-w-3xl mx-auto px-6">
           <ScrollReveal>
-            <p className="text-accent text-xs tracking-[0.3em] uppercase mb-8">
+            <p className="text-white/50 text-xs tracking-[0.3em] uppercase mb-8">
               Begin Your Journey
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-medium mb-7">
@@ -352,18 +356,18 @@ export default function Home() {
             </h2>
             <p className="text-white/45 text-lg mb-12 max-w-xl mx-auto font-light leading-relaxed">
               Whether it&apos;s a weekend escape or a month-long odyssey —
-              let&apos;s craft something extraordinary.
+              every detail handled.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-accent hover:bg-accent-light text-white px-8 py-3.5 text-[11px] font-medium tracking-[0.08em] uppercase rounded-lg transition-all duration-200 ease-in-out inline-flex items-center justify-center gap-3 hover:shadow-[0_4px_16px_rgba(138,116,80,0.3)]"
+                className="bg-accent hover:bg-[#232f3a] text-white px-8 py-4 text-[11px] font-medium tracking-[0.08em] uppercase rounded-[6px] transition-all duration-200 ease-in-out inline-flex items-center justify-center gap-3 hover:shadow-[0_4px_16px_rgba(46,58,70,0.4)]"
               >
                 Start Planning <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/packages"
-                className="border border-white/20 hover:border-white/40 text-white px-8 py-3.5 text-[11px] font-medium tracking-[0.08em] uppercase rounded-lg transition-all duration-200 ease-in-out inline-flex items-center justify-center"
+                className="border border-white/25 hover:border-white/50 hover:bg-white/5 text-white px-8 py-4 text-[11px] font-medium tracking-[0.08em] uppercase rounded-[6px] transition-all duration-200 ease-in-out inline-flex items-center justify-center"
               >
                 View Packages
               </Link>

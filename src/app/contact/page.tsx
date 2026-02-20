@@ -86,7 +86,7 @@ export default function ContactPage() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/70 to-primary/80" />
         <div className="relative z-10 max-w-3xl mx-auto px-6 pb-16 pt-32">
-          <p className="text-accent text-xs tracking-[0.3em] uppercase mb-7">
+          <p className="text-white/50 text-xs tracking-[0.3em] uppercase mb-7">
             Get in Touch
           </p>
           <h1 className="font-serif text-4xl sm:text-5xl md:text-[3.5rem] font-medium mb-6 leading-[1.1]">
@@ -150,7 +150,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="mt-12 bg-[#FAF8F6] p-7">
+                <div className="mt-12 bg-[var(--background)] p-7">
                   <h3 className="font-serif text-sm font-medium text-primary mb-5">
                     What happens next?
                   </h3>
@@ -181,7 +181,7 @@ export default function ContactPage() {
               <ScrollReveal>
                 <form
                   onSubmit={handleSubmit}
-                  className="bg-[#FAF8F6] p-8 sm:p-10"
+                  className="bg-[var(--background)] p-8 sm:p-10"
                 >
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div>
@@ -198,7 +198,7 @@ export default function ContactPage() {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-3.5 border border-warm-dark/60 focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm bg-transparent rounded-md transition-colors duration-200"
+                        className="w-full px-4 py-3.5 border border-warm-dark/60 focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm bg-transparent transition-colors duration-200"
                         placeholder="Jane Doe"
                       />
                     </div>
@@ -217,7 +217,7 @@ export default function ContactPage() {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-3.5 border border-warm-dark/60 focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm bg-transparent rounded-md transition-colors duration-200"
+                        className="w-full px-4 py-3.5 border border-warm-dark/60 focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm bg-transparent transition-colors duration-200"
                         placeholder="jane@email.com"
                       />
                     </div>
@@ -234,7 +234,7 @@ export default function ContactPage() {
                         name="packageTier"
                         value={formData.packageTier}
                         onChange={handleChange}
-                        className="w-full px-4 py-3.5 border border-warm-dark/60 focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm bg-[#FAF8F6] rounded-md transition-colors duration-200"
+                        className="w-full px-4 py-3.5 border border-warm-dark/60 focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm bg-[var(--background)] transition-colors duration-200"
                       >
                         <option value="">Select a package</option>
                         {packageOptions.map((opt) => (
@@ -257,7 +257,7 @@ export default function ContactPage() {
                         name="travelStyle"
                         value={formData.travelStyle}
                         onChange={handleChange}
-                        className="w-full px-4 py-3.5 border border-warm-dark/60 focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm bg-[#FAF8F6] rounded-md transition-colors duration-200"
+                        className="w-full px-4 py-3.5 border border-warm-dark/60 focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm bg-[var(--background)] transition-colors duration-200"
                       >
                         <option value="">Select your style</option>
                         {travelStyles.map((opt) => (
@@ -281,7 +281,7 @@ export default function ContactPage() {
                         name="destination"
                         value={formData.destination}
                         onChange={handleChange}
-                        className="w-full px-4 py-3.5 border border-warm-dark/60 focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm bg-transparent rounded-md transition-colors duration-200"
+                        className="w-full px-4 py-3.5 border border-warm-dark/60 focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm bg-transparent transition-colors duration-200"
                         placeholder="e.g. Japan, Portugal, open to ideas"
                       />
                     </div>
@@ -299,7 +299,7 @@ export default function ContactPage() {
                         name="travelDates"
                         value={formData.travelDates}
                         onChange={handleChange}
-                        className="w-full px-4 py-3.5 border border-warm-dark/60 focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm bg-transparent rounded-md transition-colors duration-200"
+                        className="w-full px-4 py-3.5 border border-warm-dark/60 focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm bg-transparent transition-colors duration-200"
                         placeholder="e.g. March 2026, flexible"
                       />
                     </div>
@@ -317,7 +317,7 @@ export default function ContactPage() {
                         name="groupSize"
                         value={formData.groupSize}
                         onChange={handleChange}
-                        className="w-full px-4 py-3.5 border border-warm-dark/60 focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm bg-transparent rounded-md transition-colors duration-200"
+                        className="w-full px-4 py-3.5 border border-warm-dark/60 focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm bg-transparent transition-colors duration-200"
                         placeholder="e.g. Just me, couple, group of 6"
                       />
                     </div>
@@ -336,7 +336,7 @@ export default function ContactPage() {
                         rows={5}
                         value={formData.message}
                         onChange={handleChange}
-                        className="w-full px-4 py-3.5 border border-warm-dark/60 focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm resize-none bg-transparent rounded-md transition-colors duration-200"
+                        className="w-full px-4 py-3.5 border border-warm-dark/60 focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm resize-none bg-transparent transition-colors duration-200"
                         placeholder="What are you envisioning? Any must-haves, dietary preferences, accessibility needs, or special occasions?"
                       />
                     </div>
@@ -346,7 +346,7 @@ export default function ContactPage() {
                     <button
                       type="submit"
                       disabled={status === "sending"}
-                      className="bg-primary hover:bg-primary-light disabled:opacity-60 text-[#FAF8F6] px-8 py-3.5 text-[11px] font-medium tracking-[0.08em] uppercase rounded-lg transition-all duration-200 ease-in-out inline-flex items-center gap-3 hover:shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
+                      className="bg-accent hover:bg-[#232f3a] disabled:opacity-60 text-white px-8 py-4 text-[11px] font-medium tracking-[0.08em] uppercase rounded-[6px] transition-all duration-200 ease-in-out inline-flex items-center gap-3 hover:shadow-[0_2px_8px_rgba(46,58,70,0.2)]"
                     >
                       {status === "sending" ? (
                         "Sending..."
@@ -359,14 +359,14 @@ export default function ContactPage() {
                   </div>
 
                   {status === "success" && (
-                    <div className="mt-7 bg-success/10 text-success px-5 py-4 text-sm rounded-md">
+                    <div className="mt-7 bg-success/10 text-success px-5 py-4 text-sm">
                       Your inquiry has been sent. I&apos;ll be in touch within 24
                       hours.
                     </div>
                   )}
 
                   {status === "error" && (
-                    <div className="mt-7 bg-red-50 text-red-700 px-5 py-4 text-sm rounded-md">
+                    <div className="mt-7 bg-red-50 text-red-700 px-5 py-4 text-sm">
                       Something went wrong. Please try again or email me directly
                       at{" "}
                       <a

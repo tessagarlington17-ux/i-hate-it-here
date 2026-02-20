@@ -25,7 +25,7 @@ export default function AboutPage() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/70 to-primary/80" />
         <div className="relative z-10 max-w-3xl mx-auto px-6 pb-16 pt-32">
-          <p className="text-accent text-xs tracking-[0.3em] uppercase mb-7">
+          <p className="text-white/50 text-xs tracking-[0.3em] uppercase mb-7">
             The Story
           </p>
           <h1 className="font-serif text-4xl sm:text-5xl md:text-[3.5rem] font-medium mb-6 leading-[1.1]">
@@ -64,16 +64,8 @@ export default function AboutPage() {
                 same philosophy I follow for my own travels: research deeply,
                 plan with intention, and always leave room to breathe.
               </p>
-              <p>
-                I don&apos;t believe in itineraries that account for every
-                minute. The most memorable travel moments emerge from space — a
-                free afternoon wandering a new neighborhood, an unhurried meal
-                at a sidewalk caf&eacute;, the freedom to follow a local&apos;s
-                recommendation on the spot.
-              </p>
               <p className="font-serif text-primary text-lg italic leading-relaxed">
-                That&apos;s what I build into every trip: structure where you
-                need it, freedom where you want it.
+                Structure where you need it. Freedom where you want it.
               </p>
             </div>
           </ScrollReveal>
@@ -123,27 +115,28 @@ export default function AboutPage() {
               {
                 icon: Heart,
                 title: "Genuinely Invested",
-                desc: "This isn't a volume business. Every journey receives the same dedication I'd pour into my own travels. Your trip matters to me.",
+                desc: "This isn't a volume business. Every journey receives the same dedication I'd pour into my own travels.",
                 image: "/trips/IMG_6550.jpeg",
               },
               {
                 icon: MapPin,
                 title: "Transparent on Budget",
-                desc: "I'll share the real cost of things — not inflated tourist pricing. I find authentic value at every level.",
+                desc: "I'll share the real cost of things — not inflated tourist pricing. Authentic value at every level.",
                 image: "/trips/coastal-villas.png",
               },
             ].map((item, i) => (
               <ScrollReveal key={item.title} delay={i % 2 === 0 ? 1 : 2}>
-                <div className="bg-[#FAF8F6] overflow-hidden h-full">
+                <div className="bg-[var(--background)] overflow-hidden h-full">
                   <div className="h-48 overflow-hidden">
                     <img
                       src={item.image}
                       alt={item.title}
                       className="w-full h-full object-cover"
+                      style={{ filter: "saturate(0.92)" }}
                     />
                   </div>
                   <div className="p-8 sm:p-9 flex gap-5">
-                    <div className="w-10 h-10 border border-accent/30 flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 border border-accent/20 flex items-center justify-center flex-shrink-0">
                       <item.icon className="h-4 w-4 text-accent" />
                     </div>
                     <div>
@@ -258,7 +251,7 @@ export default function AboutPage() {
               ].map((country) => (
                 <span
                   key={country.name}
-                  className="bg-[#FAF8F6] px-4 py-2.5 rounded-full text-xs text-primary font-medium tracking-wide border border-warm-dark/30 inline-flex items-center gap-1.5"
+                  className="bg-[var(--background)] px-4 py-2.5 rounded-full text-xs text-primary font-medium tracking-wide border border-warm-dark/30 inline-flex items-center gap-1.5"
                 >
                   <span className={`fi fi-${country.code}`} />{country.name}
                 </span>
@@ -272,19 +265,19 @@ export default function AboutPage() {
       <section className="py-32 bg-primary text-white text-center">
         <div className="max-w-2xl mx-auto px-6">
           <ScrollReveal>
-            <p className="text-accent text-xs tracking-[0.3em] uppercase mb-8">
+            <p className="text-white/50 text-xs tracking-[0.3em] uppercase mb-8">
               Let&apos;s Begin
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl font-medium mb-6 leading-tight">
               Let&apos;s Plan Something Extraordinary
             </h2>
             <p className="text-white/45 mb-12 font-light leading-relaxed">
-              I&apos;d love to hear about your next journey. Whether you have a
-              destination in mind or need inspiration — let&apos;s talk.
+              Share your vision and we&apos;ll design a journey around it —
+              wherever that may be.
             </p>
             <Link
               href="/contact"
-              className="bg-accent hover:bg-accent-light text-white px-8 py-3.5 text-[11px] font-medium tracking-[0.08em] uppercase rounded-lg transition-all duration-200 ease-in-out inline-flex items-center justify-center gap-3 hover:shadow-[0_4px_16px_rgba(138,116,80,0.3)]"
+              className="bg-accent hover:bg-[#232f3a] text-white px-8 py-4 text-[11px] font-medium tracking-[0.08em] uppercase rounded-[6px] transition-all duration-200 ease-in-out inline-flex items-center justify-center gap-3 hover:shadow-[0_4px_16px_rgba(46,58,70,0.4)]"
             >
               Get in Touch <ArrowRight className="h-4 w-4" />
             </Link>
