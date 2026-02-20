@@ -83,18 +83,18 @@ export default function Home() {
           }}
         />
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white">
-          <p className="text-white/55 font-medium tracking-[0.3em] uppercase text-xs sm:text-sm mb-10">
+          <p className="text-white font-medium tracking-[0.3em] uppercase text-xs sm:text-sm mb-10">
             Tired of Planning
           </p>
           <h1
-            className="font-serif font-medium leading-[1.08] mb-10"
+            className="font-serif font-medium leading-[1.08] mb-10 text-white"
             style={{ fontSize: "3.8rem", letterSpacing: "0.02em" }}
           >
             The World is Waiting.
             <br />
-            <span className="italic text-white/80">Stop Scrolling.</span>
+            <span className="italic">Stop Scrolling.</span>
           </h1>
-          <p className="text-lg sm:text-xl text-white/55 max-w-2xl mx-auto mb-14 leading-relaxed font-light">
+          <p className="text-lg sm:text-xl text-white max-w-2xl mx-auto mb-14 leading-relaxed font-light">
             Personalized itineraries crafted with intention — from culinary
             adventures to hidden escapes.
           </p>
