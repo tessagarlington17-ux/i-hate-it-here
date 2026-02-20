@@ -12,7 +12,7 @@ import {
 const trips = [
   {
     title: "Thailand Villa Retreat",
-    image: "/trips/thai_villa.jpeg",
+    image: "/trips/thai_villa.JPG",
     location: "Koh Samui & Bangkok, Thailand",
     duration: "10 days",
     groupSize: "17 people",
@@ -28,7 +28,7 @@ const trips = [
   },
   {
     title: "Italian Solo Adventure",
-    image: "/trips/rome.jpeg",
+    image: "/trips/rome.JPG",
     location: "Amalfi Coast, Italy",
     duration: "12 days",
     groupSize: "Solo traveler",
@@ -44,7 +44,7 @@ const trips = [
   },
   {
     title: "Banff Couple's Vacation",
-    image: "/trips/banff_street.jpeg",
+    image: "/trips/banff_street.JPG",
     location: "Banff, Alberta, Canada",
     duration: "7 days",
     groupSize: "Couple",
@@ -60,7 +60,7 @@ const trips = [
   },
   {
     title: "Southeast Asia Backpacking Trip",
-    image: "/trips/thai_temple.jpeg",
+    image: "/trips/thai_temple.JPG",
     location: "Singapore, Thailand & Vietnam",
     duration: "14 days",
     groupSize: "Group of 4",
@@ -76,7 +76,7 @@ const trips = [
   },
   {
     title: "Mexico City Long Weekend",
-    image: "/trips/mexico_city.jpeg",
+    image: "/trips/mexico_city.JPG",
     location: "CDMX, Mexico",
     duration: "4 days",
     groupSize: "Group of 6",
@@ -92,7 +92,7 @@ const trips = [
   },
   {
     title: "Costa Rica Girls Trip",
-    image: "/trips/costa_rica.jpeg",
+    image: "/trips/costa_rica.JPG",
     location: "Tamarindo, Costa Rica",
     duration: "7 days",
     groupSize: "Group of 2",

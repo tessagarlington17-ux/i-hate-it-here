@@ -22,21 +22,21 @@ const strengths = [
     title: "Unhurried Itineraries",
     description:
       "Every journey includes space to breathe. No rigid timelines — just thoughtful structure that leaves room for spontaneity.",
-    image: "/trips/puerto_rico_rainforest.jpeg",
+    image: "/trips/puerto_rico_rainforest.JPG",
   },
   {
     icon: Utensils,
     title: "Culinary Discovery",
     description:
       "From Michelin-starred restaurants to hidden local gems — every itinerary is woven with unforgettable dining experiences.",
-    image: "/trips/cafe_china.jpeg",
+    image: "/trips/cafe_china.jpg",
   },
   {
     icon: MapPin,
     title: "Every Budget, Elevated",
     description:
       "Whether it's a boutique hostel or a private villa for 17 — every trip is planned with the same meticulous care and attention.",
-    image: "/trips/telluride.jpeg",
+    image: "/trips/telluride.JPG",
   },
 ];
 
@@ -121,10 +121,10 @@ export default function Home() {
 
           <div className="grid grid-cols-2 gap-4">
             {[
-              "/trips/india.jpeg",
-              "/trips/oslo.jpeg",
-              "/trips/thai_temple_colorful.jpeg",
-              "/trips/burano.jpeg",
+              "/trips/india.JPG",
+              "/trips/oslo.JPG",
+              "/trips/thai_temple_colorful.JPG",
+              "/trips/burano.JPG",
             ].map((src) => (
               <div key={src} className="aspect-[3/2] overflow-hidden">
                 <img
