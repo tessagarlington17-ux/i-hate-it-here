@@ -121,6 +121,10 @@ export default function Home() {
 
           <div className="grid grid-cols-2 gap-4">
             {[
+              "/trips/IMG_1550.jpeg",
+              "/trips/IMG_1729.jpeg",
+              "/trips/IMG_2463 3.jpeg",
+              "/trips/IMG_2670.jpeg",
               "/trips/india.JPG",
               "/trips/oslo.JPG",
               "/trips/thai_temple_colorful.JPG",
