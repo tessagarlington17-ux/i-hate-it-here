@@ -12,7 +12,7 @@ import {
 const trips = [
   {
     title: "Thailand Villa Retreat",
-    image: "/trips/thailand-beach.png",
+    image: "/trips/thai_villa.jpeg",
     location: "Koh Samui & Bangkok, Thailand",
     duration: "10 days",
     groupSize: "17 people",
@@ -28,7 +28,7 @@ const trips = [
   },
   {
     title: "Italian Solo Adventure",
-    image: "/trips/ocean-path.jpeg",
+    image: "/trips/rome.jpeg",
     location: "Amalfi Coast, Italy",
     duration: "12 days",
     groupSize: "Solo traveler",
@@ -44,7 +44,7 @@ const trips = [
   },
   {
     title: "Banff Couple's Vacation",
-    image: "/trips/coastal-villas.png",
+    image: "/trips/banff_street.jpeg",
     location: "Banff, Alberta, Canada",
     duration: "7 days",
     groupSize: "Couple",
@@ -60,7 +60,7 @@ const trips = [
   },
   {
     title: "Southeast Asia Backpacking Trip",
-    image: "/trips/sea-boats.png",
+    image: "/trips/thai_temple.jpeg",
     location: "Singapore, Thailand & Vietnam",
     duration: "14 days",
     groupSize: "Group of 4",
@@ -76,7 +76,7 @@ const trips = [
   },
   {
     title: "Mexico City Long Weekend",
-    image: undefined,
+    image: "/trips/mexico_city.jpeg",
     location: "CDMX, Mexico",
     duration: "4 days",
     groupSize: "Group of 6",
@@ -92,7 +92,7 @@ const trips = [
   },
   {
     title: "Costa Rica Girls Trip",
-    image: undefined,
+    image: "/trips/costa_rica.jpeg",
     location: "Tamarindo, Costa Rica",
     duration: "7 days",
     groupSize: "Group of 2",
@@ -217,14 +217,14 @@ export default function PortfolioPage() {
                     </ul>
                   </div>
 
-                  <div className="flex-shrink-0 w-full md:w-64 h-48 overflow-hidden relative bg-warm-dark">
+                  <div className="flex-shrink-0 w-full md:w-[512px] h-96 overflow-hidden relative bg-warm-dark">
                     {trip.image ? (
                       <Image
                         src={trip.image}
                         alt={trip.title}
                         fill
                         className="object-cover"
-                        sizes="(max-width: 768px) 100vw, 256px"
+                        sizes="(max-width: 768px) 100vw, 512px"
                       />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center">
@@ -249,8 +249,8 @@ export default function PortfolioPage() {
             29 Countries & Counting
           </h2>
           <p className="text-text-light mb-12 max-w-xl mx-auto text-sm leading-relaxed">
-            Every destination I plan for is informed by lived experience. Here
-            are the places I&apos;ve personally explored.
+            Every destination I plan for is informed by lived experience and thorough research. Here
+            are the places I&apos;ve personally explored!
           </p>
 
           <div className="flex flex-wrap justify-center gap-2">

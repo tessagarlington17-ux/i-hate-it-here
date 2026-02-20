@@ -22,18 +22,21 @@ const strengths = [
     title: "Unhurried Itineraries",
     description:
       "Every journey includes space to breathe. No rigid timelines — just thoughtful structure that leaves room for spontaneity.",
+    image: "/trips/puerto_rico_rainforest.jpeg",
   },
   {
     icon: Utensils,
     title: "Culinary Discovery",
     description:
       "From Michelin-starred restaurants to hidden local gems — every itinerary is woven with unforgettable dining experiences.",
+    image: "/trips/cafe_china.jpeg",
   },
   {
     icon: MapPin,
     title: "Every Budget, Elevated",
     description:
       "Whether it's a boutique hostel or a private villa for 17 — every trip is planned with the same meticulous care and attention.",
+    image: "/trips/telluride.jpeg",
   },
 ];
 
@@ -46,9 +49,9 @@ const testimonials = [
   },
   {
     quote:
-      "I gave her a modest budget and she crafted the most incredible solo adventure. The dining recommendations alone transformed the entire experience.",
-    author: "James K.",
-    trip: "Portugal",
+      "I came to Tired of Planning with a last-minute idea for a Costa Rica trip and a pretty modest budget, and Tessa turned it into one of my favorite trips I've ever taken. She found an amazing boutique hostel in Tamarindo in the best possible location. It felt stylish, safe, and comfortable while still keeping costs low.\n\nWhat really stood out was how thoughtful her recommendations were. Tessa knew the area inside and out. She helped me figure out which nearby beach towns were actually worth the day trips and guided me on where to splurge versus where to save, from incredible meals to easy, low-key days exploring. Even the smaller details, like surf lessons with a Tamarindo local and a lively nighttime food market, ended up being some of my favorite memories.\n\nThe whole trip felt intentional without being overplanned. Everything just worked, and I honestly can't imagine planning something like that on my own.",
+    author: "Madisun M.",
+    trip: "Costa Rica",
   },
   {
     quote:
@@ -118,10 +121,10 @@ export default function Home() {
 
           <div className="grid grid-cols-2 gap-4">
             {[
-              "/trips/IMG_1550.jpeg",
-              "/trips/IMG_1729.jpeg",
-              "/trips/IMG_2463 3.jpeg",
-              "/trips/IMG_2670.jpeg",
+              "/trips/india.jpeg",
+              "/trips/oslo.jpeg",
+              "/trips/thai_temple_colorful.jpeg",
+              "/trips/burano.jpeg",
             ].map((src) => (
               <div key={src} className="aspect-[3/2] overflow-hidden">
                 <img
@@ -165,7 +168,7 @@ export default function Home() {
               The Experience
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-primary mb-5">
-              Why Tired of Planning
+              Why Tired of Planning?
             </h2>
             <p className="text-text-light max-w-xl mx-auto leading-relaxed">
               Years of personal travel across every continent and budget —
@@ -177,17 +180,24 @@ export default function Home() {
             {strengths.map((item) => (
               <div
                 key={item.title}
-                className="bg-warm rounded-sm p-10 hover:shadow-lg transition-shadow"
+                className="rounded-sm overflow-hidden hover:shadow-lg transition-shadow relative"
+                style={{
+                  backgroundImage: `url('${item.image}')`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
               >
-                <div className="w-12 h-12 border border-accent/30 flex items-center justify-center mb-6">
-                  <item.icon className="h-5 w-5 text-accent" />
+                <div className="bg-primary/70 p-10">
+                  <div className="w-12 h-12 border border-accent/30 flex items-center justify-center mb-6">
+                    <item.icon className="h-5 w-5 text-accent" />
+                  </div>
+                  <h3 className="font-serif text-xl font-semibold text-white mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-white/80 leading-relaxed text-sm">
+                    {item.description}
+                  </p>
                 </div>
-                <h3 className="font-serif text-xl font-semibold text-primary mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-text-light leading-relaxed text-sm">
-                  {item.description}
-                </p>
               </div>
             ))}
           </div>
