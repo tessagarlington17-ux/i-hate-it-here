@@ -8,6 +8,7 @@ import {
   ArrowRight,
   Camera,
 } from "lucide-react";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const trips = [
   {
@@ -145,22 +146,23 @@ export default function PortfolioPage() {
     <>
       {/* Header */}
       <section
-        className="pt-32 pb-20 text-white text-center relative overflow-hidden"
+        className="text-white text-center relative overflow-hidden flex items-end justify-center"
         style={{
           backgroundImage: "url('/trips/ocean-path.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
+          minHeight: "55vh",
         }}
       >
-        <div className="absolute inset-0 bg-primary/75" />
-        <div className="relative z-10 max-w-3xl mx-auto px-6">
-          <p className="text-accent text-xs tracking-[0.3em] uppercase mb-6">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/70 to-primary/80" />
+        <div className="relative z-10 max-w-3xl mx-auto px-6 pb-16 pt-32">
+          <p className="text-accent text-xs tracking-[0.3em] uppercase mb-7">
             Our Work
           </p>
-          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-semibold mb-6">
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-[3.5rem] font-medium mb-6 leading-[1.1]">
             Portfolio
           </h1>
-          <p className="text-white/50 text-lg max-w-xl mx-auto font-light">
+          <p className="text-white/50 text-lg max-w-xl mx-auto font-light leading-relaxed">
             A curated selection of journeys — from budget backpacking to
             luxury honeymoons, solo adventures to groups of seventeen.
           </p>
@@ -168,123 +170,128 @@ export default function PortfolioPage() {
       </section>
 
       {/* Trip Showcases */}
-      <section className="py-24 bg-[var(--background)]">
+      <section className="py-32 bg-[var(--background)]">
         <div className="max-w-5xl mx-auto px-6">
-          <div className="space-y-16">
+          <div className="space-y-20">
             {trips.map((trip) => (
-              <div
-                key={trip.title}
-                className="bg-warm p-8 md:p-12"
-              >
-                <div className="flex flex-col md:flex-row md:items-start gap-10">
-                  <div className="flex-1">
-                    <h2 className="font-serif text-2xl font-semibold text-primary mb-4">
-                      {trip.title}
-                    </h2>
+              <ScrollReveal key={trip.title}>
+                <div className="bg-warm p-8 md:p-12">
+                  <div className="flex flex-col md:flex-row md:items-start gap-10">
+                    <div className="flex-1">
+                      <h2 className="font-serif text-2xl font-medium text-primary mb-5">
+                        {trip.title}
+                      </h2>
 
-                    <div className="flex flex-wrap gap-5 text-xs text-text-light tracking-wider uppercase mb-6">
-                      <span className="flex items-center gap-1.5">
-                        <MapPin className="h-3 w-3 text-accent" /> {trip.location}
-                      </span>
-                      <span className="flex items-center gap-1.5">
-                        <Calendar className="h-3 w-3 text-accent" /> {trip.duration}
-                      </span>
-                      <span className="flex items-center gap-1.5">
-                        <Users className="h-3 w-3 text-accent" /> {trip.groupSize}
-                      </span>
-                      <span className="flex items-center gap-1.5">
-                        <DollarSign className="h-3 w-3 text-accent" /> {trip.budget}
-                      </span>
+                      <div className="flex flex-wrap gap-5 text-xs text-text-light tracking-wider uppercase mb-7">
+                        <span className="flex items-center gap-1.5">
+                          <MapPin className="h-3 w-3 text-accent" /> {trip.location}
+                        </span>
+                        <span className="flex items-center gap-1.5">
+                          <Calendar className="h-3 w-3 text-accent" /> {trip.duration}
+                        </span>
+                        <span className="flex items-center gap-1.5">
+                          <Users className="h-3 w-3 text-accent" /> {trip.groupSize}
+                        </span>
+                        <span className="flex items-center gap-1.5">
+                          <DollarSign className="h-3 w-3 text-accent" /> {trip.budget}
+                        </span>
+                      </div>
+
+                      <p className="text-text-light leading-[1.8] mb-9 text-sm max-w-[580px]">
+                        {trip.description}
+                      </p>
+
+                      <h3 className="text-[10px] font-medium text-accent tracking-[0.2em] uppercase mb-5">
+                        Trip Highlights
+                      </h3>
+                      <ul className="grid sm:grid-cols-2 gap-3">
+                        {trip.highlights.map((h) => (
+                          <li
+                            key={h}
+                            className="flex items-start gap-2.5 text-sm text-text-light"
+                          >
+                            <span className="text-accent text-xs mt-1">&#9670;</span>
+                            {h}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
 
-                    <p className="text-text-light leading-relaxed mb-8 text-sm">
-                      {trip.description}
-                    </p>
-
-                    <h3 className="text-xs font-medium text-accent tracking-[0.2em] uppercase mb-4">
-                      Trip Highlights
-                    </h3>
-                    <ul className="grid sm:grid-cols-2 gap-2.5">
-                      {trip.highlights.map((h) => (
-                        <li
-                          key={h}
-                          className="flex items-start gap-2.5 text-sm text-text-light"
-                        >
-                          <span className="text-accent text-xs mt-1">&#9670;</span>
-                          {h}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="flex-shrink-0 w-full md:w-[512px] h-96 overflow-hidden relative bg-warm-dark">
-                    {trip.image ? (
-                      <Image
-                        src={trip.image}
-                        alt={trip.title}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, 512px"
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center">
-                        <Camera className="h-10 w-10 text-text-light/20" />
-                      </div>
-                    )}
+                    <div className="flex-shrink-0 w-full md:w-[512px] h-96 overflow-hidden relative bg-warm-dark">
+                      {trip.image ? (
+                        <Image
+                          src={trip.image}
+                          alt={trip.title}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, 512px"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center">
+                          <Camera className="h-10 w-10 text-text-light/20" />
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
       {/* Countries */}
-      <section className="py-24 bg-warm">
+      <section className="py-32 bg-warm">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <p className="text-accent text-xs tracking-[0.3em] uppercase mb-4">
-            Destinations
-          </p>
-          <h2 className="font-serif text-3xl font-semibold text-primary mb-5">
-            29 Countries & Counting
-          </h2>
-          <p className="text-text-light mb-12 max-w-xl mx-auto text-sm leading-relaxed">
-            Every destination I plan for is informed by lived experience and thorough research. Here
-            are the places I&apos;ve personally explored!
-          </p>
+          <ScrollReveal>
+            <p className="text-accent text-xs tracking-[0.3em] uppercase mb-5">
+              Destinations
+            </p>
+            <h2 className="font-serif text-3xl sm:text-[2.25rem] font-medium text-primary mb-6">
+              29 Countries & Counting
+            </h2>
+            <p className="text-text-light mb-14 max-w-xl mx-auto text-sm leading-relaxed">
+              Every destination I plan for is informed by lived experience and thorough research. Here
+              are the places I&apos;ve personally explored!
+            </p>
+          </ScrollReveal>
 
-          <div className="flex flex-wrap justify-center gap-2">
-            {destinations.map((dest) => (
-              <span
-                key={dest}
-                className="bg-white px-5 py-2 text-xs font-medium text-primary tracking-wider uppercase"
-              >
-                {dest}
-              </span>
-            ))}
-          </div>
+          <ScrollReveal>
+            <div className="flex flex-wrap justify-center gap-2.5">
+              {destinations.map((dest) => (
+                <span
+                  key={dest}
+                  className="bg-[#FAF8F6] px-5 py-2.5 text-xs font-medium text-primary tracking-wider uppercase"
+                >
+                  {dest}
+                </span>
+              ))}
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-primary text-white text-center">
+      <section className="py-32 bg-primary text-white text-center">
         <div className="max-w-2xl mx-auto px-6">
-          <p className="text-accent text-xs tracking-[0.3em] uppercase mb-6">
-            Your Turn
-          </p>
-          <h2 className="font-serif text-3xl sm:text-4xl font-semibold mb-5">
-            Ready for a Journey Like These?
-          </h2>
-          <p className="text-white/50 mb-10 font-light">
-            Every itinerary is bespoke. Tell me where you dream of going and
-            I&apos;ll bring it to life.
-          </p>
-          <Link
-            href="/contact"
-            className="bg-accent hover:bg-accent-light text-primary px-10 py-4 font-medium text-sm tracking-widest uppercase transition-colors inline-flex items-center justify-center gap-3"
-          >
-            Plan My Trip <ArrowRight className="h-4 w-4" />
-          </Link>
+          <ScrollReveal>
+            <p className="text-accent text-xs tracking-[0.3em] uppercase mb-8">
+              Your Turn
+            </p>
+            <h2 className="font-serif text-3xl sm:text-4xl font-medium mb-6 leading-tight">
+              Ready for a Journey Like These?
+            </h2>
+            <p className="text-white/45 mb-12 font-light leading-relaxed">
+              Every itinerary is bespoke. Tell me where you dream of going and
+              I&apos;ll bring it to life.
+            </p>
+            <Link
+              href="/contact"
+              className="bg-accent hover:bg-accent-light text-white px-8 py-3.5 text-[11px] font-medium tracking-[0.08em] uppercase rounded-lg transition-all duration-200 ease-in-out inline-flex items-center justify-center gap-3 hover:shadow-[0_4px_16px_rgba(138,116,80,0.3)]"
+            >
+              Plan My Trip <ArrowRight className="h-4 w-4" />
+            </Link>
+          </ScrollReveal>
         </div>
       </section>
     </>

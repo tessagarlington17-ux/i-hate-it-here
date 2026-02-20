@@ -5,29 +5,62 @@
   --color-foreground: var(--foreground);
   --color-primary: #1a1a1a;
   --color-primary-light: #2d2d2d;
-  --color-accent: #b89d6a;
-  --color-accent-light: #d4b97c;
-  --color-warm: #f8f5f0;
-  --color-warm-dark: #ede8e0;
+  --color-accent: #8a7450;
+  --color-accent-light: #a08a64;
+  --color-warm: #F5F1EC;
+  --color-warm-dark: #E8E2DA;
   --color-text: #1a1a1a;
   --color-text-light: #6b6560;
-  --color-white: #ffffff;
+  --color-white: #FAF8F6;
   --color-success: #6b8f6b;
-  --font-serif: "Manrope", "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: "Playfair Display", "Georgia", "Times New Roman", serif;
 }
 
 :root {
-  --background: #fdfcfa;
+  --background: #FAF8F6;
   --foreground: #1a1a1a;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Inter", "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Scroll reveal animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+}
+
+.reveal.revealed {
+  animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.reveal-delay-1 {
+  animation-delay: 0.1s !important;
+}
+
+.reveal-delay-2 {
+  animation-delay: 0.2s !important;
+}
+
+.reveal-delay-3 {
+  animation-delay: 0.3s !important;
 }
