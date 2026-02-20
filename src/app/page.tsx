@@ -130,7 +130,7 @@ export default function Home() {
               "/trips/thai_temple_colorful.JPG",
               "/trips/burano.JPG",
             ].map((src) => (
-              <div key={src} className="aspect-[3/2] overflow-hidden">
+              <div key={src} className="aspect-[15/13] overflow-hidden">
                 <img
                   src={src}
                   alt="Travel snapshot"

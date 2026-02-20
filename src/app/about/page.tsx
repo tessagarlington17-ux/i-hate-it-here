@@ -214,41 +214,41 @@ export default function AboutPage() {
 
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              "USA",
-              "Canada",
-              "Thailand",
-              "Vietnam",
-              "Cambodia",
-              "Portugal",
-              "Spain",
-              "Italy",
-              "Denmark",
-              "Netherlands",
-              "Germany",
-              "Switzerland",
-              "Costa Rica",
-              "Mexico",
-              "Belize",
-              "Honduras",
-              "Slovenia",
-              "Greece",
-              "Czech Republic",
-              "Puerto Rico",
-              "Barbados",
-              "Morocco",
-              "France",
-              "India",
-              "Norway",
-              "Singapore",
-              "The Bahamas",
-              "Croatia",
-              "United Kingdom",
+              { name: "USA", flag: "\u{1F1FA}\u{1F1F8}" },
+              { name: "Canada", flag: "\u{1F1E8}\u{1F1E6}" },
+              { name: "Thailand", flag: "\u{1F1F9}\u{1F1ED}" },
+              { name: "Vietnam", flag: "\u{1F1FB}\u{1F1F3}" },
+              { name: "Cambodia", flag: "\u{1F1F0}\u{1F1ED}" },
+              { name: "Portugal", flag: "\u{1F1F5}\u{1F1F9}" },
+              { name: "Spain", flag: "\u{1F1EA}\u{1F1F8}" },
+              { name: "Italy", flag: "\u{1F1EE}\u{1F1F9}" },
+              { name: "Denmark", flag: "\u{1F1E9}\u{1F1F0}" },
+              { name: "Netherlands", flag: "\u{1F1F3}\u{1F1F1}" },
+              { name: "Germany", flag: "\u{1F1E9}\u{1F1EA}" },
+              { name: "Switzerland", flag: "\u{1F1E8}\u{1F1ED}" },
+              { name: "Costa Rica", flag: "\u{1F1E8}\u{1F1F7}" },
+              { name: "Mexico", flag: "\u{1F1F2}\u{1F1FD}" },
+              { name: "Belize", flag: "\u{1F1E7}\u{1F1FF}" },
+              { name: "Honduras", flag: "\u{1F1ED}\u{1F1F3}" },
+              { name: "Slovenia", flag: "\u{1F1F8}\u{1F1EE}" },
+              { name: "Greece", flag: "\u{1F1EC}\u{1F1F7}" },
+              { name: "Czech Republic", flag: "\u{1F1E8}\u{1F1FF}" },
+              { name: "Puerto Rico", flag: "\u{1F1F5}\u{1F1F7}" },
+              { name: "Barbados", flag: "\u{1F1E7}\u{1F1E7}" },
+              { name: "Morocco", flag: "\u{1F1F2}\u{1F1E6}" },
+              { name: "France", flag: "\u{1F1EB}\u{1F1F7}" },
+              { name: "India", flag: "\u{1F1EE}\u{1F1F3}" },
+              { name: "Norway", flag: "\u{1F1F3}\u{1F1F4}" },
+              { name: "Singapore", flag: "\u{1F1F8}\u{1F1EC}" },
+              { name: "The Bahamas", flag: "\u{1F1E7}\u{1F1F8}" },
+              { name: "Croatia", flag: "\u{1F1ED}\u{1F1F7}" },
+              { name: "United Kingdom", flag: "\u{1F1EC}\u{1F1E7}" },
             ].map((country) => (
               <span
-                key={country}
+                key={country.name}
                 className="bg-white px-4 py-2 rounded-full text-xs text-primary font-medium tracking-wide border border-warm-dark/20"
               >
-                {country}
+                <span className="mr-1.5">{country.flag}</span>{country.name}
               </span>
             ))}
           </div>
