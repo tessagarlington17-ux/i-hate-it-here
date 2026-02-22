@@ -18,6 +18,31 @@ const travelStyles = [
   "Mix of everything",
 ];
 
+const inputStyle: React.CSSProperties = {
+  width: "100%",
+  padding: "0.875rem 1rem",
+  border: "1px solid rgba(200,184,154,0.5)",
+  outline: "none",
+  fontFamily: '"Jost", sans-serif',
+  fontWeight: 300,
+  fontSize: "0.875rem",
+  color: "#2C2C2A",
+  background: "#FDFAF5",
+  borderRadius: 0,
+  transition: "border-color 0.2s ease",
+};
+
+const labelStyle: React.CSSProperties = {
+  display: "block",
+  fontFamily: '"Jost", sans-serif',
+  fontWeight: 300,
+  fontSize: "0.65rem",
+  letterSpacing: "0.2em",
+  textTransform: "uppercase",
+  color: "#2C2C2A",
+  marginBottom: "0.625rem",
+};
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
@@ -81,7 +106,7 @@ export default function ContactPage() {
     <>
       {/* Header */}
       <section
-        className="text-white text-center relative overflow-hidden flex items-end justify-center"
+        className="relative overflow-hidden flex items-end justify-center text-white text-center"
         style={{
           backgroundImage: "url('/trips/maui.JPG')",
           backgroundSize: "cover",
@@ -89,93 +114,193 @@ export default function ContactPage() {
           minHeight: "70vh",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/70 to-primary/80" />
-        <div className="relative z-10 max-w-3xl mx-auto px-6 pb-16 pt-32">
-          <p className="text-white/50 text-xs tracking-[0.3em] uppercase mb-7">
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to top, rgba(26,25,22,0.75) 0%, rgba(26,25,22,0.3) 60%, transparent 100%)",
+          }}
+        />
+        <div className="relative z-10 max-w-3xl mx-auto px-6 pb-16 pt-32 text-center">
+          <p
+            style={{
+              fontFamily: '"Jost", sans-serif',
+              fontWeight: 300,
+              fontSize: "0.65rem",
+              letterSpacing: "0.2em",
+              textTransform: "uppercase",
+              color: "rgba(255,255,255,0.5)",
+              marginBottom: "1.75rem",
+            }}
+          >
             Get in Touch
           </p>
-          <h1 className="font-serif text-4xl sm:text-5xl md:text-[3.5rem] font-medium mb-6 leading-[1.1]">
+          <h1
+            style={{
+              fontFamily: '"Cormorant Garamond", Georgia, serif',
+              fontWeight: 300,
+              fontSize: "clamp(3rem, 6vw, 4.5rem)",
+              letterSpacing: "0.04em",
+              color: "#fff",
+              lineHeight: 1.1,
+              marginBottom: "1.25rem",
+            }}
+          >
             Let&apos;s Plan Your Journey
           </h1>
-          <p className="text-white/50 text-lg max-w-xl mx-auto font-light leading-relaxed">
+          <p
+            style={{
+              fontFamily: '"Jost", sans-serif',
+              fontWeight: 300,
+              fontSize: "1rem",
+              color: "rgba(255,255,255,0.55)",
+              maxWidth: "400px",
+              margin: "0 auto",
+              lineHeight: 1.7,
+            }}
+          >
             Share your vision and I&apos;ll respond within 24 hours with a
             personalized plan.
           </p>
         </div>
       </section>
 
-      <section className="py-32 bg-warm">
-        <div className="max-w-5xl mx-auto px-6">
+      <section style={{ padding: "120px 0", background: "#F5F0E8" }}>
+        <div
+          style={{ maxWidth: "1200px", margin: "0 auto" }}
+          className="px-6 sm:px-10 lg:px-[60px]"
+        >
           <div className="grid md:grid-cols-3 gap-12">
             {/* Contact Info */}
             <div className="md:col-span-1">
               <ScrollReveal>
-                <h2 className="font-serif text-xl font-medium text-primary mb-9">
+                <h2
+                  style={{
+                    fontFamily: '"Cormorant Garamond", Georgia, serif',
+                    fontWeight: 300,
+                    fontSize: "1.75rem",
+                    letterSpacing: "0.04em",
+                    color: "#2C2C2A",
+                    marginBottom: "2.25rem",
+                  }}
+                >
                   Contact Details
                 </h2>
 
-                <div className="space-y-7">
-                  <div className="flex items-start gap-4">
-                    <Mail className="h-4 w-4 text-accent mt-1" />
-                    <div>
-                      <p className="text-[10px] font-medium text-primary tracking-[0.12em] uppercase mb-1">
-                        Email
-                      </p>
-                      <a
-                        href="mailto:hello@tiredofplanning.com"
-                        className="text-text-light text-sm hover:text-accent transition-colors duration-200"
-                      >
-                        hello@tiredofplanning.com
-                      </a>
+                <div style={{ display: "flex", flexDirection: "column", gap: "1.75rem" }}>
+                  {[
+                    {
+                      Icon: Mail,
+                      label: "Email",
+                      content: (
+                        <a
+                          href="mailto:hello@tiredofplanning.com"
+                          style={{
+                            color: "#8A8478",
+                            fontSize: "0.875rem",
+                            fontWeight: 300,
+                            textDecoration: "none",
+                            fontFamily: '"Jost", sans-serif',
+                            transition: "color 0.2s ease",
+                          }}
+                          onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = "#A8906A"; }}
+                          onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.color = "#8A8478"; }}
+                        >
+                          hello@tiredofplanning.com
+                        </a>
+                      ),
+                    },
+                    {
+                      Icon: Instagram,
+                      label: "Instagram",
+                      content: (
+                        <p style={{ color: "#8A8478", fontSize: "0.875rem", fontWeight: 300, fontFamily: '"Jost", sans-serif', margin: 0 }}>
+                          @tiredofplanning
+                        </p>
+                      ),
+                    },
+                    {
+                      Icon: MapPin,
+                      label: "Based In",
+                      content: (
+                        <p style={{ color: "#8A8478", fontSize: "0.875rem", fontWeight: 300, fontFamily: '"Jost", sans-serif', margin: 0 }}>
+                          Remote — planning worldwide
+                        </p>
+                      ),
+                    },
+                  ].map(({ Icon, label, content }) => (
+                    <div key={label} style={{ display: "flex", alignItems: "flex-start", gap: "1rem" }}>
+                      <Icon style={{ width: "16px", height: "16px", color: "#A8906A", marginTop: "2px", flexShrink: 0 }} />
+                      <div>
+                        <p
+                          style={{
+                            fontFamily: '"Jost", sans-serif',
+                            fontWeight: 300,
+                            fontSize: "0.6rem",
+                            letterSpacing: "0.2em",
+                            textTransform: "uppercase",
+                            color: "#2C2C2A",
+                            marginBottom: "0.25rem",
+                          }}
+                        >
+                          {label}
+                        </p>
+                        {content}
+                      </div>
                     </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <Instagram className="h-4 w-4 text-accent mt-1" />
-                    <div>
-                      <p className="text-[10px] font-medium text-primary tracking-[0.12em] uppercase mb-1">
-                        Instagram
-                      </p>
-                      <p className="text-text-light text-sm">
-                        @tiredofplanning
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <MapPin className="h-4 w-4 text-accent mt-1" />
-                    <div>
-                      <p className="text-[10px] font-medium text-primary tracking-[0.12em] uppercase mb-1">
-                        Based In
-                      </p>
-                      <p className="text-text-light text-sm">
-                        Remote — planning worldwide
-                      </p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
 
-                <div className="mt-12 bg-[var(--background)] p-7">
-                  <h3 className="font-serif text-sm font-medium text-primary mb-5">
+                <div
+                  style={{
+                    marginTop: "3rem",
+                    background: "#FDFAF5",
+                    padding: "1.75rem",
+                  }}
+                >
+                  <h3
+                    style={{
+                      fontFamily: '"Cormorant Garamond", Georgia, serif',
+                      fontWeight: 300,
+                      fontSize: "1.2rem",
+                      letterSpacing: "0.04em",
+                      color: "#2C2C2A",
+                      marginBottom: "1.25rem",
+                    }}
+                  >
                     What happens next?
                   </h3>
-                  <ol className="space-y-3.5 text-sm text-text-light">
-                    <li className="flex gap-3">
-                      <span className="font-serif text-accent">1.</span>
-                      I review your trip details
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="font-serif text-accent">2.</span>
-                      We connect for a brief consultation
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="font-serif text-accent">3.</span>
-                      I send a custom quote
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="font-serif text-accent">4.</span>
-                      We begin crafting your journey
-                    </li>
+                  <ol style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.875rem" }}>
+                    {[
+                      "I review your trip details",
+                      "We connect for a brief consultation",
+                      "I send a custom quote",
+                      "We begin crafting your journey",
+                    ].map((step, i) => (
+                      <li
+                        key={step}
+                        style={{
+                          display: "flex",
+                          gap: "0.875rem",
+                          fontFamily: '"Jost", sans-serif',
+                          fontWeight: 300,
+                          fontSize: "0.875rem",
+                          color: "#8A8478",
+                        }}
+                      >
+                        <span
+                          style={{
+                            fontFamily: '"Cormorant Garamond", Georgia, serif',
+                            fontWeight: 300,
+                            color: "#A8906A",
+                            flexShrink: 0,
+                          }}
+                        >
+                          {i + 1}.
+                        </span>
+                        {step}
+                      </li>
+                    ))}
                   </ol>
                 </div>
               </ScrollReveal>
@@ -186,14 +311,11 @@ export default function ContactPage() {
               <ScrollReveal>
                 <form
                   onSubmit={handleSubmit}
-                  className="bg-[var(--background)] p-8 sm:p-10"
+                  style={{ background: "#FDFAF5", padding: "2.5rem" }}
                 >
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div>
-                      <label
-                        htmlFor="name"
-                        className="block text-[10px] font-medium text-primary tracking-[0.12em] uppercase mb-2.5"
-                      >
+                      <label htmlFor="name" style={labelStyle}>
                         Your Name *
                       </label>
                       <input
@@ -203,16 +325,15 @@ export default function ContactPage() {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-3.5 border border-warm-dark/60 focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm bg-transparent transition-colors duration-200"
+                        style={inputStyle}
                         placeholder="Jane Doe"
+                        onFocus={(e) => { e.currentTarget.style.borderColor = "#A8906A"; }}
+                        onBlur={(e) => { e.currentTarget.style.borderColor = "rgba(200,184,154,0.5)"; }}
                       />
                     </div>
 
                     <div>
-                      <label
-                        htmlFor="email"
-                        className="block text-[10px] font-medium text-primary tracking-[0.12em] uppercase mb-2.5"
-                      >
+                      <label htmlFor="email" style={labelStyle}>
                         Email Address *
                       </label>
                       <input
@@ -222,16 +343,15 @@ export default function ContactPage() {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-3.5 border border-warm-dark/60 focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm bg-transparent transition-colors duration-200"
+                        style={inputStyle}
                         placeholder="jane@email.com"
+                        onFocus={(e) => { e.currentTarget.style.borderColor = "#A8906A"; }}
+                        onBlur={(e) => { e.currentTarget.style.borderColor = "rgba(200,184,154,0.5)"; }}
                       />
                     </div>
 
                     <div>
-                      <label
-                        htmlFor="packageTier"
-                        className="block text-[10px] font-medium text-primary tracking-[0.12em] uppercase mb-2.5"
-                      >
+                      <label htmlFor="packageTier" style={labelStyle}>
                         Interested Package
                       </label>
                       <select
@@ -239,22 +359,19 @@ export default function ContactPage() {
                         name="packageTier"
                         value={formData.packageTier}
                         onChange={handleChange}
-                        className="w-full px-4 py-3.5 border border-warm-dark/60 focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm bg-[var(--background)] transition-colors duration-200"
+                        style={{ ...inputStyle, background: "#FDFAF5" }}
+                        onFocus={(e) => { e.currentTarget.style.borderColor = "#A8906A"; }}
+                        onBlur={(e) => { e.currentTarget.style.borderColor = "rgba(200,184,154,0.5)"; }}
                       >
                         <option value="">Select a package</option>
                         {packageOptions.map((opt) => (
-                          <option key={opt} value={opt}>
-                            {opt}
-                          </option>
+                          <option key={opt} value={opt}>{opt}</option>
                         ))}
                       </select>
                     </div>
 
                     <div>
-                      <label
-                        htmlFor="travelStyle"
-                        className="block text-[10px] font-medium text-primary tracking-[0.12em] uppercase mb-2.5"
-                      >
+                      <label htmlFor="travelStyle" style={labelStyle}>
                         Travel Style
                       </label>
                       <select
@@ -262,22 +379,19 @@ export default function ContactPage() {
                         name="travelStyle"
                         value={formData.travelStyle}
                         onChange={handleChange}
-                        className="w-full px-4 py-3.5 border border-warm-dark/60 focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm bg-[var(--background)] transition-colors duration-200"
+                        style={{ ...inputStyle, background: "#FDFAF5" }}
+                        onFocus={(e) => { e.currentTarget.style.borderColor = "#A8906A"; }}
+                        onBlur={(e) => { e.currentTarget.style.borderColor = "rgba(200,184,154,0.5)"; }}
                       >
                         <option value="">Select your style</option>
                         {travelStyles.map((opt) => (
-                          <option key={opt} value={opt}>
-                            {opt}
-                          </option>
+                          <option key={opt} value={opt}>{opt}</option>
                         ))}
                       </select>
                     </div>
 
                     <div>
-                      <label
-                        htmlFor="destination"
-                        className="block text-[10px] font-medium text-primary tracking-[0.12em] uppercase mb-2.5"
-                      >
+                      <label htmlFor="destination" style={labelStyle}>
                         Destination(s)
                       </label>
                       <input
@@ -286,16 +400,15 @@ export default function ContactPage() {
                         name="destination"
                         value={formData.destination}
                         onChange={handleChange}
-                        className="w-full px-4 py-3.5 border border-warm-dark/60 focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm bg-transparent transition-colors duration-200"
+                        style={inputStyle}
                         placeholder="e.g. Japan, Portugal, open to ideas"
+                        onFocus={(e) => { e.currentTarget.style.borderColor = "#A8906A"; }}
+                        onBlur={(e) => { e.currentTarget.style.borderColor = "rgba(200,184,154,0.5)"; }}
                       />
                     </div>
 
                     <div>
-                      <label
-                        htmlFor="travelDates"
-                        className="block text-[10px] font-medium text-primary tracking-[0.12em] uppercase mb-2.5"
-                      >
+                      <label htmlFor="travelDates" style={labelStyle}>
                         Travel Dates
                       </label>
                       <input
@@ -304,16 +417,15 @@ export default function ContactPage() {
                         name="travelDates"
                         value={formData.travelDates}
                         onChange={handleChange}
-                        className="w-full px-4 py-3.5 border border-warm-dark/60 focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm bg-transparent transition-colors duration-200"
+                        style={inputStyle}
                         placeholder="e.g. March 2026, flexible"
+                        onFocus={(e) => { e.currentTarget.style.borderColor = "#A8906A"; }}
+                        onBlur={(e) => { e.currentTarget.style.borderColor = "rgba(200,184,154,0.5)"; }}
                       />
                     </div>
 
                     <div className="sm:col-span-2">
-                      <label
-                        htmlFor="groupSize"
-                        className="block text-[10px] font-medium text-primary tracking-[0.12em] uppercase mb-2.5"
-                      >
+                      <label htmlFor="groupSize" style={labelStyle}>
                         Group Size
                       </label>
                       <input
@@ -322,16 +434,15 @@ export default function ContactPage() {
                         name="groupSize"
                         value={formData.groupSize}
                         onChange={handleChange}
-                        className="w-full px-4 py-3.5 border border-warm-dark/60 focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm bg-transparent transition-colors duration-200"
+                        style={inputStyle}
                         placeholder="e.g. Just me, couple, group of 6"
+                        onFocus={(e) => { e.currentTarget.style.borderColor = "#A8906A"; }}
+                        onBlur={(e) => { e.currentTarget.style.borderColor = "rgba(200,184,154,0.5)"; }}
                       />
                     </div>
 
                     <div className="sm:col-span-2">
-                      <label
-                        htmlFor="message"
-                        className="block text-[10px] font-medium text-primary tracking-[0.12em] uppercase mb-2.5"
-                      >
+                      <label htmlFor="message" style={labelStyle}>
                         Tell Me About Your Dream Trip *
                       </label>
                       <textarea
@@ -341,50 +452,73 @@ export default function ContactPage() {
                         rows={5}
                         value={formData.message}
                         onChange={handleChange}
-                        className="w-full px-4 py-3.5 border border-warm-dark/60 focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent text-sm resize-none bg-transparent transition-colors duration-200"
+                        style={{ ...inputStyle, resize: "none" }}
                         placeholder="What are you envisioning? Any must-haves, dietary preferences, accessibility needs, or special occasions?"
+                        onFocus={(e) => { e.currentTarget.style.borderColor = "#A8906A"; }}
+                        onBlur={(e) => { e.currentTarget.style.borderColor = "rgba(200,184,154,0.5)"; }}
                       />
                     </div>
                   </div>
 
-                  <div className="mt-9">
+                  <div style={{ marginTop: "2.25rem" }}>
                     <button
                       type="submit"
                       disabled={status === "sending"}
-                      className="bg-accent hover:bg-[#232f3a] disabled:opacity-60 text-white px-8 py-4 text-[11px] font-medium tracking-[0.08em] uppercase rounded-[6px] transition-all duration-200 ease-in-out inline-flex items-center gap-3 hover:shadow-[0_2px_8px_rgba(46,58,70,0.2)]"
+                      className="btn-gold"
+                      style={{ opacity: status === "sending" ? 0.6 : 1 }}
                     >
                       {status === "sending" ? (
                         "Sending..."
                       ) : (
                         <>
-                          Send Inquiry <Send className="h-4 w-4" />
+                          Send Inquiry <Send style={{ width: "14px", height: "14px" }} />
                         </>
                       )}
                     </button>
                   </div>
 
                   {status === "success" && (
-                    <div className="mt-7 bg-success/10 text-success px-5 py-4 text-sm">
-                      Your inquiry has been sent. I&apos;ll be in touch within 24
-                      hours.
+                    <div
+                      style={{
+                        marginTop: "1.75rem",
+                        background: "rgba(107,143,107,0.1)",
+                        color: "#6b8f6b",
+                        padding: "1rem 1.25rem",
+                        fontFamily: '"Jost", sans-serif',
+                        fontWeight: 300,
+                        fontSize: "0.875rem",
+                      }}
+                    >
+                      Your inquiry has been sent. I&apos;ll be in touch within 24 hours.
                     </div>
                   )}
 
                   {status === "error" && (
-                    <div className="mt-7 bg-red-50 text-red-700 px-5 py-4 text-sm space-y-1">
+                    <div
+                      style={{
+                        marginTop: "1.75rem",
+                        background: "rgba(239,68,68,0.08)",
+                        color: "#b91c1c",
+                        padding: "1rem 1.25rem",
+                        fontFamily: '"Jost", sans-serif',
+                        fontWeight: 300,
+                        fontSize: "0.875rem",
+                      }}
+                    >
                       <p>
-                        Something went wrong. Please try again or email me directly
-                        at{" "}
+                        Something went wrong. Please try again or email me directly at{" "}
                         <a
                           href="mailto:hello@tiredofplanning.com"
-                          className="underline hover:text-red-900 transition-colors"
+                          style={{ textDecoration: "underline", color: "inherit" }}
                         >
                           hello@tiredofplanning.com
                         </a>
                         .
                       </p>
                       {errorDetail && (
-                        <p className="text-xs opacity-70 font-mono break-all">{errorDetail}</p>
+                        <p style={{ fontSize: "0.72rem", opacity: 0.7, fontFamily: "monospace", marginTop: "0.5rem", wordBreak: "break-all" }}>
+                          {errorDetail}
+                        </p>
                       )}
                     </div>
                   )}

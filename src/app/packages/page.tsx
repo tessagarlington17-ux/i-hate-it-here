@@ -1,12 +1,13 @@
 import Link from "next/link";
-import {
-  Check,
-  ArrowRight,
-  Compass,
-  Map,
-  Crown,
-} from "lucide-react";
+import { Check, Compass, Map, Crown } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+
+const S = {
+  maxWidth: "1400px",
+  margin: "0 auto",
+  padding: "0 60px",
+} as const;
+const C = "px-6 sm:px-10 lg:px-[60px]";
 
 const packages = [
   {
@@ -71,7 +72,7 @@ export default function PackagesPage() {
     <>
       {/* Header */}
       <section
-        className="text-white text-center relative overflow-hidden flex items-end justify-center"
+        className="relative overflow-hidden flex items-end justify-center text-white text-center"
         style={{
           backgroundImage: "url('/trips/puerto_rico.JPG')",
           backgroundSize: "cover",
@@ -79,15 +80,51 @@ export default function PackagesPage() {
           minHeight: "70vh",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/70 to-primary/80" />
-        <div className="relative z-10 max-w-3xl mx-auto px-6 pb-16 pt-32">
-          <p className="text-white/50 text-xs tracking-[0.3em] uppercase mb-7">
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to top, rgba(26,25,22,0.75) 0%, rgba(26,25,22,0.3) 60%, transparent 100%)",
+          }}
+        />
+        <div className="relative z-10 max-w-3xl mx-auto px-6 pb-16 pt-32 text-center">
+          <p
+            style={{
+              fontFamily: '"Jost", sans-serif',
+              fontWeight: 300,
+              fontSize: "0.65rem",
+              letterSpacing: "0.2em",
+              textTransform: "uppercase",
+              color: "rgba(255,255,255,0.5)",
+              marginBottom: "1.75rem",
+            }}
+          >
             Services
           </p>
-          <h1 className="font-serif text-4xl sm:text-5xl md:text-[3.5rem] font-medium mb-6 leading-[1.1]">
+          <h1
+            style={{
+              fontFamily: '"Cormorant Garamond", Georgia, serif',
+              fontWeight: 300,
+              fontSize: "clamp(3rem, 6vw, 4.5rem)",
+              letterSpacing: "0.04em",
+              color: "#fff",
+              lineHeight: 1.1,
+              marginBottom: "1.25rem",
+            }}
+          >
             Packages & Pricing
           </h1>
-          <p className="text-white/50 text-lg max-w-xl mx-auto font-light leading-relaxed">
+          <p
+            style={{
+              fontFamily: '"Jost", sans-serif',
+              fontWeight: 300,
+              fontSize: "1rem",
+              color: "rgba(255,255,255,0.55)",
+              maxWidth: "480px",
+              margin: "0 auto",
+              lineHeight: 1.7,
+            }}
+          >
             Three tiers designed around how much support you desire — from a
             curated itinerary to full concierge service.
           </p>
@@ -95,69 +132,159 @@ export default function PackagesPage() {
       </section>
 
       {/* Packages Grid */}
-      <section className="py-32 bg-warm">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-5">
+      <section style={{ padding: "120px 0", background: "#F5F0E8" }}>
+        <div style={S} className={C}>
+          <div className="grid md:grid-cols-3 gap-px" style={{ background: "rgba(200,184,154,0.3)" }}>
             {packages.map((pkg, i) => (
-              <ScrollReveal key={pkg.name} delay={i + 1}>
+              <ScrollReveal key={pkg.name} delay={i + 1 as 1 | 2 | 3}>
                 <div
-                  className={`bg-[var(--background)] flex flex-col overflow-hidden transition-shadow duration-300 ease-in-out h-full ${
-                    pkg.featured ? "ring-1 ring-accent relative" : ""
-                  }`}
+                  style={{
+                    background: "#FDFAF5",
+                    display: "flex",
+                    flexDirection: "column",
+                    height: "100%",
+                    position: "relative",
+                  }}
                 >
                   {pkg.featured && (
-                    <div className="bg-accent text-white text-center text-[10px] font-medium tracking-[0.15em] uppercase py-2.5">
+                    <div
+                      style={{
+                        background: "#A8906A",
+                        color: "#fff",
+                        textAlign: "center",
+                        fontFamily: '"Jost", sans-serif',
+                        fontWeight: 300,
+                        fontSize: "0.65rem",
+                        letterSpacing: "0.2em",
+                        textTransform: "uppercase",
+                        padding: "0.625rem",
+                      }}
+                    >
                       Most Popular
                     </div>
                   )}
 
-                  <div className="p-8 sm:p-10 flex-1 flex flex-col">
-                    <div className="flex items-center gap-3 mb-7">
-                      <div className="w-10 h-10 border border-accent/20 flex items-center justify-center">
-                        <pkg.icon className="h-4 w-4 text-accent" />
+                  <div style={{ padding: "2.5rem", flex: 1, display: "flex", flexDirection: "column" }}>
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "0.875rem",
+                        marginBottom: "1.75rem",
+                      }}
+                    >
+                      <div
+                        style={{
+                          width: "40px",
+                          height: "40px",
+                          border: "1px solid rgba(168,144,106,0.3)",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <pkg.icon style={{ width: "16px", height: "16px", color: "#A8906A" }} />
                       </div>
-                      <h2 className="font-serif text-2xl font-medium text-primary">
+                      <h2
+                        style={{
+                          fontFamily: '"Cormorant Garamond", Georgia, serif',
+                          fontWeight: 300,
+                          fontSize: "1.75rem",
+                          letterSpacing: "0.04em",
+                          color: "#2C2C2A",
+                          margin: 0,
+                        }}
+                      >
                         {pkg.name}
                       </h2>
                     </div>
 
-                    <div className="font-serif text-3xl font-medium text-primary mb-3">
+                    <div
+                      style={{
+                        fontFamily: '"Cormorant Garamond", Georgia, serif',
+                        fontWeight: 300,
+                        fontSize: "2rem",
+                        letterSpacing: "0.02em",
+                        color: "#2C2C2A",
+                        marginBottom: "0.75rem",
+                      }}
+                    >
                       {pkg.price}
                     </div>
-                    <p className="text-text-light text-sm mb-9 leading-relaxed">
+                    <p
+                      style={{
+                        fontFamily: '"Jost", sans-serif',
+                        fontWeight: 300,
+                        fontSize: "0.875rem",
+                        color: "#8A8478",
+                        marginBottom: "2.25rem",
+                        lineHeight: 1.65,
+                      }}
+                    >
                       {pkg.tagline}
                     </p>
 
-                    <ul className="space-y-3.5 mb-9 flex-1">
+                    <ul
+                      style={{
+                        listStyle: "none",
+                        padding: 0,
+                        margin: 0,
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "0.875rem",
+                        marginBottom: "2.25rem",
+                        flex: 1,
+                      }}
+                    >
                       {pkg.features.map((feature) => (
                         <li
                           key={feature}
-                          className="flex items-start gap-3 text-sm text-text"
+                          style={{
+                            display: "flex",
+                            alignItems: "flex-start",
+                            gap: "0.75rem",
+                            fontFamily: '"Jost", sans-serif',
+                            fontWeight: 300,
+                            fontSize: "0.875rem",
+                            color: "#2C2C2A",
+                          }}
                         >
-                          <Check className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
+                          <Check
+                            style={{
+                              width: "14px",
+                              height: "14px",
+                              color: "#A8906A",
+                              flexShrink: 0,
+                              marginTop: "2px",
+                            }}
+                          />
                           {feature}
                         </li>
                       ))}
                     </ul>
 
-                    <div className="bg-warm rounded-[4px] p-4 mb-9">
-                      <p className="text-xs text-text-light">
-                        <span className="font-medium text-primary">
-                          Ideal for:
-                        </span>{" "}
+                    <div
+                      style={{
+                        background: "#F5F0E8",
+                        padding: "1rem",
+                        marginBottom: "2.25rem",
+                      }}
+                    >
+                      <p
+                        style={{
+                          fontFamily: '"Jost", sans-serif',
+                          fontWeight: 300,
+                          fontSize: "0.78rem",
+                          color: "#8A8478",
+                        }}
+                      >
+                        <span style={{ color: "#2C2C2A" }}>Ideal for: </span>
                         {pkg.ideal}
                       </p>
                     </div>
 
-                    <Link
-                      href="/contact"
-                      className={`w-full py-4 text-[11px] font-medium tracking-[0.08em] uppercase text-center rounded-[6px] transition-all duration-200 ease-in-out inline-flex items-center justify-center gap-2 ${
-                        pkg.featured
-                          ? "bg-accent hover:bg-[#232f3a] text-white hover:shadow-[0_4px_16px_rgba(46,58,70,0.25)]"
-                          : "bg-primary hover:bg-primary-light text-white hover:shadow-[0_2px_8px_rgba(0,0,0,0.1)]"
-                      }`}
-                    >
-                      {pkg.cta} <ArrowRight className="h-4 w-4" />
+                    <Link href="/contact" className="btn-gold" style={{ width: "100%", textAlign: "center" }}>
+                      {pkg.cta}
                     </Link>
                   </div>
                 </div>
@@ -168,20 +295,33 @@ export default function PackagesPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-32 bg-[var(--background)]">
-        <div className="max-w-[680px] mx-auto px-6">
+      <section style={{ padding: "120px 0", background: "#FDFAF5" }}>
+        <div
+          style={{ maxWidth: "680px", margin: "0 auto" }}
+          className="px-6"
+        >
           <ScrollReveal>
-            <div className="text-center mb-20">
-              <p className="text-accent text-xs tracking-[0.3em] uppercase mb-5">
-                FAQ
-              </p>
-              <h2 className="font-serif text-3xl sm:text-[2.25rem] font-medium text-primary">
-                Common Questions
-              </h2>
+            <div style={{ marginBottom: "80px" }}>
+              <p className="eyebrow" style={{ marginBottom: "40px" }}>FAQ</p>
+              <div className="heading-rule">
+                <h2
+                  style={{
+                    fontFamily: '"Cormorant Garamond", Georgia, serif',
+                    fontWeight: 300,
+                    fontSize: "clamp(2.8rem, 4vw, 4rem)",
+                    letterSpacing: "0.04em",
+                    color: "#2C2C2A",
+                    margin: 0,
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  Common Questions
+                </h2>
+              </div>
             </div>
           </ScrollReveal>
 
-          <div className="space-y-12">
+          <div style={{ display: "flex", flexDirection: "column", gap: "3rem" }}>
             {[
               {
                 q: "Why a price range instead of a fixed price?",
@@ -205,11 +345,33 @@ export default function PackagesPage() {
               },
             ].map((item) => (
               <ScrollReveal key={item.q}>
-                <div className="border-b border-warm-dark/40 pb-10">
-                  <h3 className="font-serif text-lg font-medium text-primary mb-4">
+                <div
+                  style={{
+                    borderBottom: "1px solid rgba(200,184,154,0.4)",
+                    paddingBottom: "2.5rem",
+                  }}
+                >
+                  <h3
+                    style={{
+                      fontFamily: '"Cormorant Garamond", Georgia, serif',
+                      fontWeight: 300,
+                      fontSize: "1.4rem",
+                      letterSpacing: "0.04em",
+                      color: "#2C2C2A",
+                      marginBottom: "1rem",
+                    }}
+                  >
                     {item.q}
                   </h3>
-                  <p className="text-text-light leading-[1.8] text-sm">
+                  <p
+                    style={{
+                      fontFamily: '"Jost", sans-serif',
+                      fontWeight: 300,
+                      fontSize: "0.875rem",
+                      color: "#8A8478",
+                      lineHeight: 1.8,
+                    }}
+                  >
                     {item.a}
                   </p>
                 </div>
@@ -220,24 +382,54 @@ export default function PackagesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-32 bg-primary text-white text-center">
-        <div className="max-w-2xl mx-auto px-6">
+      <section
+        style={{ padding: "120px 0", background: "#1A1916", textAlign: "center" }}
+      >
+        <div
+          style={{ maxWidth: "600px", margin: "0 auto", padding: "0 24px" }}
+        >
           <ScrollReveal>
-            <p className="text-white/50 text-xs tracking-[0.3em] uppercase mb-8">
+            <p
+              style={{
+                fontFamily: '"Jost", sans-serif',
+                fontWeight: 300,
+                fontSize: "0.65rem",
+                letterSpacing: "0.25em",
+                textTransform: "uppercase",
+                color: "rgba(255,255,255,0.4)",
+                marginBottom: "2.5rem",
+              }}
+            >
               Not Sure
             </p>
-            <h2 className="font-serif text-3xl sm:text-4xl font-medium mb-6 leading-tight">
+            <h2
+              style={{
+                fontFamily: '"Cormorant Garamond", Georgia, serif',
+                fontWeight: 300,
+                fontSize: "clamp(2.5rem, 5vw, 3.75rem)",
+                letterSpacing: "0.04em",
+                color: "#fff",
+                lineHeight: 1.15,
+                marginBottom: "1.25rem",
+              }}
+            >
               Let Me Recommend the Right Fit
             </h2>
-            <p className="text-white/45 mb-12 font-light leading-relaxed">
+            <p
+              style={{
+                fontFamily: '"Jost", sans-serif',
+                fontWeight: 300,
+                fontSize: "0.95rem",
+                color: "#8A8478",
+                lineHeight: 1.75,
+                marginBottom: "3rem",
+              }}
+            >
               Share your trip details and I&apos;ll suggest the package that
               best serves your vision.
             </p>
-            <Link
-              href="/contact"
-              className="bg-accent hover:bg-[#232f3a] text-white px-8 py-4 text-[11px] font-medium tracking-[0.08em] uppercase rounded-[6px] transition-all duration-200 ease-in-out inline-flex items-center justify-center gap-3 hover:shadow-[0_4px_16px_rgba(46,58,70,0.4)]"
-            >
-              Let&apos;s Chat <ArrowRight className="h-4 w-4" />
+            <Link href="/contact" className="btn-gold">
+              Let&apos;s Chat
             </Link>
           </ScrollReveal>
         </div>

@@ -3,30 +3,38 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-primary: #1C1C1C;
-  --color-primary-light: #2d2d2d;
-  --color-accent: #2E3A46;
-  --color-accent-light: #3d4d5a;
-  --color-warm: #FAF8F6;
-  --color-warm-dark: #E8E2DA;
-  --color-text: #1C1C1C;
-  --color-text-light: #6b6560;
-  --color-white: #F7F5F2;
+  --color-primary: #2C2C2A;
+  --color-primary-light: #3d3d3a;
+  --color-accent: #A8906A;
+  --color-accent-light: #b89d7a;
+  --color-warm: #F5F0E8;
+  --color-warm-dark: #C8B89A;
+  --color-text: #2C2C2A;
+  --color-text-light: #8A8478;
+  --color-white: #FDFAF5;
   --color-success: #6b8f6b;
   --font-serif: "Cormorant Garamond", "Georgia", "Times New Roman", serif;
+  --font-sans: "Jost", system-ui, -apple-system, sans-serif;
 }
 
 :root {
-  --background: #F7F5F2;
-  --foreground: #1C1C1C;
+  --background: #F5F0E8;
+  --foreground: #2C2C2A;
+  --cream: #F5F0E8;
+  --warm-white: #FDFAF5;
+  --sand: #C8B89A;
+  --charcoal: #2C2C2A;
+  --muted: #8A8478;
+  --dark-earth: #1A1916;
+  --gold: #A8906A;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: "Jost", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.65;
 }
 
@@ -36,6 +44,79 @@ html {
 
 h1, h2, h3, h4 {
   font-family: "Cormorant Garamond", "Georgia", "Times New Roman", serif;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+
+/* Section eyebrow labels */
+.eyebrow {
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Section heading with editorial rule */
+.heading-rule {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.heading-rule::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--sand);
+  opacity: 0.5;
+}
+
+/* Gold outlined button */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  background: transparent;
+  padding: 1rem 2rem;
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-radius: 0;
+  transition: background 0.25s ease, color 0.25s ease;
+  cursor: pointer;
+}
+.btn-gold:hover {
+  background: var(--gold);
+  color: #fff;
+}
+
+/* Ghost button (white border, for dark backgrounds) */
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  border: 1px solid rgba(255,255,255,0.45);
+  color: #fff;
+  background: transparent;
+  padding: 1rem 2rem;
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-radius: 0;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+.btn-ghost:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.7);
 }
 
 /* Scroll reveal animations */
@@ -68,4 +149,12 @@ h1, h2, h3, h4 {
 
 .reveal-delay-3 {
   animation-delay: 0.3s !important;
+}
+
+/* Photo strip scrollbar hidden */
+.photo-strip::-webkit-scrollbar {
+  display: none;
+}
+.photo-strip {
+  scrollbar-width: none;
 }

@@ -3,75 +3,176 @@ import { Instagram, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-white">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-14">
+    <footer style={{ background: "#1A1916", color: "#C8B89A" }}>
+      <div
+        style={{
+          maxWidth: "1400px",
+          margin: "0 auto",
+          padding: "0 60px",
+        }}
+        className="px-6 sm:px-10 lg:px-[60px] py-20"
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-14">
+          {/* Brand */}
           <div>
-            <span className="font-serif text-2xl font-medium block mb-5">
+            <span
+              style={{
+                fontFamily: '"Cormorant Garamond", Georgia, serif',
+                fontStyle: "italic",
+                fontWeight: 300,
+                fontSize: "1.5rem",
+                letterSpacing: "0.02em",
+                color: "#fff",
+                display: "block",
+                marginBottom: "1.25rem",
+              }}
+            >
               Tired of Planning
             </span>
-            <p className="text-white/40 text-sm leading-relaxed max-w-xs">
+            <p
+              style={{
+                color: "#8A8478",
+                fontSize: "0.85rem",
+                lineHeight: "1.75",
+                maxWidth: "280px",
+                fontWeight: 300,
+              }}
+            >
               Bespoke travel planning for those who believe the world is best
               experienced with intention. 29 countries and counting.
             </p>
           </div>
 
-          <div>
-            <h3 className="text-[10px] font-medium tracking-[0.2em] uppercase text-white/50 mb-7">
-              Navigate
-            </h3>
-            <ul className="space-y-3.5">
-              {[
-                { href: "/about", label: "About" },
-                { href: "/packages", label: "Packages" },
-                { href: "/portfolio", label: "Portfolio" },
-                { href: "/contact", label: "Inquire" },
-              ].map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-white/50 hover:text-white text-sm transition-colors duration-200"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Navigate + Connect */}
+          <div className="grid grid-cols-2 gap-10">
+            <div>
+              <h3
+                style={{
+                  fontFamily: '"Jost", sans-serif',
+                  fontWeight: 300,
+                  fontSize: "0.65rem",
+                  letterSpacing: "0.2em",
+                  textTransform: "uppercase",
+                  color: "rgba(200,184,154,0.5)",
+                  marginBottom: "1.75rem",
+                }}
+              >
+                Navigate
+              </h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.875rem" }}>
+                {[
+                  { href: "/about", label: "About" },
+                  { href: "/packages", label: "Packages" },
+                  { href: "/portfolio", label: "Portfolio" },
+                  { href: "/contact", label: "Inquire" },
+                ].map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      style={{
+                        color: "#C8B89A",
+                        fontSize: "0.85rem",
+                        textDecoration: "none",
+                        fontWeight: 300,
+                        transition: "color 0.2s ease",
+                      }}
+                      onMouseEnter={(e) => {
+                        (e.target as HTMLElement).style.color = "#fff";
+                      }}
+                      onMouseLeave={(e) => {
+                        (e.target as HTMLElement).style.color = "#C8B89A";
+                      }}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          <div>
-            <h3 className="text-[10px] font-medium tracking-[0.2em] uppercase text-white/50 mb-7">
-              Connect
-            </h3>
-            <div className="flex gap-5">
-              <a
-                href="https://www.instagram.com/tiredofplanning"
-                className="text-white/40 hover:text-white transition-colors duration-200"
-                aria-label="Instagram"
+            <div>
+              <h3
+                style={{
+                  fontFamily: '"Jost", sans-serif',
+                  fontWeight: 300,
+                  fontSize: "0.65rem",
+                  letterSpacing: "0.2em",
+                  textTransform: "uppercase",
+                  color: "rgba(200,184,154,0.5)",
+                  marginBottom: "1.75rem",
+                }}
               >
-                <Instagram className="h-5 w-5" />
-              </a>
+                Connect
+              </h3>
+              <div style={{ display: "flex", gap: "1.25rem", marginBottom: "1.75rem" }}>
+                <a
+                  href="https://www.instagram.com/tiredofplanning"
+                  style={{ color: "rgba(200,184,154,0.5)", transition: "color 0.2s ease" }}
+                  aria-label="Instagram"
+                  onMouseEnter={(e) => {
+                    (e.currentTarget as HTMLElement).style.color = "#fff";
+                  }}
+                  onMouseLeave={(e) => {
+                    (e.currentTarget as HTMLElement).style.color = "rgba(200,184,154,0.5)";
+                  }}
+                >
+                  <Instagram className="h-5 w-5" />
+                </a>
+                <a
+                  href="mailto:tessa.garlington@gmail.com"
+                  style={{ color: "rgba(200,184,154,0.5)", transition: "color 0.2s ease" }}
+                  aria-label="Email"
+                  onMouseEnter={(e) => {
+                    (e.currentTarget as HTMLElement).style.color = "#fff";
+                  }}
+                  onMouseLeave={(e) => {
+                    (e.currentTarget as HTMLElement).style.color = "rgba(200,184,154,0.5)";
+                  }}
+                >
+                  <Mail className="h-5 w-5" />
+                </a>
+              </div>
               <a
-                href="mailto:tessa.garlington@gmail.com"
-                className="text-white/40 hover:text-white transition-colors duration-200"
-                aria-label="Email"
+                href="mailto:hello@tiredofplanning.com"
+                style={{
+                  color: "rgba(200,184,154,0.4)",
+                  fontSize: "0.8rem",
+                  textDecoration: "none",
+                  fontWeight: 300,
+                  transition: "color 0.2s ease",
+                }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLElement).style.color = "#fff";
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLElement).style.color = "rgba(200,184,154,0.4)";
+                }}
               >
-                <Mail className="h-5 w-5" />
+                hello@tiredofplanning.com
               </a>
             </div>
-            <a
-              href="mailto:hello@tiredofplanning.com"
-              className="text-white/25 hover:text-white text-sm mt-7 block transition-colors duration-200"
-            >
-              hello@tiredofplanning.com
-            </a>
           </div>
         </div>
 
-        <div className="border-t border-white/[0.06] mt-14 pt-9 flex flex-col sm:flex-row justify-between items-center gap-4 text-white/25 text-xs tracking-wider">
-          <span>
-            &copy; {new Date().getFullYear()} Tired of Planning
-          </span>
+        {/* Bottom rule */}
+        <div
+          style={{
+            borderTop: "1px solid rgba(200,184,154,0.2)",
+            marginTop: "3.5rem",
+            paddingTop: "2.25rem",
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+            gap: "1rem",
+            flexWrap: "wrap",
+            color: "rgba(200,184,154,0.3)",
+            fontSize: "0.72rem",
+            letterSpacing: "0.08em",
+            fontWeight: 300,
+          }}
+        >
+          <span>&copy; {new Date().getFullYear()} Tired of Planning</span>
           <span>Designed for calmer travel</span>
         </div>
       </div>
