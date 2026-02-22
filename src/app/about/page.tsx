@@ -10,19 +10,12 @@ import {
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
-const S = {
-  maxWidth: "1400px",
-  margin: "0 auto",
-  padding: "0 60px",
-} as const;
-const C = "px-6 sm:px-10 lg:px-[60px]";
-
 export default function AboutPage() {
   return (
     <>
       {/* Header */}
       <section
-        className="relative overflow-hidden flex items-end justify-center text-white text-center"
+        className="text-white text-center relative overflow-hidden flex items-end justify-center"
         style={{
           backgroundImage: "url('/trips/oslo.JPG')",
           backgroundSize: "cover",
@@ -30,87 +23,29 @@ export default function AboutPage() {
           minHeight: "70vh",
         }}
       >
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(to top, rgba(26,25,22,0.75) 0%, rgba(26,25,22,0.3) 60%, transparent 100%)",
-          }}
-        />
-        <div className="relative z-10 max-w-3xl mx-auto px-6 pb-16 pt-32 text-center">
-          <p
-            style={{
-              fontFamily: '"Jost", sans-serif',
-              fontWeight: 300,
-              fontSize: "0.65rem",
-              letterSpacing: "0.2em",
-              textTransform: "uppercase",
-              color: "rgba(255,255,255,0.5)",
-              marginBottom: "1.75rem",
-            }}
-          >
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/70 to-primary/80" />
+        <div className="relative z-10 max-w-3xl mx-auto px-6 pb-16 pt-32">
+          <p className="text-white/50 text-xs tracking-[0.3em] uppercase mb-7">
             The Story
           </p>
-          <h1
-            style={{
-              fontFamily: '"Cormorant Garamond", Georgia, serif',
-              fontWeight: 300,
-              fontSize: "clamp(3rem, 6vw, 4.5rem)",
-              letterSpacing: "0.04em",
-              color: "#fff",
-              lineHeight: 1.1,
-              marginBottom: "1.25rem",
-            }}
-          >
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-[3.5rem] font-medium mb-6 leading-[1.1]">
             About Me
           </h1>
-          <p
-            style={{
-              fontFamily: '"Jost", sans-serif',
-              fontWeight: 300,
-              fontSize: "1rem",
-              color: "rgba(255,255,255,0.55)",
-              maxWidth: "400px",
-              margin: "0 auto",
-              lineHeight: 1.7,
-            }}
-          >
+          <p className="text-white/50 text-lg font-light max-w-lg mx-auto leading-relaxed">
             The short version: I love planning trips as much as taking them.
           </p>
         </div>
       </section>
 
       {/* Story */}
-      <section style={{ padding: "120px 0", background: "#F5F0E8" }}>
-        <div
-          style={{ maxWidth: "680px", margin: "0 auto" }}
-          className="px-6"
-        >
+      <section className="py-32 bg-[var(--background)]">
+        <div className="max-w-[680px] mx-auto px-6">
           <ScrollReveal>
-            <h2
-              style={{
-                fontFamily: '"Cormorant Garamond", Georgia, serif',
-                fontWeight: 300,
-                fontSize: "clamp(2rem, 3.5vw, 2.75rem)",
-                letterSpacing: "0.04em",
-                color: "#2C2C2A",
-                marginBottom: "3rem",
-              }}
-            >
+            <h2 className="font-serif text-3xl sm:text-[2.25rem] font-medium text-primary mb-12">
               From Traveler to Travel Curator
             </h2>
 
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "1.75rem",
-                color: "#8A8478",
-                lineHeight: 1.8,
-                fontWeight: 300,
-                fontSize: "0.95rem",
-              }}
-            >
+            <div className="space-y-7 text-text-light leading-[1.8]">
               <p>
                 I&apos;m 30, I&apos;ve been to 29 countries, and I&apos;ve
                 planned trips for every budget imaginable — from $8 hostels in
@@ -129,16 +64,7 @@ export default function AboutPage() {
                 same philosophy I follow for my own travels: research deeply,
                 plan with intention, and always leave room to breathe.
               </p>
-              <p
-                style={{
-                  fontFamily: '"Cormorant Garamond", Georgia, serif',
-                  fontStyle: "italic",
-                  fontWeight: 300,
-                  fontSize: "1.3rem",
-                  color: "#2C2C2A",
-                  lineHeight: 1.6,
-                }}
-              >
+              <p className="font-serif text-primary text-lg italic leading-relaxed">
                 Structure where you need it. Freedom where you want it.
               </p>
             </div>
@@ -147,31 +73,16 @@ export default function AboutPage() {
       </section>
 
       {/* What Sets Me Apart */}
-      <section style={{ padding: "120px 0", background: "#FDFAF5" }}>
-        <div style={S} className={C}>
+      <section className="py-32 bg-warm">
+        <div className="max-w-5xl mx-auto px-6">
           <ScrollReveal>
-            <div style={{ marginBottom: "80px" }}>
-              <p
-                className="eyebrow"
-                style={{ marginBottom: "40px" }}
-              >
+            <div className="text-center mb-20">
+              <p className="text-accent text-xs tracking-[0.3em] uppercase mb-5">
                 The Difference
               </p>
-              <div className="heading-rule">
-                <h2
-                  style={{
-                    fontFamily: '"Cormorant Garamond", Georgia, serif',
-                    fontWeight: 300,
-                    fontSize: "clamp(2.8rem, 4vw, 4rem)",
-                    letterSpacing: "0.04em",
-                    color: "#2C2C2A",
-                    margin: 0,
-                    whiteSpace: "nowrap",
-                  }}
-                >
-                  What Sets Me Apart
-                </h2>
-              </div>
+              <h2 className="font-serif text-3xl sm:text-[2.25rem] font-medium text-primary">
+                What Sets Me Apart
+              </h2>
             </div>
           </ScrollReveal>
 
@@ -215,67 +126,24 @@ export default function AboutPage() {
               },
             ].map((item, i) => (
               <ScrollReveal key={item.title} delay={i % 2 === 0 ? 1 : 2}>
-                <div
-                  style={{
-                    background: "#F5F0E8",
-                    overflow: "hidden",
-                  }}
-                >
-                  <div style={{ height: "192px", overflow: "hidden" }}>
+                <div className="bg-[var(--background)] overflow-hidden h-full">
+                  <div className="h-48 overflow-hidden">
                     <img
                       src={item.image}
                       alt={item.title}
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                        filter: "saturate(0.88) contrast(1.02)",
-                        display: "block",
-                      }}
+                      className="w-full h-full object-cover"
+                      style={{ filter: "saturate(0.92)" }}
                     />
                   </div>
-                  <div
-                    style={{
-                      padding: "2rem 2.25rem",
-                      display: "flex",
-                      gap: "1.25rem",
-                    }}
-                  >
-                    <div
-                      style={{
-                        width: "40px",
-                        height: "40px",
-                        border: "1px solid rgba(168,144,106,0.25)",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        flexShrink: 0,
-                      }}
-                    >
-                      <item.icon style={{ width: "16px", height: "16px", color: "#A8906A" }} />
+                  <div className="p-8 sm:p-9 flex gap-5">
+                    <div className="w-10 h-10 border border-accent/20 flex items-center justify-center flex-shrink-0">
+                      <item.icon className="h-4 w-4 text-accent" />
                     </div>
                     <div>
-                      <h3
-                        style={{
-                          fontFamily: '"Cormorant Garamond", Georgia, serif',
-                          fontWeight: 300,
-                          fontSize: "1.4rem",
-                          letterSpacing: "0.04em",
-                          color: "#2C2C2A",
-                          marginBottom: "0.625rem",
-                        }}
-                      >
+                      <h3 className="font-serif text-lg font-medium text-primary mb-3">
                         {item.title}
                       </h3>
-                      <p
-                        style={{
-                          fontFamily: '"Jost", sans-serif',
-                          fontWeight: 300,
-                          fontSize: "0.875rem",
-                          color: "#8A8478",
-                          lineHeight: 1.75,
-                        }}
-                      >
+                      <p className="text-text-light text-sm leading-relaxed">
                         {item.desc}
                       </p>
                     </div>
@@ -288,27 +156,15 @@ export default function AboutPage() {
       </section>
 
       {/* Travel Philosophy */}
-      <section style={{ padding: "120px 0", background: "#F5F0E8" }}>
-        <div style={S} className={C}>
+      <section className="py-32 bg-[var(--background)]">
+        <div className="max-w-3xl mx-auto px-6 text-center">
           <ScrollReveal>
-            <div style={{ marginBottom: "80px" }}>
-              <p className="eyebrow" style={{ marginBottom: "40px" }}>Guiding Principles</p>
-              <div className="heading-rule">
-                <h2
-                  style={{
-                    fontFamily: '"Cormorant Garamond", Georgia, serif',
-                    fontWeight: 300,
-                    fontSize: "clamp(2.8rem, 4vw, 4rem)",
-                    letterSpacing: "0.04em",
-                    color: "#2C2C2A",
-                    margin: 0,
-                    whiteSpace: "nowrap",
-                  }}
-                >
-                  My Travel Philosophy
-                </h2>
-              </div>
-            </div>
+            <p className="text-accent text-xs tracking-[0.3em] uppercase mb-5">
+              Guiding Principles
+            </p>
+            <h2 className="font-serif text-3xl sm:text-[2.25rem] font-medium text-primary mb-16">
+              My Travel Philosophy
+            </h2>
           </ScrollReveal>
           <div className="grid sm:grid-cols-3 gap-14">
             {[
@@ -328,41 +184,15 @@ export default function AboutPage() {
                 desc: "Know what you seek from a journey — then design around it.",
               },
             ].map((item, i) => (
-              <ScrollReveal key={item.number} delay={i + 1 as 1 | 2 | 3}>
+              <ScrollReveal key={item.number} delay={i + 1}>
                 <div>
-                  <div
-                    style={{
-                      fontFamily: '"Cormorant Garamond", Georgia, serif',
-                      fontWeight: 300,
-                      fontSize: "4rem",
-                      lineHeight: 1,
-                      color: "rgba(200,184,154,0.45)",
-                      marginBottom: "1rem",
-                    }}
-                  >
+                  <div className="font-serif text-4xl font-medium text-accent/20 mb-4">
                     {item.number}
                   </div>
-                  <h3
-                    style={{
-                      fontFamily: '"Cormorant Garamond", Georgia, serif',
-                      fontWeight: 300,
-                      fontSize: "1.5rem",
-                      letterSpacing: "0.04em",
-                      color: "#2C2C2A",
-                      marginBottom: "0.75rem",
-                    }}
-                  >
+                  <h3 className="font-serif text-lg font-medium text-primary mb-3">
                     {item.title}
                   </h3>
-                  <p
-                    style={{
-                      fontFamily: '"Jost", sans-serif',
-                      fontWeight: 300,
-                      fontSize: "0.875rem",
-                      color: "#8A8478",
-                      lineHeight: 1.75,
-                    }}
-                  >
+                  <p className="text-text-light text-sm leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
@@ -373,31 +203,21 @@ export default function AboutPage() {
       </section>
 
       {/* Destinations */}
-      <section style={{ padding: "120px 0", background: "#FDFAF5" }}>
-        <div style={S} className={C}>
+      <section className="py-32 bg-warm">
+        <div className="max-w-5xl mx-auto px-6">
           <ScrollReveal>
-            <div style={{ marginBottom: "64px" }}>
-              <p className="eyebrow" style={{ marginBottom: "40px" }}>Where I&apos;ve Been</p>
-              <div className="heading-rule">
-                <h2
-                  style={{
-                    fontFamily: '"Cormorant Garamond", Georgia, serif',
-                    fontWeight: 300,
-                    fontSize: "clamp(2.8rem, 4vw, 4rem)",
-                    letterSpacing: "0.04em",
-                    color: "#2C2C2A",
-                    margin: 0,
-                    whiteSpace: "nowrap",
-                  }}
-                >
-                  Destinations
-                </h2>
-              </div>
+            <div className="text-center mb-16">
+              <p className="text-accent text-xs tracking-[0.3em] uppercase mb-5">
+                Where I&apos;ve Been
+              </p>
+              <h2 className="font-serif text-3xl sm:text-[2.25rem] font-medium text-primary">
+                Destinations
+              </h2>
             </div>
           </ScrollReveal>
 
           <ScrollReveal>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap justify-center gap-3">
               {[
                 { name: "USA", code: "us" },
                 { name: "Canada", code: "ca" },
@@ -431,19 +251,7 @@ export default function AboutPage() {
               ].map((country) => (
                 <span
                   key={country.name}
-                  style={{
-                    background: "#F5F0E8",
-                    border: "1px solid rgba(200,184,154,0.4)",
-                    padding: "0.5rem 1rem",
-                    fontSize: "0.78rem",
-                    color: "#2C2C2A",
-                    fontWeight: 300,
-                    letterSpacing: "0.05em",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "0.375rem",
-                    borderRadius: 0,
-                  }}
+                  className="bg-[var(--background)] px-4 py-2.5 rounded-full text-xs text-primary font-medium tracking-wide border border-warm-dark/30 inline-flex items-center gap-1.5"
                 >
                   <span className={`fi fi-${country.code}`} />{country.name}
                 </span>
@@ -454,58 +262,24 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section
-        style={{
-          padding: "120px 0",
-          background: "#1A1916",
-          textAlign: "center",
-        }}
-      >
-        <div
-          style={{ maxWidth: "600px", margin: "0 auto", padding: "0 24px" }}
-        >
+      <section className="py-32 bg-primary text-white text-center">
+        <div className="max-w-2xl mx-auto px-6">
           <ScrollReveal>
-            <p
-              style={{
-                fontFamily: '"Jost", sans-serif',
-                fontWeight: 300,
-                fontSize: "0.65rem",
-                letterSpacing: "0.25em",
-                textTransform: "uppercase",
-                color: "rgba(255,255,255,0.4)",
-                marginBottom: "2.5rem",
-              }}
-            >
+            <p className="text-white/50 text-xs tracking-[0.3em] uppercase mb-8">
               Let&apos;s Begin
             </p>
-            <h2
-              style={{
-                fontFamily: '"Cormorant Garamond", Georgia, serif',
-                fontWeight: 300,
-                fontSize: "clamp(2.5rem, 5vw, 3.75rem)",
-                letterSpacing: "0.04em",
-                color: "#fff",
-                lineHeight: 1.15,
-                marginBottom: "1.25rem",
-              }}
-            >
+            <h2 className="font-serif text-3xl sm:text-4xl font-medium mb-6 leading-tight">
               Let&apos;s Plan Something Extraordinary
             </h2>
-            <p
-              style={{
-                fontFamily: '"Jost", sans-serif',
-                fontWeight: 300,
-                fontSize: "0.95rem",
-                color: "#8A8478",
-                lineHeight: 1.75,
-                marginBottom: "3rem",
-              }}
-            >
+            <p className="text-white/45 mb-12 font-light leading-relaxed">
               Share your vision and we&apos;ll design a journey around it —
               wherever that may be.
             </p>
-            <Link href="/contact" className="btn-gold">
-              Get in Touch
+            <Link
+              href="/contact"
+              className="bg-accent hover:bg-[#232f3a] text-white px-8 py-4 text-[11px] font-medium tracking-[0.08em] uppercase rounded-[6px] transition-all duration-200 ease-in-out inline-flex items-center justify-center gap-3 hover:shadow-[0_4px_16px_rgba(46,58,70,0.4)]"
+            >
+              Get in Touch <ArrowRight className="h-4 w-4" />
             </Link>
           </ScrollReveal>
         </div>

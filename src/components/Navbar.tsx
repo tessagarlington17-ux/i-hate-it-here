@@ -26,101 +26,63 @@ export default function Navbar() {
 
   return (
     <nav
-      className="fixed top-0 w-full z-50 transition-all duration-500 ease-in-out"
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ease-in-out ${
+        scrolled
+          ? "backdrop-blur-[6px] shadow-none"
+          : "bg-transparent"
+      }`}
       style={
         scrolled
-          ? {
-              background: "#F5F0E8",
-              borderBottom: "1px solid rgba(200,184,154,0.5)",
-            }
-          : { background: "transparent" }
+          ? { background: "rgba(247,245,242,0.85)" }
+          : undefined
       }
     >
-      <div
-        style={{
-          maxWidth: "1400px",
-          margin: "0 auto",
-          padding: "0 60px",
-        }}
-        className="px-6 sm:px-10 lg:px-[60px]"
-      >
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex justify-between items-center h-20">
-          <Link href="/">
-            <span
-              style={{
-                fontFamily: '"Cormorant Garamond", Georgia, serif',
-                fontStyle: "italic",
-                fontWeight: 300,
-                fontSize: "1.3rem",
-                letterSpacing: "0.02em",
-                color: scrolled ? "#2C2C2A" : "#fff",
-                transition: "color 0.3s ease",
-              }}
-            >
+          <Link href="/" className="group">
+            <span className="font-serif text-xl font-medium text-primary tracking-tight">
               Tired of Planning
             </span>
           </Link>
 
-          {/* Desktop links */}
-          <div className="hidden md:flex items-center gap-10">
-            {links.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                style={{
-                  fontFamily: '"Jost", sans-serif',
-                  fontWeight: 300,
-                  fontSize: "0.72rem",
-                  letterSpacing: "0.15em",
-                  textTransform: "uppercase",
-                  color: scrolled ? "#2C2C2A" : "rgba(255,255,255,0.9)",
-                  textDecoration: "none",
-                  transition: "color 0.2s ease",
-                }}
-                onMouseEnter={(e) => {
-                  (e.target as HTMLElement).style.color = "#A8906A";
-                }}
-                onMouseLeave={(e) => {
-                  (e.target as HTMLElement).style.color = scrolled
-                    ? "#2C2C2A"
-                    : "rgba(255,255,255,0.9)";
-                }}
-              >
-                {link.label}
-              </Link>
-            ))}
+          <div className="hidden md:flex items-center gap-12">
+            {links.map((link) =>
+              link.label === "Inquire" ? (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="bg-accent hover:bg-[#232f3a] text-white px-6 py-2.5 text-[11px] font-medium tracking-[0.08em] uppercase rounded-[6px] transition-all duration-200 ease-in-out hover:shadow-[0_2px_8px_rgba(46,58,70,0.2)]"
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="relative text-text-light hover:text-primary text-[11px] font-medium tracking-[0.06em] uppercase transition-colors duration-200 after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[1px] after:bg-accent after:opacity-0 after:transition-opacity after:duration-200 hover:after:opacity-100"
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
           </div>
 
           <button
-            className="md:hidden"
+            className="md:hidden text-primary"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
-            style={{ color: scrolled ? "#2C2C2A" : "#fff" }}
           >
             {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
 
         {isOpen && (
-          <div
-            style={{ borderTop: "1px solid rgba(200,184,154,0.3)" }}
-            className="md:hidden py-6 space-y-1"
-          >
+          <div className="md:hidden py-6 space-y-1 border-t border-warm-dark/20">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                style={{
-                  display: "block",
-                  padding: "12px 8px",
-                  fontFamily: '"Jost", sans-serif',
-                  fontWeight: 300,
-                  fontSize: "0.72rem",
-                  letterSpacing: "0.15em",
-                  textTransform: "uppercase",
-                  color: "#8A8478",
-                  textDecoration: "none",
-                }}
+                className="block py-3 px-2 text-text-light hover:text-primary text-[11px] font-medium tracking-[0.06em] uppercase transition-colors duration-200"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}

@@ -1,14 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, Calendar, Users, DollarSign, Camera } from "lucide-react";
+import {
+  MapPin,
+  Calendar,
+  Users,
+  DollarSign,
+  ArrowRight,
+  Camera,
+} from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
-
-const S = {
-  maxWidth: "1400px",
-  margin: "0 auto",
-  padding: "0 60px",
-} as const;
-const C = "px-6 sm:px-10 lg:px-[60px]";
 
 const trips = [
   {
@@ -101,7 +101,7 @@ const trips = [
     description:
       "A solo traveler's dream route along Italy's most stunning coastline — built around charming hostel stays, cliff-side boat tours, lemon grove walks, and a curated list of the best wood-fired pizza from Sorrento to Salerno.",
     highlights: [
-      "Handpicked hostels with sea views under €40/night",
+      "Handpicked hostels with sea views under \u20AC40/night",
       "Private boat tour along the Amalfi cliffs",
       "Pizza trail mapped from Sorrento to Salerno",
       "Golden-hour day trips to Positano and Ravello",
@@ -146,7 +146,7 @@ export default function PortfolioPage() {
     <>
       {/* Header */}
       <section
-        className="relative overflow-hidden flex items-end justify-center text-white text-center"
+        className="text-white text-center relative overflow-hidden flex items-end justify-center"
         style={{
           backgroundImage: "url('/trips/thai_temple_colorful.JPG')",
           backgroundSize: "cover",
@@ -154,51 +154,15 @@ export default function PortfolioPage() {
           minHeight: "70vh",
         }}
       >
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(to top, rgba(26,25,22,0.75) 0%, rgba(26,25,22,0.3) 60%, transparent 100%)",
-          }}
-        />
-        <div className="relative z-10 max-w-3xl mx-auto px-6 pb-16 pt-32 text-center">
-          <p
-            style={{
-              fontFamily: '"Jost", sans-serif',
-              fontWeight: 300,
-              fontSize: "0.65rem",
-              letterSpacing: "0.2em",
-              textTransform: "uppercase",
-              color: "rgba(255,255,255,0.5)",
-              marginBottom: "1.75rem",
-            }}
-          >
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/70 to-primary/80" />
+        <div className="relative z-10 max-w-3xl mx-auto px-6 pb-16 pt-32">
+          <p className="text-white/50 text-xs tracking-[0.3em] uppercase mb-7">
             Our Work
           </p>
-          <h1
-            style={{
-              fontFamily: '"Cormorant Garamond", Georgia, serif',
-              fontWeight: 300,
-              fontSize: "clamp(3rem, 6vw, 4.5rem)",
-              letterSpacing: "0.04em",
-              color: "#fff",
-              lineHeight: 1.1,
-              marginBottom: "1.25rem",
-            }}
-          >
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-[3.5rem] font-medium mb-6 leading-[1.1]">
             Portfolio
           </h1>
-          <p
-            style={{
-              fontFamily: '"Jost", sans-serif',
-              fontWeight: 300,
-              fontSize: "1rem",
-              color: "rgba(255,255,255,0.55)",
-              maxWidth: "480px",
-              margin: "0 auto",
-              lineHeight: 1.7,
-            }}
-          >
+          <p className="text-white/50 text-lg max-w-xl mx-auto font-light leading-relaxed">
             A curated selection of journeys — from budget backpacking to
             luxury honeymoons, solo adventures to groups of seventeen.
           </p>
@@ -206,141 +170,69 @@ export default function PortfolioPage() {
       </section>
 
       {/* Trip Showcases */}
-      <section style={{ padding: "120px 0", background: "#F5F0E8" }}>
-        <div style={S} className={C}>
-          <div style={{ display: "flex", flexDirection: "column", gap: "5rem" }}>
+      <section className="py-32 bg-[var(--background)]">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="space-y-20">
             {trips.map((trip) => (
               <ScrollReveal key={trip.title}>
-                <div
-                  style={{
-                    background: "#FDFAF5",
-                    padding: "3rem",
-                  }}
-                  className="flex flex-col md:flex-row md:items-start gap-10"
-                >
-                  <div style={{ flex: 1 }}>
-                    <h2
-                      style={{
-                        fontFamily: '"Cormorant Garamond", Georgia, serif',
-                        fontWeight: 300,
-                        fontSize: "2rem",
-                        letterSpacing: "0.04em",
-                        color: "#2C2C2A",
-                        marginBottom: "1.25rem",
-                      }}
-                    >
-                      {trip.title}
-                    </h2>
+                <div className="bg-warm p-8 md:p-12">
+                  <div className="flex flex-col md:flex-row md:items-start gap-10">
+                    <div className="flex-1">
+                      <h2 className="font-serif text-2xl font-medium text-primary mb-5">
+                        {trip.title}
+                      </h2>
 
-                    <div
-                      style={{
-                        display: "flex",
-                        flexWrap: "wrap",
-                        gap: "1.25rem",
-                        marginBottom: "1.75rem",
-                      }}
-                    >
-                      {[
-                        { Icon: MapPin, text: trip.location },
-                        { Icon: Calendar, text: trip.duration },
-                        { Icon: Users, text: trip.groupSize },
-                        { Icon: DollarSign, text: trip.budget },
-                      ].map(({ Icon, text }) => (
-                        <span
-                          key={text}
-                          style={{
-                            display: "flex",
-                            alignItems: "center",
-                            gap: "0.375rem",
-                            fontFamily: '"Jost", sans-serif',
-                            fontWeight: 300,
-                            fontSize: "0.72rem",
-                            letterSpacing: "0.1em",
-                            textTransform: "uppercase",
-                            color: "#8A8478",
-                          }}
-                        >
-                          <Icon style={{ width: "12px", height: "12px", color: "#A8906A" }} />
-                          {text}
+                      <div className="flex flex-wrap gap-5 text-xs text-text-light tracking-wider uppercase mb-7">
+                        <span className="flex items-center gap-1.5">
+                          <MapPin className="h-3 w-3 text-accent" /> {trip.location}
                         </span>
-                      ))}
+                        <span className="flex items-center gap-1.5">
+                          <Calendar className="h-3 w-3 text-accent" /> {trip.duration}
+                        </span>
+                        <span className="flex items-center gap-1.5">
+                          <Users className="h-3 w-3 text-accent" /> {trip.groupSize}
+                        </span>
+                        <span className="flex items-center gap-1.5">
+                          <DollarSign className="h-3 w-3 text-accent" /> {trip.budget}
+                        </span>
+                      </div>
+
+                      <p className="text-text-light leading-[1.8] mb-9 text-sm max-w-[580px]">
+                        {trip.description}
+                      </p>
+
+                      <h3 className="text-[10px] font-medium text-accent tracking-[0.2em] uppercase mb-5">
+                        Trip Highlights
+                      </h3>
+                      <ul className="grid sm:grid-cols-2 gap-3">
+                        {trip.highlights.map((h) => (
+                          <li
+                            key={h}
+                            className="flex items-start gap-2.5 text-sm text-text-light"
+                          >
+                            <span className="text-accent text-xs mt-1">&#9670;</span>
+                            {h}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
 
-                    <p
-                      style={{
-                        fontFamily: '"Jost", sans-serif',
-                        fontWeight: 300,
-                        fontSize: "0.875rem",
-                        color: "#8A8478",
-                        lineHeight: 1.8,
-                        marginBottom: "2.25rem",
-                        maxWidth: "560px",
-                      }}
-                    >
-                      {trip.description}
-                    </p>
-
-                    <p
-                      style={{
-                        fontFamily: '"Jost", sans-serif',
-                        fontWeight: 300,
-                        fontSize: "0.6rem",
-                        letterSpacing: "0.2em",
-                        textTransform: "uppercase",
-                        color: "#A8906A",
-                        marginBottom: "1.25rem",
-                      }}
-                    >
-                      Trip Highlights
-                    </p>
-                    <ul
-                      style={{
-                        listStyle: "none",
-                        padding: 0,
-                        margin: 0,
-                        display: "grid",
-                        gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-                        gap: "0.75rem",
-                      }}
-                    >
-                      {trip.highlights.map((h) => (
-                        <li
-                          key={h}
-                          style={{
-                            display: "flex",
-                            alignItems: "flex-start",
-                            gap: "0.625rem",
-                            fontFamily: '"Jost", sans-serif',
-                            fontWeight: 300,
-                            fontSize: "0.875rem",
-                            color: "#8A8478",
-                          }}
-                        >
-                          <span style={{ color: "#C8B89A", fontSize: "0.65rem", marginTop: "4px", flexShrink: 0 }}>&#9670;</span>
-                          {h}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div
-                    className="flex-shrink-0 w-full md:w-[480px]"
-                    style={{ height: "360px", overflow: "hidden", position: "relative", background: "#E8E2DA" }}
-                  >
-                    {trip.image ? (
-                      <Image
-                        src={trip.image}
-                        alt={trip.title}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, 480px"
-                        style={{ filter: "saturate(0.88) contrast(1.02)" }}
-                      />
-                    ) : (
-                      <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                        <Camera style={{ width: "40px", height: "40px", color: "rgba(138,132,120,0.2)" }} />
-                      </div>
-                    )}
+                    <div className="flex-shrink-0 w-full md:w-[512px] h-96 overflow-hidden relative bg-warm-dark">
+                      {trip.image ? (
+                        <Image
+                          src={trip.image}
+                          alt={trip.title}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, 512px"
+                          style={{ filter: "saturate(0.92)" }}
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center">
+                          <Camera className="h-10 w-10 text-text-light/20" />
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
               </ScrollReveal>
@@ -350,60 +242,27 @@ export default function PortfolioPage() {
       </section>
 
       {/* Countries */}
-      <section style={{ padding: "120px 0", background: "#FDFAF5" }}>
-        <div style={S} className={C}>
+      <section className="py-32 bg-warm">
+        <div className="max-w-4xl mx-auto px-6 text-center">
           <ScrollReveal>
-            <div style={{ marginBottom: "64px" }}>
-              <p className="eyebrow" style={{ marginBottom: "40px" }}>Destinations</p>
-              <div className="heading-rule">
-                <h2
-                  style={{
-                    fontFamily: '"Cormorant Garamond", Georgia, serif',
-                    fontWeight: 300,
-                    fontSize: "clamp(2.8rem, 4vw, 4rem)",
-                    letterSpacing: "0.04em",
-                    color: "#2C2C2A",
-                    margin: 0,
-                    whiteSpace: "nowrap",
-                  }}
-                >
-                  29 Countries & Counting
-                </h2>
-              </div>
-              <p
-                style={{
-                  marginTop: "1.5rem",
-                  color: "#8A8478",
-                  fontWeight: 300,
-                  fontSize: "0.875rem",
-                  maxWidth: "520px",
-                  lineHeight: 1.75,
-                }}
-              >
-                Every destination I plan for is informed by lived experience and thorough research. Here
-                are the places I&apos;ve personally explored.
-              </p>
-            </div>
+            <p className="text-accent text-xs tracking-[0.3em] uppercase mb-5">
+              Destinations
+            </p>
+            <h2 className="font-serif text-3xl sm:text-[2.25rem] font-medium text-primary mb-6">
+              29 Countries & Counting
+            </h2>
+            <p className="text-text-light mb-14 max-w-xl mx-auto text-sm leading-relaxed">
+              Every destination I plan for is informed by lived experience and thorough research. Here
+              are the places I&apos;ve personally explored.
+            </p>
           </ScrollReveal>
 
           <ScrollReveal>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap justify-center gap-3">
               {destinations.map((country) => (
                 <span
                   key={country.name}
-                  style={{
-                    background: "#F5F0E8",
-                    border: "1px solid rgba(200,184,154,0.4)",
-                    padding: "0.5rem 1rem",
-                    fontSize: "0.78rem",
-                    color: "#2C2C2A",
-                    fontWeight: 300,
-                    letterSpacing: "0.05em",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "0.375rem",
-                    borderRadius: 0,
-                  }}
+                  className="bg-[var(--background)] px-4 py-2.5 rounded-full text-xs text-primary font-medium tracking-wide border border-warm-dark/30 inline-flex items-center gap-1.5"
                 >
                   <span className={`fi fi-${country.code}`} />{country.name}
                 </span>
@@ -414,54 +273,24 @@ export default function PortfolioPage() {
       </section>
 
       {/* CTA */}
-      <section
-        style={{ padding: "120px 0", background: "#1A1916", textAlign: "center" }}
-      >
-        <div
-          style={{ maxWidth: "600px", margin: "0 auto", padding: "0 24px" }}
-        >
+      <section className="py-32 bg-primary text-white text-center">
+        <div className="max-w-2xl mx-auto px-6">
           <ScrollReveal>
-            <p
-              style={{
-                fontFamily: '"Jost", sans-serif',
-                fontWeight: 300,
-                fontSize: "0.65rem",
-                letterSpacing: "0.25em",
-                textTransform: "uppercase",
-                color: "rgba(255,255,255,0.4)",
-                marginBottom: "2.5rem",
-              }}
-            >
+            <p className="text-white/50 text-xs tracking-[0.3em] uppercase mb-8">
               Your Turn
             </p>
-            <h2
-              style={{
-                fontFamily: '"Cormorant Garamond", Georgia, serif',
-                fontWeight: 300,
-                fontSize: "clamp(2.5rem, 5vw, 3.75rem)",
-                letterSpacing: "0.04em",
-                color: "#fff",
-                lineHeight: 1.15,
-                marginBottom: "1.25rem",
-              }}
-            >
+            <h2 className="font-serif text-3xl sm:text-4xl font-medium mb-6 leading-tight">
               Ready for a Journey Like These?
             </h2>
-            <p
-              style={{
-                fontFamily: '"Jost", sans-serif',
-                fontWeight: 300,
-                fontSize: "0.95rem",
-                color: "#8A8478",
-                lineHeight: 1.75,
-                marginBottom: "3rem",
-              }}
-            >
+            <p className="text-white/45 mb-12 font-light leading-relaxed">
               Every itinerary is bespoke. Tell me where you dream of going and
               I&apos;ll bring it to life.
             </p>
-            <Link href="/contact" className="btn-gold">
-              Plan My Trip
+            <Link
+              href="/contact"
+              className="bg-accent hover:bg-[#232f3a] text-white px-8 py-4 text-[11px] font-medium tracking-[0.08em] uppercase rounded-[6px] transition-all duration-200 ease-in-out inline-flex items-center justify-center gap-3 hover:shadow-[0_4px_16px_rgba(46,58,70,0.4)]"
+            >
+              Plan My Trip <ArrowRight className="h-4 w-4" />
             </Link>
           </ScrollReveal>
         </div>
