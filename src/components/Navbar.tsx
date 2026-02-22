@@ -3,10 +3,12 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     function onScroll() {
@@ -24,6 +26,8 @@ export default function Navbar() {
     { href: "/contact", label: "Inquire" },
   ];
 
+  const isHomeHero = pathname === "/" && !scrolled;
+
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-500 ease-in-out ${
@@ -40,7 +44,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="group">
-            <span className="font-serif text-xl font-medium text-primary tracking-tight">
+            <span
+              className={`font-serif text-xl font-medium tracking-tight transition-colors duration-300 ${
+                isHomeHero ? "text-white" : "text-primary"
+              }`}
+              style={isHomeHero ? { textShadow: "0 1px 6px rgba(0,0,0,0.25)" } : undefined}
+            >
               Tired of Planning
             </span>
           </Link>
@@ -51,7 +60,12 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="bg-accent hover:bg-[#232f3a] text-white px-6 py-2.5 text-[11px] font-medium tracking-[0.08em] uppercase rounded-[6px] transition-all duration-200 ease-in-out hover:shadow-[0_2px_8px_rgba(46,58,70,0.2)]"
+                  className={`px-6 py-2.5 text-[11px] font-medium tracking-[0.08em] uppercase rounded-[6px] transition-all duration-200 ease-in-out ${
+                    isHomeHero
+                      ? "border border-white/65 bg-white/10 text-white hover:bg-white hover:text-accent"
+                      : "bg-accent hover:bg-[#232f3a] text-white hover:shadow-[0_2px_8px_rgba(46,58,70,0.2)]"
+                  }`}
+                  style={isHomeHero ? { backdropFilter: "blur(2px)" } : undefined}
                 >
                   {link.label}
                 </Link>
@@ -59,7 +73,12 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="relative text-text-light hover:text-primary text-[11px] font-medium tracking-[0.06em] uppercase transition-colors duration-200 after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[1px] after:bg-accent after:opacity-0 after:transition-opacity after:duration-200 hover:after:opacity-100"
+                  className={`relative text-[11px] font-medium tracking-[0.06em] uppercase transition-colors duration-200 after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[1px] after:opacity-0 after:transition-opacity after:duration-200 hover:after:opacity-100 ${
+                    isHomeHero
+                      ? "text-white/90 hover:text-white after:bg-white"
+                      : "text-text-light hover:text-primary after:bg-accent"
+                  }`}
+                  style={isHomeHero ? { textShadow: "0 1px 6px rgba(0,0,0,0.3)" } : undefined}
                 >
                   {link.label}
                 </Link>
@@ -68,7 +87,9 @@ export default function Navbar() {
           </div>
 
           <button
-            className="md:hidden text-primary"
+            className={`md:hidden transition-colors duration-300 ${
+              isHomeHero ? "text-white" : "text-primary"
+            }`}
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -77,12 +98,21 @@ export default function Navbar() {
         </div>
 
         {isOpen && (
-          <div className="md:hidden py-6 space-y-1 border-t border-warm-dark/20">
+          <div
+            className={`md:hidden py-6 space-y-1 border-t ${
+              isHomeHero ? "border-white/20" : "border-warm-dark/20"
+            }`}
+            style={isHomeHero ? { background: "rgba(17, 24, 39, 0.4)", backdropFilter: "blur(10px)" } : undefined}
+          >
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="block py-3 px-2 text-text-light hover:text-primary text-[11px] font-medium tracking-[0.06em] uppercase transition-colors duration-200"
+                className={`block py-3 px-2 text-[11px] font-medium tracking-[0.06em] uppercase transition-colors duration-200 ${
+                  isHomeHero
+                    ? "text-white/90 hover:text-white"
+                    : "text-text-light hover:text-primary"
+                }`}
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
