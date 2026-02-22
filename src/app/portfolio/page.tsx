@@ -151,7 +151,7 @@ export default function PortfolioPage() {
           backgroundImage: "url('/trips/thai_temple_colorful.JPG')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          minHeight: "55vh",
+          minHeight: "70vh",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/70 to-primary/80" />

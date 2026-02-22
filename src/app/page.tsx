@@ -68,7 +68,7 @@ export default function Home() {
       {/* Hero */}
       <style>{`
         .hero-section {
-          height: 80vh;
+          height: 100vh;
         }
         .hero-h1 {
           font-size: 3.8rem;

@@ -83,10 +83,10 @@ export default function ContactPage() {
       <section
         className="text-white text-center relative overflow-hidden flex items-end justify-center"
         style={{
-          backgroundImage: "url('/trips/thailand-beach.png')",
+          backgroundImage: "url('/trips/maui.JPG')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          minHeight: "55vh",
+          minHeight: "70vh",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/70 to-primary/80" />
