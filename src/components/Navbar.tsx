@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,6 +27,8 @@ export default function Navbar() {
   ];
 
   const isHomeHero = pathname === "/" && !scrolled;
+  // All pages show white nav when over hero (not scrolled); home gets special treatment
+  const showWhite = !scrolled;
 
   return (
     <nav
@@ -46,7 +48,7 @@ export default function Navbar() {
           <Link href="/" className="group">
             <span
               className={`font-serif text-xl font-medium tracking-tight transition-colors duration-300 ${
-                isHomeHero ? "text-white" : "text-primary"
+                showWhite ? "text-white" : "text-primary"
               }`}
               style={isHomeHero ? { textShadow: "0 1px 6px rgba(0,0,0,0.25)" } : undefined}
             >
@@ -74,7 +76,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   className={`relative text-[11px] font-medium tracking-[0.06em] uppercase transition-colors duration-200 after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[1px] after:opacity-0 after:transition-opacity after:duration-200 hover:after:opacity-100 ${
-                    isHomeHero
+                    showWhite
                       ? "text-white/90 hover:text-white after:bg-white"
                       : "text-text-light hover:text-primary after:bg-accent"
                   }`}
@@ -88,7 +90,7 @@ export default function Navbar() {
 
           <button
             className={`md:hidden transition-colors duration-300 ${
-              isHomeHero ? "text-white" : "text-primary"
+              showWhite ? "text-white" : "text-primary"
             }`}
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
@@ -100,16 +102,16 @@ export default function Navbar() {
         {isOpen && (
           <div
             className={`md:hidden py-6 space-y-1 border-t ${
-              isHomeHero ? "border-white/20" : "border-warm-dark/20"
+              showWhite ? "border-white/20" : "border-warm-dark/20"
             }`}
-            style={isHomeHero ? { background: "rgba(17, 24, 39, 0.4)", backdropFilter: "blur(10px)" } : undefined}
+            style={showWhite ? { background: "rgba(17, 24, 39, 0.4)", backdropFilter: "blur(10px)" } : undefined}
           >
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={`block py-3 px-2 text-[11px] font-medium tracking-[0.06em] uppercase transition-colors duration-200 ${
-                  isHomeHero
+                  showWhite
                     ? "text-white/90 hover:text-white"
                     : "text-text-light hover:text-primary"
                 }`}

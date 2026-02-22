@@ -6,14 +6,12 @@ import {
   Calendar,
   Star,
   ArrowRight,
-  Users,
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const stats = [
   { icon: Globe, value: "29", label: "Countries" },
   { icon: MapPin, value: "100+", label: "Trips Curated" },
-  { icon: Users, value: "3K+", label: "Happy Travelers" },
   { icon: Star, value: "5.0", label: "Client Rating" },
 ];
 
@@ -118,6 +116,9 @@ export default function Home() {
             display: none;
           }
         }
+        .photo-carousel::-webkit-scrollbar {
+          display: none;
+        }
       `}</style>
       <section
         className="hero-section relative flex items-center justify-center overflow-hidden"
@@ -187,21 +188,48 @@ export default function Home() {
           </ScrollReveal>
 
           <ScrollReveal>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div
+              style={{
+                display: "flex",
+                overflowX: "auto",
+                gap: "16px",
+                scrollSnapType: "x mandatory",
+                paddingLeft: "max(24px, calc((100vw - 1400px) / 2 + 60px))",
+                paddingRight: "max(24px, calc((100vw - 1400px) / 2 + 60px))",
+                scrollbarWidth: "none",
+                msOverflowStyle: "none",
+              }}
+              className="photo-carousel"
+            >
               {[
                 "/trips/IMG_1550.jpeg",
                 "/trips/IMG_1729.jpeg",
                 "/trips/IMG_2670.jpeg",
                 "/trips/india.JPG",
-                "/trips/thai_temple_colorful.JPG",
+                "/trips/thai_2019.jpg",
                 "/trips/burano.JPG",
+                "/trips/amalfi_coast.JPG",
               ].map((src) => (
-                <div key={src} className="aspect-video overflow-hidden">
+                <div
+                  key={src}
+                  style={{
+                    width: "320px",
+                    height: "480px",
+                    flexShrink: 0,
+                    overflow: "hidden",
+                    scrollSnapAlign: "start",
+                  }}
+                >
                   <img
                     src={src}
                     alt="Travel snapshot"
-                    className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-700 ease-in-out"
-                    style={{ filter: "saturate(0.9) brightness(0.98)" }}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      filter: "saturate(0.9) brightness(0.98)",
+                      display: "block",
+                    }}
                   />
                 </div>
               ))}
@@ -214,7 +242,7 @@ export default function Home() {
       <section className="py-16 bg-[var(--background)]">
         <div className="max-w-5xl mx-auto px-6">
           <ScrollReveal>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+            <div className="grid grid-cols-3 gap-12">
               {stats.map((stat) => (
                 <div key={stat.label} className="text-center">
                   <stat.icon className="h-5 w-5 text-accent mx-auto mb-5" />
@@ -234,24 +262,24 @@ export default function Home() {
       <div className="max-w-16 mx-auto border-t border-warm-dark/40" />
 
       {/* What I Do Best */}
-      <section className="py-24 bg-[var(--background)]">
+      <section className="py-32 bg-[var(--background)]">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
-            <div className="text-center mb-14">
-              <p className="text-accent text-xs tracking-[0.3em] uppercase mb-5">
+            <div className="text-center mb-[4.55rem]">
+              <p className="text-accent text-[0.8125rem] tracking-[0.3em] uppercase mb-6">
                 The Experience
               </p>
-              <h2 className="font-serif text-3xl sm:text-4xl md:text-[2.75rem] font-medium text-primary mb-6">
+              <h2 className="font-serif text-[2.6rem] sm:text-[3.25rem] md:text-[3.575rem] font-medium text-primary mb-7">
                 Why Tired of Planning?
               </h2>
-              <p className="text-text-light max-w-[680px] mx-auto leading-relaxed">
+              <p className="text-text-light max-w-[680px] mx-auto leading-relaxed text-base">
                 Personal travel across 29 countries — distilled into planning
                 that feels effortless.
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-8">
             {strengths.map((item, i) => (
               <ScrollReveal key={item.title} delay={i + 1}>
                 <div
@@ -260,16 +288,17 @@ export default function Home() {
                     backgroundImage: `url('${item.image}')`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
+                    minHeight: "480px",
                   }}
                 >
-                  <div className="bg-primary/72 p-10 sm:p-12">
-                    <div className="w-12 h-12 border border-white/20 flex items-center justify-center mb-7">
-                      <item.icon className="h-5 w-5 text-white/60" />
+                  <div className="bg-primary/72 p-[3.25rem] sm:p-[3.9rem] h-full flex flex-col justify-end" style={{ minHeight: "480px" }}>
+                    <div className="w-[3.75rem] h-[3.75rem] border border-white/20 flex items-center justify-center mb-9">
+                      <item.icon className="h-6 w-6 text-white/60" />
                     </div>
-                    <h3 className="font-serif text-xl font-medium text-white mb-4">
+                    <h3 className="font-serif text-[1.625rem] font-medium text-white mb-5">
                       {item.title}
                     </h3>
-                    <p className="text-white/70 leading-relaxed text-sm">
+                    <p className="text-white/70 leading-relaxed text-base">
                       {item.description}
                     </p>
                   </div>

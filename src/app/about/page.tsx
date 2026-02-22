@@ -20,18 +20,18 @@ export default function AboutPage() {
           backgroundImage: "url('/trips/oslo.JPG')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          minHeight: "70vh",
+          minHeight: "98vh",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/70 to-primary/80" />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 100%)" }} />
         <div className="relative z-10 max-w-3xl mx-auto px-6 pb-16 pt-32">
-          <p className="text-white/50 text-xs tracking-[0.3em] uppercase mb-7">
+          <p className="text-white/80 text-xs tracking-[0.3em] uppercase mb-7">
             The Story
           </p>
           <h1 className="font-serif text-4xl sm:text-5xl md:text-[3.5rem] font-medium mb-6 leading-[1.1]">
             About Me
           </h1>
-          <p className="text-white/50 text-lg font-light max-w-lg mx-auto leading-relaxed">
+          <p className="text-white/80 text-lg font-light max-w-lg mx-auto leading-relaxed">
             The short version: I love planning trips as much as taking them.
           </p>
         </div>
@@ -98,13 +98,13 @@ export default function AboutPage() {
                 icon: Utensils,
                 title: "Culinary-First Planning",
                 desc: "Food is the soul of travel. Every itinerary features curated dining — from acclaimed restaurants to neighborhood gems only locals know.",
-                image: "/trips/IMG_8200 3.jpeg",
+                image: "/trips/uchi.jpg",
               },
               {
                 icon: Calendar,
                 title: "Built-In Breathing Room",
                 desc: "My itineraries aren't checklists. I design unstructured time because the finest moments happen when you're not rushing.",
-                image: "/trips/thailand-beach.png",
+                image: "/trips/baltimore.JPG",
               },
               {
                 icon: Users,
@@ -122,31 +122,28 @@ export default function AboutPage() {
                 icon: MapPin,
                 title: "Transparent on Budget",
                 desc: "I'll share the real cost of things — not inflated tourist pricing. Authentic value at every level.",
-                image: "/trips/coastal-villas.png",
+                image: "/trips/connecticut.JPG",
               },
             ].map((item, i) => (
               <ScrollReveal key={item.title} delay={i % 2 === 0 ? 1 : 2}>
-                <div className="bg-[var(--background)] overflow-hidden h-full">
-                  <div className="h-48 overflow-hidden">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-full object-cover"
-                      style={{ filter: "saturate(0.92)" }}
-                    />
-                  </div>
-                  <div className="p-8 sm:p-9 flex gap-5">
-                    <div className="w-10 h-10 border border-accent/20 flex items-center justify-center flex-shrink-0">
-                      <item.icon className="h-4 w-4 text-accent" />
+                <div className="overflow-hidden h-full relative" style={{ height: "576px" }}>
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="absolute inset-0 w-full h-full object-cover"
+                    style={{ filter: "saturate(0.92)" }}
+                  />
+                  <div className="absolute inset-0 bg-primary/60" />
+                  <div className="relative z-10 p-8 sm:p-9 flex flex-col justify-end h-full">
+                    <div className="w-10 h-10 border border-white/30 flex items-center justify-center mb-4">
+                      <item.icon className="h-4 w-4 text-white/80" />
                     </div>
-                    <div>
-                      <h3 className="font-serif text-lg font-medium text-primary mb-3">
-                        {item.title}
-                      </h3>
-                      <p className="text-text-light text-sm leading-relaxed">
-                        {item.desc}
-                      </p>
-                    </div>
+                    <h3 className="font-serif text-lg font-medium text-white mb-3">
+                      {item.title}
+                    </h3>
+                    <p className="text-white/75 text-sm leading-relaxed">
+                      {item.desc}
+                    </p>
                   </div>
                 </div>
               </ScrollReveal>

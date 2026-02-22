@@ -73,21 +73,21 @@ export default function PackagesPage() {
       <section
         className="text-white text-center relative overflow-hidden flex items-end justify-center"
         style={{
-          backgroundImage: "url('/trips/puerto_rico.JPG')",
+          backgroundImage: "url('/trips/puerto_rico_rainforest.JPG')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          minHeight: "70vh",
+          minHeight: "98vh",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/70 to-primary/80" />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 100%)" }} />
         <div className="relative z-10 max-w-3xl mx-auto px-6 pb-16 pt-32">
-          <p className="text-white/50 text-xs tracking-[0.3em] uppercase mb-7">
+          <p className="text-white/80 text-xs tracking-[0.3em] uppercase mb-7">
             Services
           </p>
           <h1 className="font-serif text-4xl sm:text-5xl md:text-[3.5rem] font-medium mb-6 leading-[1.1]">
             Packages & Pricing
           </h1>
-          <p className="text-white/50 text-lg max-w-xl mx-auto font-light leading-relaxed">
+          <p className="text-white/80 text-lg max-w-xl mx-auto font-light leading-relaxed">
             Three tiers designed around how much support you desire — from a
             curated itinerary to full concierge service.
           </p>

@@ -52,7 +52,7 @@ export default function Footer() {
                 <Instagram className="h-5 w-5" />
               </a>
               <a
-                href="mailto:tessa.garlington@gmail.com"
+                href="mailto:hello@tiredofplanning.com"
                 className="text-white/40 hover:text-white transition-colors duration-200"
                 aria-label="Email"
               >
