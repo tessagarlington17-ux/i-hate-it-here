@@ -71,7 +71,7 @@ export default function PackagesPage() {
     <>
       {/* Header */}
       <section
-        className="text-white text-center relative overflow-hidden flex items-end justify-center"
+        className="text-white text-center relative overflow-hidden flex items-center justify-center"
         style={{
           backgroundImage: "url('/trips/puerto_rico_rainforest.JPG')",
           backgroundSize: "cover",
@@ -79,8 +79,8 @@ export default function PackagesPage() {
           minHeight: "98vh",
         }}
       >
-        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 100%)" }} />
-        <div className="relative z-10 max-w-3xl mx-auto px-6 pb-16 pt-32">
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.1))" }} />
+        <div className="relative z-10 max-w-3xl mx-auto px-6">
           <p className="text-white/80 text-xs tracking-[0.3em] uppercase mb-7">
             Services
           </p>
