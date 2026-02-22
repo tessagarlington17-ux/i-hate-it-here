@@ -66,48 +66,105 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
+      <style>{`
+        .hero-section {
+          height: 80vh;
+        }
+        .hero-h1 {
+          font-size: 3.8rem;
+          line-height: 1.08;
+          letter-spacing: 0.02em;
+        }
+        .hero-subtitle {
+          font-size: 1.125rem;
+          line-height: 1.625;
+          max-width: 42rem;
+          margin-bottom: 3.5rem;
+        }
+        .hero-btn-secondary {
+          display: inline-flex;
+        }
+        @media (max-width: 767px) {
+          .hero-section {
+            height: auto;
+            min-height: 90vh;
+            padding: 80px 24px 60px;
+          }
+          .hero-h1 {
+            font-size: 2.4rem !important;
+            line-height: 1.15 !important;
+            letter-spacing: 0 !important;
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          .hero-subtitle {
+            font-size: 1rem !important;
+            line-height: 1.6 !important;
+            max-width: 85%;
+            margin-top: 16px;
+            margin-bottom: 28px !important;
+          }
+          .hero-buttons {
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+          }
+          .hero-btn-primary {
+            width: 100%;
+            max-width: 320px;
+          }
+          .hero-btn-secondary {
+            display: none;
+          }
+        }
+      `}</style>
       <section
-        className="relative flex items-center justify-center overflow-hidden"
+        className="hero-section relative flex items-center justify-center overflow-hidden"
         style={{
           backgroundImage: "url('/trips/amalfi_coast.JPG')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          height: "80vh",
         }}
       >
+        {/* Mobile overlay — darker for legibility */}
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 sm:hidden"
+          style={{
+            background: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.35))",
+          }}
+        />
+        {/* Desktop overlay */}
+        <div
+          className="absolute inset-0 hidden sm:block"
           style={{
             background:
               "linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.1))",
           }}
         />
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white">
+        <div className="relative z-10 max-w-4xl mx-auto text-center text-white w-full px-6 sm:px-6">
           <p className="text-white font-medium tracking-[0.3em] uppercase text-xs sm:text-sm mb-10">
             Tired of Planning
           </p>
-          <h1
-            className="font-serif font-medium leading-[1.08] mb-10 text-white"
-            style={{ fontSize: "3.8rem", letterSpacing: "0.02em" }}
-          >
+          <h1 className="hero-h1 font-serif font-medium text-white mb-10">
             The World is Waiting.
             <br />
             <span className="italic">Stop Scrolling.</span>
           </h1>
-          <p className="text-lg sm:text-xl text-white max-w-2xl mx-auto mb-14 leading-relaxed font-light">
+          <p className="hero-subtitle text-white mx-auto font-light">
             Personalized itineraries crafted with intention — from culinary
             adventures to hidden escapes.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="hero-buttons flex sm:flex-row gap-4 justify-center">
             <Link
               href="/packages"
-              className="bg-accent hover:bg-[#232f3a] text-white px-8 py-4 text-[11px] font-medium tracking-[0.08em] uppercase rounded-[6px] transition-all duration-200 ease-in-out inline-flex items-center justify-center gap-3 hover:shadow-[0_4px_16px_rgba(46,58,70,0.3)]"
+              className="hero-btn-primary bg-accent hover:bg-[#232f3a] text-white px-8 py-4 text-[11px] font-medium tracking-[0.08em] uppercase rounded-[6px] transition-all duration-200 ease-in-out inline-flex items-center justify-center gap-3 hover:shadow-[0_4px_16px_rgba(46,58,70,0.3)]"
             >
               View Packages <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href="/portfolio"
-              className="border border-white/30 hover:border-white/60 hover:bg-white/5 text-white px-8 py-4 text-[11px] font-medium tracking-[0.08em] uppercase rounded-[6px] transition-all duration-200 ease-in-out inline-flex items-center justify-center"
+              className="hero-btn-secondary border border-white/30 hover:border-white/60 hover:bg-white/5 text-white px-8 py-4 text-[11px] font-medium tracking-[0.08em] uppercase rounded-[6px] transition-all duration-200 ease-in-out items-center justify-center"
             >
               See My Work
             </Link>
