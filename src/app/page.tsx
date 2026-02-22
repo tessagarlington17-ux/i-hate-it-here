@@ -158,13 +158,13 @@ export default function Home() {
           <div className="hero-buttons flex sm:flex-row gap-4 justify-center">
             <Link
               href="/packages"
-              className="hero-btn-primary bg-accent hover:bg-[#232f3a] text-white px-8 py-4 text-[11px] font-medium tracking-[0.08em] uppercase rounded-[6px] transition-all duration-200 ease-in-out inline-flex items-center justify-center gap-3 hover:shadow-[0_4px_16px_rgba(46,58,70,0.3)]"
+              className="hero-btn-primary bg-white text-accent hover:bg-white/90 px-8 py-4 text-[11px] font-medium tracking-[0.08em] uppercase rounded-[6px] transition-all duration-200 ease-in-out inline-flex items-center justify-center gap-3 shadow-[0_2px_12px_rgba(0,0,0,0.25)]"
             >
               View Packages <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href="/portfolio"
-              className="hero-btn-secondary border border-white/30 hover:border-white/60 hover:bg-white/5 text-white px-8 py-4 text-[11px] font-medium tracking-[0.08em] uppercase rounded-[6px] transition-all duration-200 ease-in-out items-center justify-center"
+              className="hero-btn-secondary border border-white text-white hover:bg-white hover:text-accent px-8 py-4 text-[11px] font-medium tracking-[0.08em] uppercase rounded-[6px] transition-all duration-200 ease-in-out items-center justify-center"
             >
               See My Work
             </Link>

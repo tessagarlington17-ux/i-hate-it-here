@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
     }
 
     await resend.emails.send({
-      from: "Tired of Planning <onboarding@resend.dev>",
+      from: "Tired of Planning <hello@tiredofplanning.com>",
       to: "hello@tiredofplanning.com",
       replyTo: email,
       subject: `New Travel Inquiry from ${name}`,
@@ -73,9 +73,11 @@ export async function POST(request: NextRequest) {
       { success: true, message: "Inquiry received! We'll be in touch within 24 hours." },
       { status: 200 }
     );
-  } catch {
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err);
+    console.error("[Resend] Email send failed:", message);
     return NextResponse.json(
-      { error: "Failed to process inquiry." },
+      { error: "Failed to send email.", detail: message },
       { status: 500 }
     );
   }

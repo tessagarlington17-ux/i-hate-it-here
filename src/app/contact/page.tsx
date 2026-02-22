@@ -32,6 +32,7 @@ export default function ContactPage() {
   const [status, setStatus] = useState<
     "idle" | "sending" | "success" | "error"
   >("idle");
+  const [errorDetail, setErrorDetail] = useState<string | null>(null);
 
   function handleChange(
     e: React.ChangeEvent<
@@ -54,6 +55,7 @@ export default function ContactPage() {
 
       if (res.ok) {
         setStatus("success");
+        setErrorDetail(null);
         setFormData({
           name: "",
           email: "",
@@ -65,9 +67,12 @@ export default function ContactPage() {
           message: "",
         });
       } else {
+        const body = await res.json().catch(() => ({}));
+        setErrorDetail(body.detail ?? body.error ?? null);
         setStatus("error");
       }
-    } catch {
+    } catch (err) {
+      setErrorDetail(err instanceof Error ? err.message : null);
       setStatus("error");
     }
   }
@@ -366,16 +371,21 @@ export default function ContactPage() {
                   )}
 
                   {status === "error" && (
-                    <div className="mt-7 bg-red-50 text-red-700 px-5 py-4 text-sm">
-                      Something went wrong. Please try again or email me directly
-                      at{" "}
-                      <a
-                        href="mailto:hello@tiredofplanning.com"
-                        className="underline hover:text-red-900 transition-colors"
-                      >
-                        hello@tiredofplanning.com
-                      </a>
-                      .
+                    <div className="mt-7 bg-red-50 text-red-700 px-5 py-4 text-sm space-y-1">
+                      <p>
+                        Something went wrong. Please try again or email me directly
+                        at{" "}
+                        <a
+                          href="mailto:hello@tiredofplanning.com"
+                          className="underline hover:text-red-900 transition-colors"
+                        >
+                          hello@tiredofplanning.com
+                        </a>
+                        .
+                      </p>
+                      {errorDetail && (
+                        <p className="text-xs opacity-70 font-mono break-all">{errorDetail}</p>
+                      )}
                     </div>
                   )}
                 </form>

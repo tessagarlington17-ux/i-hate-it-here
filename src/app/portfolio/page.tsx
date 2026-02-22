@@ -28,22 +28,6 @@ const trips = [
     ],
   },
   {
-    title: "Italian Solo Adventure",
-    image: "/trips/rome.JPG",
-    location: "Amalfi Coast, Italy",
-    duration: "12 days",
-    groupSize: "Solo traveler",
-    budget: "Budget-Friendly",
-    description:
-      "A solo traveler's dream route along Italy's most stunning coastline — built around charming hostel stays, cliff-side boat tours, lemon grove walks, and a curated list of the best wood-fired pizza from Sorrento to Salerno.",
-    highlights: [
-      "Handpicked hostels with sea views under \u20AC40/night",
-      "Private boat tour along the Amalfi cliffs",
-      "Pizza trail mapped from Sorrento to Salerno",
-      "Golden-hour day trips to Positano and Ravello",
-    ],
-  },
-  {
     title: "Banff Couple's Vacation",
     image: "/trips/banff_street.JPG",
     location: "Banff, Alberta, Canada",
@@ -107,6 +91,22 @@ const trips = [
       "Scenic coastal drive to hidden beaches",
     ],
   },
+  {
+    title: "Italian Solo Adventure",
+    image: "/trips/rome.JPG",
+    location: "Amalfi Coast, Italy",
+    duration: "12 days",
+    groupSize: "Solo traveler",
+    budget: "Budget-Friendly",
+    description:
+      "A solo traveler's dream route along Italy's most stunning coastline — built around charming hostel stays, cliff-side boat tours, lemon grove walks, and a curated list of the best wood-fired pizza from Sorrento to Salerno.",
+    highlights: [
+      "Handpicked hostels with sea views under \u20AC40/night",
+      "Private boat tour along the Amalfi cliffs",
+      "Pizza trail mapped from Sorrento to Salerno",
+      "Golden-hour day trips to Positano and Ravello",
+    ],
+  },
 ];
 
 const destinations = [
@@ -148,7 +148,7 @@ export default function PortfolioPage() {
       <section
         className="text-white text-center relative overflow-hidden flex items-end justify-center"
         style={{
-          backgroundImage: "url('/trips/ocean-path.png')",
+          backgroundImage: "url('/trips/thai_temple_colorful.JPG')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           minHeight: "55vh",
