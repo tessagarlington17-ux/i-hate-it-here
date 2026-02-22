@@ -150,7 +150,7 @@ export default function PortfolioPage() {
         style={{
           backgroundImage: "url('/trips/thai_temple_colorful.JPG')",
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "top",
           minHeight: "98vh",
         }}
       >

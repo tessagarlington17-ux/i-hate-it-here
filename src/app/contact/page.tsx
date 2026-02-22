@@ -149,7 +149,7 @@ export default function ContactPage() {
                         Based In
                       </p>
                       <p className="text-text-light text-sm">
-                        Remote — planning worldwide
+                        New York City, planning worldwide
                       </p>
                     </div>
                   </div>

@@ -208,13 +208,12 @@ export default function Home() {
                 "/trips/india.JPG",
                 "/trips/thai_2019.jpg",
                 "/trips/burano.JPG",
-                "/trips/amalfi_coast.JPG",
               ].map((src) => (
                 <div
                   key={src}
                   style={{
-                    width: "320px",
-                    height: "480px",
+                    width: "384px",
+                    height: "576px",
                     flexShrink: 0,
                     overflow: "hidden",
                     scrollSnapAlign: "start",
