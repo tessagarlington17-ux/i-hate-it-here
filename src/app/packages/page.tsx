@@ -73,7 +73,7 @@ export default function PackagesPage() {
       <section
         className="text-white text-center relative overflow-hidden flex items-end justify-center"
         style={{
-          backgroundImage: "url('/trips/sea-boats.png')",
+          backgroundImage: "url('/trips/puerto_rico.JPG')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           minHeight: "55vh",

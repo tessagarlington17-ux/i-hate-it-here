@@ -17,7 +17,7 @@ export default function AboutPage() {
       <section
         className="text-white text-center relative overflow-hidden flex items-end justify-center"
         style={{
-          backgroundImage: "url('/trips/coastal-villas.png')",
+          backgroundImage: "url('/trips/oslo.JPG')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           minHeight: "55vh",

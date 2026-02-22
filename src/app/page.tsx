@@ -22,21 +22,21 @@ const strengths = [
     icon: Calendar,
     title: "Unhurried Itineraries",
     description:
-      "Every journey includes space to breathe. No rigid timelines — just thoughtful structure that leaves room for spontaneity.",
+      "No rigid timelines — just thoughtful structure that leaves room for spontaneity.",
     image: "/trips/puerto_rico_rainforest.JPG",
   },
   {
     icon: Utensils,
     title: "Culinary Discovery",
     description:
-      "From Michelin-starred restaurants to hidden local gems — every itinerary is woven with unforgettable dining experiences.",
+      "Every itinerary features curated dining — from acclaimed restaurants to hidden local gems.",
     image: "/trips/cafe_china.jpg",
   },
   {
     icon: MapPin,
     title: "Every Budget, Elevated",
     description:
-      "Whether it's a boutique hostel or a private villa for 17 — every trip is planned with the same meticulous care.",
+      "Boutique hostels to private villas for 17 — every trip gets the same meticulous care.",
     image: "/trips/telluride.JPG",
   },
 ];
@@ -50,7 +50,7 @@ const testimonials = [
   },
   {
     quote:
-      "I came with a modest budget and a last-minute idea for Costa Rica. Tessa found an amazing boutique hostel in Tamarindo — stylish, safe, and well-located. Her recommendations were thoughtful throughout: which beach towns were worth the day trip, where to splurge versus save. Even the smaller details — surf lessons with a local, a lively food market — became the best memories. The whole trip felt intentional without being overplanned.",
+      "Tessa found an amazing boutique hostel in Tamarindo on a modest budget. Every recommendation was thoughtful — which towns to visit, where to splurge vs. save. The whole trip felt intentional without being overplanned.",
     author: "Madisun M.",
     trip: "Costa Rica",
   },
@@ -173,7 +173,7 @@ export default function Home() {
       </section>
 
       {/* Trip Photos */}
-      <section className="py-28 bg-[var(--background)]">
+      <section className="py-20 bg-[var(--background)]">
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
@@ -211,7 +211,7 @@ export default function Home() {
       </section>
 
       {/* Stats */}
-      <section className="py-24 bg-[var(--background)]">
+      <section className="py-16 bg-[var(--background)]">
         <div className="max-w-5xl mx-auto px-6">
           <ScrollReveal>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
@@ -234,10 +234,10 @@ export default function Home() {
       <div className="max-w-16 mx-auto border-t border-warm-dark/40" />
 
       {/* What I Do Best */}
-      <section className="py-32 bg-[var(--background)]">
+      <section className="py-24 bg-[var(--background)]">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
-            <div className="text-center mb-20">
+            <div className="text-center mb-14">
               <p className="text-accent text-xs tracking-[0.3em] uppercase mb-5">
                 The Experience
               </p>
@@ -245,8 +245,8 @@ export default function Home() {
                 Why Tired of Planning?
               </h2>
               <p className="text-text-light max-w-[680px] mx-auto leading-relaxed">
-                Years of personal travel across every continent and budget —
-                distilled into planning that feels effortless.
+                Personal travel across 29 countries — distilled into planning
+                that feels effortless.
               </p>
             </div>
           </ScrollReveal>
@@ -281,7 +281,7 @@ export default function Home() {
       </section>
 
       {/* How It Works */}
-      <section className="py-32 bg-warm relative overflow-hidden">
+      <section className="py-24 bg-warm relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-[0.05]"
           style={{
@@ -293,7 +293,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-warm/92" />
         <div className="relative z-10 max-w-3xl mx-auto px-6">
           <ScrollReveal>
-            <div className="text-center mb-20">
+            <div className="text-center mb-14">
               <p className="text-accent text-xs tracking-[0.3em] uppercase mb-5">
                 The Process
               </p>
@@ -301,7 +301,7 @@ export default function Home() {
                 From Vision to Voyage
               </h2>
               <p className="text-text-light max-w-[680px] mx-auto">
-                A refined, four-step process designed to make planning effortless.
+                Four steps from idea to departure.
               </p>
             </div>
           </ScrollReveal>
@@ -311,12 +311,12 @@ export default function Home() {
               {
                 step: "01",
                 title: "Share Your Vision",
-                desc: "Tell me about your dream destination, travel style, budget, and the moments that matter most.",
+                desc: "Share your dream destination, travel style, and budget.",
               },
               {
                 step: "02",
                 title: "Receive Your Itinerary",
-                desc: "A meticulously crafted day-by-day plan with curated dining, experiences, logistics, and breathing room built in.",
+                desc: "A day-by-day plan with curated dining, experiences, and breathing room built in.",
               },
               {
                 step: "03",
@@ -326,7 +326,7 @@ export default function Home() {
               {
                 step: "04",
                 title: "Travel with Confidence",
-                desc: "Depart with a polished itinerary, insider knowledge, and support should anything change along the way.",
+                desc: "Depart with a polished itinerary, insider knowledge, and on-trip support.",
               },
             ].map((item, i) => (
               <ScrollReveal key={item.step} delay={i < 3 ? (i + 1) as 1 | 2 | 3 : 0}>
@@ -350,10 +350,10 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-36 bg-warm">
+      <section className="py-24 bg-warm">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
-            <div className="text-center mb-20">
+            <div className="text-center mb-14">
               <p className="text-accent text-xs tracking-[0.3em] uppercase mb-5">
                 Testimonials
               </p>
@@ -395,7 +395,7 @@ export default function Home() {
 
       {/* CTA */}
       <section
-        className="py-32 bg-primary text-white text-center relative overflow-hidden"
+        className="py-24 bg-primary text-white text-center relative overflow-hidden"
         style={{
           backgroundImage: "url('/trips/coastal-villas.png')",
           backgroundSize: "cover",
