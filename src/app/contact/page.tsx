@@ -104,7 +104,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="py-32 bg-warm">
+      <section className="py-16 bg-warm">
         <div className="max-w-5xl mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-12">
             {/* Contact Info */}

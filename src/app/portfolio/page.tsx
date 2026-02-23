@@ -170,7 +170,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* Trip Showcases */}
-      <section className="py-32 bg-[var(--background)]">
+      <section className="py-16 bg-[var(--background)]">
         <div className="max-w-5xl mx-auto px-6">
           <div className="space-y-20">
             {trips.map((trip) => (
@@ -242,7 +242,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* Countries */}
-      <section className="py-32 bg-warm">
+      <section className="py-16 bg-warm">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <ScrollReveal>
             <p className="text-accent text-xs tracking-[0.3em] uppercase mb-5">
@@ -273,7 +273,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-32 bg-primary text-white text-center">
+      <section className="py-16 bg-primary text-white text-center">
         <div className="max-w-2xl mx-auto px-6">
           <ScrollReveal>
             <p className="text-white/50 text-xs tracking-[0.3em] uppercase mb-8">

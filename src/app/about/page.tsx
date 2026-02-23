@@ -38,7 +38,7 @@ export default function AboutPage() {
       </section>
 
       {/* Story */}
-      <section className="py-32 bg-[var(--background)]">
+      <section className="py-16 bg-[var(--background)]">
         <div className="max-w-[680px] mx-auto px-6">
           <ScrollReveal>
             <h2 className="font-serif text-3xl sm:text-[2.25rem] font-medium text-primary mb-12">
@@ -73,7 +73,7 @@ export default function AboutPage() {
       </section>
 
       {/* What Sets Me Apart */}
-      <section className="py-32 bg-warm">
+      <section className="py-16 bg-warm">
         <div className="max-w-5xl mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-20">
@@ -153,7 +153,7 @@ export default function AboutPage() {
       </section>
 
       {/* Travel Philosophy */}
-      <section className="py-32 bg-[var(--background)]">
+      <section className="py-16 bg-[var(--background)]">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <ScrollReveal>
             <p className="text-accent text-xs tracking-[0.3em] uppercase mb-5">
@@ -200,7 +200,7 @@ export default function AboutPage() {
       </section>
 
       {/* Destinations */}
-      <section className="py-32 bg-warm">
+      <section className="py-16 bg-warm">
         <div className="max-w-5xl mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
@@ -259,7 +259,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-32 bg-primary text-white text-center">
+      <section className="py-16 bg-primary text-white text-center">
         <div className="max-w-2xl mx-auto px-6">
           <ScrollReveal>
             <p className="text-white/50 text-xs tracking-[0.3em] uppercase mb-8">

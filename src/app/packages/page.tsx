@@ -95,7 +95,7 @@ export default function PackagesPage() {
       </section>
 
       {/* Packages Grid */}
-      <section className="py-32 bg-warm">
+      <section className="py-16 bg-warm">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-5">
             {packages.map((pkg, i) => (
@@ -168,7 +168,7 @@ export default function PackagesPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-32 bg-[var(--background)]">
+      <section className="py-16 bg-[var(--background)]">
         <div className="max-w-[680px] mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-20">
@@ -220,11 +220,11 @@ export default function PackagesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-32 bg-primary text-white text-center">
+      <section className="py-16 bg-primary text-white text-center">
         <div className="max-w-2xl mx-auto px-6">
           <ScrollReveal>
             <p className="text-white/50 text-xs tracking-[0.3em] uppercase mb-8">
-              Not Sure
+              Not Sure?
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl font-medium mb-6 leading-tight">
               Let Me Recommend the Right Fit

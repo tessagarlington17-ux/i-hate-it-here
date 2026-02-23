@@ -8,6 +8,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import PhotoCarousel from "@/components/PhotoCarousel";
 
 const stats = [
   { icon: Globe, value: "29", label: "Countries" },
@@ -48,15 +49,15 @@ const testimonials = [
   },
   {
     quote:
-      "Tessa found an amazing boutique hostel in Tamarindo on a modest budget. Every recommendation was thoughtful — which towns to visit, where to splurge vs. save. The whole trip felt intentional without being overplanned.",
+      "I came to Tired of Planning with a last-minute Costa Rica idea and a modest budget, and it became one of my favorite trips I\u2019ve ever taken. They found an incredible boutique stay in Tamarindo in the perfect location, stylish, safe, and budget-conscious. Every recommendation felt thoughtful and strategic, from which beach towns were truly worth visiting, to where to splurge and where to save. Even the smaller details, like local surf lessons and a lively food market, became highlights of the trip. The entire vacation felt intentional without ever being overplanned!",
     author: "Madisun M.",
     trip: "Costa Rica",
   },
   {
     quote:
-      "Our honeymoon struck the perfect balance of adventure and tranquility. We never felt rushed, yet experienced everything on our list.",
-    author: "The Nguyens",
-    trip: "Italy & Greece",
+      "Our trip to Banff was exceptional from start to finish. Tired of Planning handled every detail thoughtfully, and the entire experience felt seamless and stress-free. The itinerary perfectly balanced adventure, relaxation, and unforgettable scenery. I would highly recommend Tired of Planning to anyone looking for a meticulously curated travel experience.",
+    author: "Blake R.",
+    trip: "Canada",
   },
 ];
 
@@ -174,7 +175,7 @@ export default function Home() {
       </section>
 
       {/* Trip Photos */}
-      <section className="py-20 bg-[var(--background)]">
+      <section className="py-10 bg-[var(--background)]">
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
@@ -188,57 +189,13 @@ export default function Home() {
           </ScrollReveal>
 
           <ScrollReveal>
-            <div
-              style={{
-                display: "flex",
-                overflowX: "auto",
-                gap: "16px",
-                scrollSnapType: "x mandatory",
-                paddingLeft: "max(24px, calc((100vw - 1400px) / 2 + 60px))",
-                paddingRight: "max(24px, calc((100vw - 1400px) / 2 + 60px))",
-                scrollbarWidth: "none",
-                msOverflowStyle: "none",
-              }}
-              className="photo-carousel"
-            >
-              {[
-                "/trips/IMG_1550.jpeg",
-                "/trips/IMG_1729.jpeg",
-                "/trips/IMG_2670.jpeg",
-                "/trips/india.JPG",
-                "/trips/thai_2019.jpg",
-                "/trips/burano.JPG",
-              ].map((src) => (
-                <div
-                  key={src}
-                  style={{
-                    width: "384px",
-                    height: "576px",
-                    flexShrink: 0,
-                    overflow: "hidden",
-                    scrollSnapAlign: "start",
-                  }}
-                >
-                  <img
-                    src={src}
-                    alt="Travel snapshot"
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                      filter: "saturate(0.9) brightness(0.98)",
-                      display: "block",
-                    }}
-                  />
-                </div>
-              ))}
-            </div>
+            <PhotoCarousel />
           </ScrollReveal>
         </div>
       </section>
 
       {/* Stats */}
-      <section className="py-16 bg-[var(--background)]">
+      <section className="py-8 bg-[var(--background)]">
         <div className="max-w-5xl mx-auto px-6">
           <ScrollReveal>
             <div className="grid grid-cols-3 gap-12">
@@ -261,7 +218,7 @@ export default function Home() {
       <div className="max-w-16 mx-auto border-t border-warm-dark/40" />
 
       {/* What I Do Best */}
-      <section className="py-32 bg-[var(--background)]">
+      <section className="py-16 bg-[var(--background)]">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-[4.55rem]">
@@ -309,7 +266,7 @@ export default function Home() {
       </section>
 
       {/* How It Works */}
-      <section className="py-24 bg-warm relative overflow-hidden">
+      <section className="py-12 bg-warm relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-[0.05]"
           style={{
@@ -378,7 +335,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 bg-warm">
+      <section className="py-12 bg-warm">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-14">
@@ -423,7 +380,7 @@ export default function Home() {
 
       {/* CTA */}
       <section
-        className="py-24 bg-primary text-white text-center relative overflow-hidden"
+        className="py-12 bg-primary text-white text-center relative overflow-hidden"
         style={{
           backgroundImage: "url('/trips/coastal-villas.png')",
           backgroundSize: "cover",
