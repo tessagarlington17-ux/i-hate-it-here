@@ -39,7 +39,7 @@ export default function AboutPage() {
 
       {/* Story */}
       <section className="py-24 bg-[var(--background)]">
-        <div className="max-w-[680px] mx-auto px-6">
+        <div className="max-w-[880px] mx-auto px-6">
           <ScrollReveal>
             <h2 className="font-serif text-[2rem] sm:text-[2.75rem] font-medium text-primary mb-16 leading-[1.15]">
               From Traveler to Travel Curator
