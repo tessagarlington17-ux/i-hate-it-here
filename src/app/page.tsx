@@ -43,9 +43,9 @@ const strengths = [
 const testimonials = [
   {
     quote:
-      "She planned a two-week Southeast Asia journey for our group of eight. Every detail was impeccable — the villa in Thailand was absolutely breathtaking.",
-    author: "Sarah M.",
-    trip: "Thailand & Vietnam",
+      "If you\u2019re looking for someone who can turn potential trip chaos into a seamless, unforgettable experience, hire Tired of Planning. She organized a trip to Koh Samui, Thailand for our group of 17 adults and made it feel effortless. What could have been logistical mayhem became one of the smoothest, most thoughtfully executed group trips I\u2019ve ever been on. Planning started well in advance, and nothing was chosen casually. Excursions, transportation, dinners, beach days, nights out \u2014 everything was curated with clear options, timelines, and expectations. The structure created intention, but there was always flexibility. Every person felt informed and included. What stood out most was the attention to detail. Needs were anticipated before they arose, and while the backend logistics were invisible to us, they were clearly handled with precision. The result was a trip that felt expansive, joyful, and completely stress-free \u2014 not because it was simple, but because it was expertly orchestrated. Any group, brand, or client would be lucky to have Tired of Planning design their travel experience.",
+    author: "Alastair S.",
+    trip: "Thailand",
   },
   {
     quote:
