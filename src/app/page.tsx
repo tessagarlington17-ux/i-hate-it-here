@@ -49,15 +49,15 @@ const testimonials = [
   },
   {
     quote:
-      "I came to Tired of Planning with a last-minute Costa Rica idea and a modest budget, and it became one of my favorite trips I\u2019ve ever taken. They found an incredible boutique stay in Tamarindo in the perfect location, stylish, safe, and budget-conscious. Every recommendation felt thoughtful and strategic, from which beach towns were truly worth visiting, to where to splurge and where to save. Even the smaller details, like local surf lessons and a lively food market, became highlights of the trip. The entire vacation felt intentional without ever being overplanned!",
-    author: "Madisun M.",
-    trip: "Costa Rica",
-  },
-  {
-    quote:
       "Our trip to Banff was exceptional from start to finish. Tired of Planning handled every detail thoughtfully, and the entire experience felt seamless and stress-free. The itinerary perfectly balanced adventure, relaxation, and unforgettable scenery. I would highly recommend Tired of Planning to anyone looking for a meticulously curated travel experience.",
     author: "Blake R.",
     trip: "Canada",
+  },
+  {
+    quote:
+      "I came to Tired of Planning with a last-minute idea for a Costa Rica trip and a pretty modest budget, and Tessa turned it into one of my favorite trips I\u2019ve ever taken. She found an amazing boutique hostel in Tamarindo in the best possible location. It felt stylish, safe, and comfortable while still keeping costs low. What really stood out was how thoughtful her recommendations were. Tessa knew the area inside and out. She helped me figure out which nearby beach towns were actually worth the day trips and guided me on where to splurge versus where to save, from incredible meals to easy, low-key days exploring. Even the smaller details, like surf lessons with a Tamarindo local and a lively nighttime food market, ended up being some of my favorite memories. The whole trip felt intentional without being overplanned. Everything just worked, and I honestly can\u2019t imagine planning something like that on my own.",
+    author: "Madisun M.",
+    trip: "Costa Rica",
   },
 ];
 
