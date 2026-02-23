@@ -336,7 +336,7 @@ export default function Home() {
 
       {/* Testimonials */}
       <section className="py-12 bg-warm">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-14">
               <p className="text-accent text-xs tracking-[0.3em] uppercase mb-5">
