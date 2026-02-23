@@ -47,25 +47,42 @@ export default function AboutPage() {
 
             <div className="space-y-7 text-text-light leading-[1.8]">
               <p>
-                I&apos;m 30, I&apos;ve been to 29 countries, and I&apos;ve
-                planned trips for every budget imaginable — from $8 hostels in
-                Southeast Asia to a private villa in Thailand for 17 of my
-                closest friends.
+                I&apos;ve visited 29 countries and designed trips at nearly
+                every level — from $8 hostels in Southeast Asia to a private
+                villa in Thailand for 17 guests.
               </p>
               <p>
-                What started as being &ldquo;the friend who plans
-                everything&rdquo; evolved into something much larger. People kept
-                returning, asking me to design their next journey. Friends of
-                friends began reaching out. My inbox became a full-time
-                occupation.
+                What began as being &ldquo;the friend who plans
+                everything&rdquo; gradually evolved into something more. People
+                returned. Friends of friends reached out. Planning stopped being
+                a favor and became a craft.
               </p>
               <p>
-                So I made it official. Tired of Planning is built on the
-                same philosophy I follow for my own travels: research deeply,
-                plan with intention, and always leave room to breathe.
+                Travel has always been the center.
+              </p>
+              <p>
+                Based in New York City and shaped by a career in tech, I
+                approach travel the same way I approach complex systems:
+                thoughtfully, strategically, and with precision. Every decision
+                has a purpose. Every detail connects.
+              </p>
+              <p>
+                So I made it official.
+              </p>
+              <p>
+                Tired of Planning is built on the philosophy I follow for my
+                own travels: research deeply, design with intention, and leave
+                space for discovery.
               </p>
               <p className="font-serif text-primary text-lg italic leading-relaxed">
-                Structure where you need it. Freedom where you want it.
+                Structure where you need it.{" "} Freedom where you want it.
+              </p>
+              <p>
+                My goal is simple: remove the overwhelm and give you the
+                confidence to go farther than you thought you could.
+              </p>
+              <p>
+                You choose the destination. I design the experience.
               </p>
             </div>
           </ScrollReveal>
