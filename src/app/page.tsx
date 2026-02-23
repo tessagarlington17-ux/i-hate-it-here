@@ -49,7 +49,7 @@ const testimonials = [
   },
   {
     quote:
-      "Our trip to Banff was exceptional from start to finish. Tired of Planning handled every detail thoughtfully, and the entire experience felt seamless and stress-free. The itinerary perfectly balanced adventure, relaxation, and unforgettable scenery. I would highly recommend Tired of Planning to anyone looking for a meticulously curated travel experience.",
+      "Our trip to Banff was exceptional from start to finish. Tired of Planning handled every detail thoughtfully, and the entire experience felt seamless and stress-free. The itinerary struck the perfect balance between adventure, relaxation, and unforgettable scenery. She curated off-the-beaten-path hikes with incredible views while helping us avoid the crowds, and one of my favorite moments was driving along the Icefields Parkway and stopping at the hand-picked locations built into our route. She also recommended incredible restaurants we wouldn\u2019t have discovered on our own. I would highly recommend Tired of Planning to anyone looking for a meticulously curated travel experience.",
     author: "Blake R.",
     trip: "Canada",
   },
