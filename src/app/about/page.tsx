@@ -41,18 +41,16 @@ export default function AboutPage() {
       <section className="py-24 bg-[var(--background)]">
         <div className="max-w-[880px] mx-auto px-6">
           <ScrollReveal>
-            <h2 className="font-serif text-[2rem] sm:text-[2.75rem] font-medium text-primary mb-16 leading-[1.15]">
+            <h2 className="font-serif text-[2rem] sm:text-[2.75rem] font-medium text-primary mb-10 leading-[1.15]">
               From Traveler to Travel Curator
             </h2>
 
-            {/* Credibility statement — slightly larger, emphasized */}
-            <p className="text-text-light text-lg sm:text-[1.2rem] leading-[1.9] mb-12">
-              I&apos;ve visited 29 countries and designed trips at nearly
-              every level — from $8 hostels in Southeast Asia to a private
-              villa in Thailand for 17 guests.
-            </p>
-
-            <div className="space-y-8 text-text-light leading-[2]">
+            <div className="space-y-5 text-text-light leading-[1.95]">
+              <p>
+                I&apos;ve visited 29 countries and designed trips at nearly
+                every level — from $8 hostels in Southeast Asia to a private
+                villa in Thailand for 17 guests.
+              </p>
               <p>
                 What began as being &ldquo;the friend who plans
                 everything&rdquo; gradually evolved into something more. People
@@ -62,45 +60,38 @@ export default function AboutPage() {
               <p>
                 Travel has always been the center.
               </p>
+              <p>
+                Based in New York City and shaped by a career in tech, I
+                approach travel the same way I approach complex systems:
+                thoughtfully, strategically, and with precision. Every decision
+                has a purpose. Every detail connects.
+              </p>
+              <p>
+                So I made it official.
+              </p>
+              <p>
+                Tired of Planning is built on the philosophy I follow for my
+                own travels: research deeply, design with intention, and leave
+                space for discovery.
+              </p>
             </div>
 
-            {/* Visual break */}
-            <div className="h-14" />
-
-            <p className="text-text-light leading-[2]">
-              Based in New York City and shaped by a career in tech, I
-              approach travel the same way I approach complex systems:
-              thoughtfully, strategically, and with precision. Every decision
-              has a purpose. Every detail connects.
-            </p>
-
-            {/* Standalone statement */}
-            <p className="font-serif text-primary text-lg sm:text-xl font-medium my-14">
-              So I made it official.
-            </p>
-
-            <p className="text-text-light leading-[2]">
-              Tired of Planning is built on the philosophy I follow for my
-              own travels: research deeply, design with intention, and leave
-              space for discovery.
-            </p>
-
-            {/* Brand thesis — centered, prominent */}
-            <p className="font-serif text-primary text-xl sm:text-2xl italic leading-relaxed text-center my-16">
+            {/* Brand thesis */}
+            <p className="font-serif text-primary text-xl sm:text-2xl italic leading-relaxed text-center my-10">
               Structure where you need it.
               <br />
               Freedom where you want it.
             </p>
 
-            <p className="text-text-light leading-[2]">
-              My goal is simple: remove the overwhelm and give you the
-              confidence to go farther than you thought you could.
-            </p>
-
-            {/* Closing statement */}
-            <p className="font-serif text-primary text-lg sm:text-[1.2rem] font-medium mt-14">
-              You choose the destination. I design the experience.
-            </p>
+            <div className="space-y-5 text-text-light leading-[1.95]">
+              <p>
+                My goal is simple: remove the overwhelm and give you the
+                confidence to go farther than you thought you could.
+              </p>
+              <p>
+                You choose the destination. I design the experience.
+              </p>
+            </div>
           </ScrollReveal>
         </div>
       </section>
