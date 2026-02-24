@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "flag-icons/css/flag-icons.min.css";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -29,6 +30,18 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-K7VQL3KFHZ"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-K7VQL3KFHZ');
+        `}
+      </Script>
       <body className="antialiased">
         <Navbar />
         <main>{children}</main>
