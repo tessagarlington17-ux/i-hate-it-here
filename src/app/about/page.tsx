@@ -48,7 +48,7 @@ export default function AboutPage() {
             <div className="space-y-5 text-text-light leading-[1.95]">
               <p>
                 I&apos;ve visited 29 countries and designed trips at nearly
-                every level — from $8 hostels in Southeast Asia to a private
+                every level, from $8 hostels in Southeast Asia to a private
                 villa in Thailand for 17 guests.
               </p>
               <p>
@@ -121,7 +121,7 @@ export default function AboutPage() {
               {
                 icon: Utensils,
                 title: "Culinary-First Planning",
-                desc: "Food is the soul of travel. Every itinerary features curated dining — from acclaimed restaurants to neighborhood gems only locals know.",
+                desc: "Food is the soul of travel. Every itinerary features curated dining, from acclaimed restaurants to neighborhood gems only locals know.",
                 image: "/trips/uchi.jpg",
               },
               {
@@ -145,7 +145,7 @@ export default function AboutPage() {
               {
                 icon: MapPin,
                 title: "Transparent on Budget",
-                desc: "I'll share the real cost of things — not inflated tourist pricing. Authentic value at every level.",
+                desc: "I'll share the real cost of things, not inflated tourist pricing. Authentic value at every level.",
                 image: "/trips/connecticut.JPG",
               },
             ].map((item, i) => (
@@ -202,7 +202,7 @@ export default function AboutPage() {
               {
                 number: "03",
                 title: "Travel With Intent",
-                desc: "Know what you seek from a journey — then design around it.",
+                desc: "Know what you seek from a journey, then design around it.",
               },
             ].map((item, i) => (
               <ScrollReveal key={item.number} delay={i + 1}>
@@ -293,7 +293,7 @@ export default function AboutPage() {
               Let&apos;s Plan Something Extraordinary
             </h2>
             <p className="text-white/45 mb-12 font-light leading-relaxed">
-              Share your vision and we&apos;ll design a journey around it —
+              Share your vision and we&apos;ll design a journey around it,
               wherever that may be.
             </p>
             <Link

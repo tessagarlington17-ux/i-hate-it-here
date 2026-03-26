@@ -21,21 +21,21 @@ const strengths = [
     icon: Calendar,
     title: "Unhurried Itineraries",
     description:
-      "No rigid timelines — just thoughtful structure that leaves room for spontaneity.",
+      "No rigid timelines, just thoughtful structure that leaves room for spontaneity.",
     image: "/trips/puerto_rico_rainforest.JPG",
   },
   {
     icon: Utensils,
     title: "Culinary Discovery",
     description:
-      "Every itinerary features curated dining — from acclaimed restaurants to hidden local gems.",
+      "Every itinerary features curated dining, from acclaimed restaurants to hidden local gems.",
     image: "/trips/cafe_china.jpg",
   },
   {
     icon: MapPin,
     title: "Every Budget, Elevated",
     description:
-      "Boutique hostels to private villas for 17 — every trip gets the same meticulous care.",
+      "Boutique hostels to private villas for 17, every trip gets the same meticulous care.",
     image: "/trips/telluride.JPG",
   },
 ];
@@ -43,7 +43,7 @@ const strengths = [
 const testimonials = [
   {
     quote:
-      "If you\u2019re looking for someone who can turn potential trip chaos into a seamless, unforgettable experience, hire Tired of Planning. She organized a trip to Koh Samui, Thailand for our group of 17 adults and made it feel effortless. What could have been logistical mayhem became one of the smoothest, most thoughtfully executed group trips I\u2019ve ever been on. Planning started well in advance, and nothing was chosen casually. Excursions, transportation, dinners, beach days, nights out \u2014 everything was curated with clear options, timelines, and expectations. The structure created intention, but there was always flexibility. Every person felt informed and included. What stood out most was the attention to detail. Needs were anticipated before they arose, and while the backend logistics were invisible to us, they were clearly handled with precision. The result was a trip that felt expansive, joyful, and completely stress-free \u2014 not because it was simple, but because it was expertly orchestrated. Any group, brand, or client would be lucky to have Tired of Planning design their travel experience.",
+      "If you\u2019re looking for someone who can turn potential trip chaos into a seamless, unforgettable experience, hire Tired of Planning. She organized a trip to Koh Samui, Thailand for our group of 17 adults and made it feel effortless. What could have been logistical mayhem became one of the smoothest, most thoughtfully executed group trips I\u2019ve ever been on. Planning started well in advance, and nothing was chosen casually. Excursions, transportation, dinners, beach days, nights out, everything was curated with clear options, timelines, and expectations. The structure created intention, but there was always flexibility. Every person felt informed and included. What stood out most was the attention to detail. Needs were anticipated before they arose, and while the backend logistics were invisible to us, they were clearly handled with precision. The result was a trip that felt expansive, joyful, and completely stress-free, not because it was simple, but because it was expertly orchestrated. Any group, brand, or client would be lucky to have Tired of Planning design their travel experience.",
     author: "Alastair S.",
     trip: "Thailand",
   },
@@ -129,7 +129,7 @@ export default function Home() {
           backgroundPosition: "center",
         }}
       >
-        {/* Mobile overlay — darker for legibility */}
+        {/* Mobile overlay, darker for legibility */}
         <div
           className="absolute inset-0 sm:hidden"
           style={{
@@ -154,7 +154,7 @@ export default function Home() {
             <span className="italic">Stop Scrolling.</span>
           </h1>
           <p className="hero-subtitle text-white mx-auto font-light">
-            Personalized itineraries crafted with intention — from culinary
+            Personalized itineraries crafted with intention, from culinary
             adventures to hidden escapes.
           </p>
           <div className="hero-buttons flex sm:flex-row gap-4 justify-center">
@@ -229,7 +229,7 @@ export default function Home() {
                 Why Tired of Planning?
               </h2>
               <p className="text-text-light max-w-[680px] mx-auto leading-relaxed text-base">
-                Personal travel across 29 countries — distilled into planning
+                Personal travel across 29 countries, distilled into planning
                 that feels effortless.
               </p>
             </div>
@@ -397,7 +397,7 @@ export default function Home() {
               Ready to See the World Differently?
             </h2>
             <p className="text-white/45 text-lg mb-12 max-w-xl mx-auto font-light leading-relaxed">
-              Whether it&apos;s a weekend escape or a month-long odyssey —
+              Whether it&apos;s a weekend escape or a month-long odyssey,
               every detail handled.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

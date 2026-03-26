@@ -19,7 +19,7 @@ const trips = [
     groupSize: "17 people",
     budget: "Luxury",
     description:
-      "Coordinated a private villa stay for 17 friends across Koh Samui and Bangkok — blending lazy pool days and golden-hour beach sessions with hands-on cultural experiences and late-night street food crawls through Bangkok's best neighborhoods.",
+      "Coordinated a private villa stay for 17 friends across Koh Samui and Bangkok, blending lazy pool days and golden-hour beach sessions with hands-on cultural experiences and late-night street food crawls through Bangkok's best neighborhoods.",
     highlights: [
       "Beachfront villa with infinity pool for the full group",
       "Private longtail boat tour to Ang Thong Marine Park",
@@ -35,7 +35,7 @@ const trips = [
     groupSize: "Couple",
     budget: "Luxury",
     description:
-      "A romantic week in the Canadian Rockies designed for couples who want equal parts adventure and downtime — alpine hikes to turquoise lakes by day, fireside dinners with mountain views by night.",
+      "A romantic week in the Canadian Rockies designed for couples who want equal parts adventure and downtime, alpine hikes to turquoise lakes by day, fireside dinners with mountain views by night.",
     highlights: [
       "Guided sunrise hike to Lake Louise overlook",
       "Fireside dinners at Banff's top-rated lodges",
@@ -99,7 +99,7 @@ const trips = [
     groupSize: "Solo traveler",
     budget: "Budget-Friendly",
     description:
-      "A solo traveler's dream route along Italy's most stunning coastline — built around charming hostel stays, cliff-side boat tours, lemon grove walks, and a curated list of the best wood-fired pizza from Sorrento to Salerno.",
+      "A solo traveler's dream route along Italy's most stunning coastline, built around charming hostel stays, cliff-side boat tours, lemon grove walks, and a curated list of the best wood-fired pizza from Sorrento to Salerno.",
     highlights: [
       "Handpicked hostels with sea views under \u20AC40/night",
       "Private boat tour along the Amalfi cliffs",
@@ -163,7 +163,7 @@ export default function PortfolioPage() {
             Portfolio
           </h1>
           <p className="text-white/80 text-lg max-w-xl mx-auto font-light leading-relaxed">
-            A curated selection of journeys — from budget backpacking to
+            A curated selection of journeys, from budget backpacking to
             luxury honeymoons, solo adventures to groups of seventeen.
           </p>
         </div>

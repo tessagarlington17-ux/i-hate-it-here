@@ -49,7 +49,7 @@ const packages = [
     name: "Concierge",
     icon: Crown,
     price: "Starting at $2,000",
-    tagline: "White-glove, end-to-end service. Every detail handled — you simply arrive.",
+    tagline: "White-glove, end-to-end service. Every detail handled, you simply arrive.",
     features: [
       "Everything in Navigator, plus:",
       "Full booking assistance (flights, hotels, experiences)",
@@ -88,7 +88,7 @@ export default function PackagesPage() {
             Packages & Pricing
           </h1>
           <p className="text-white/80 text-lg max-w-xl mx-auto font-light leading-relaxed">
-            Three tiers designed around how much support you desire — from a
+            Three tiers designed around how much support you desire, from a
             curated itinerary to full concierge service.
           </p>
         </div>
@@ -189,7 +189,7 @@ export default function PackagesPage() {
               },
               {
                 q: "Can I upgrade my package later?",
-                a: "Yes. If you begin with Explorer and decide you'd like booking assistance, we can seamlessly upgrade to Navigator or Concierge — crediting what you've already invested.",
+                a: "Yes. If you begin with Explorer and decide you'd like booking assistance, we can seamlessly upgrade to Navigator or Concierge, crediting what you've already invested.",
               },
               {
                 q: "What destinations do you cover?",
