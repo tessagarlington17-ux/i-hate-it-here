@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import PhotoCarousel from "@/components/PhotoCarousel";
+import GoogleReviewsCarousel from "@/components/GoogleReviewsCarousel";
 
 const stats = [
   { icon: Globe, value: "29", label: "Countries" },
@@ -40,26 +41,6 @@ const strengths = [
   },
 ];
 
-const testimonials = [
-  {
-    quote:
-      "If you\u2019re looking for someone who can turn potential trip chaos into a seamless, unforgettable experience, hire Tired of Planning. She organized a trip to Koh Samui, Thailand for our group of 17 adults and made it feel effortless. What could have been logistical mayhem became one of the smoothest, most thoughtfully executed group trips I\u2019ve ever been on. Planning started well in advance, and nothing was chosen casually. Excursions, transportation, dinners, beach days, nights out, everything was curated with clear options, timelines, and expectations. The structure created intention, but there was always flexibility. Every person felt informed and included. What stood out most was the attention to detail. Needs were anticipated before they arose, and while the backend logistics were invisible to us, they were clearly handled with precision. The result was a trip that felt expansive, joyful, and completely stress-free, not because it was simple, but because it was expertly orchestrated. Any group, brand, or client would be lucky to have Tired of Planning design their travel experience.",
-    author: "Alastair S.",
-    trip: "Thailand",
-  },
-  {
-    quote:
-      "Our trip to Banff was exceptional from start to finish. Tired of Planning handled every detail thoughtfully, and the entire experience felt seamless and stress-free. The itinerary struck the perfect balance between adventure, relaxation, and unforgettable scenery. She curated off-the-beaten-path hikes with incredible views while helping us avoid the crowds, and one of my favorite moments was driving along the Icefields Parkway and stopping at the hand-picked locations built into our route. She also recommended incredible restaurants we wouldn\u2019t have discovered on our own. I would highly recommend Tired of Planning to anyone looking for a meticulously curated travel experience.",
-    author: "Blake R.",
-    trip: "Canada",
-  },
-  {
-    quote:
-      "I came to Tired of Planning with a last-minute idea for a Costa Rica trip and a pretty modest budget, and Tessa turned it into one of my favorite trips I\u2019ve ever taken. She found an amazing boutique hostel in Tamarindo in the best possible location. It felt stylish, safe, and comfortable while still keeping costs low. What really stood out was how thoughtful her recommendations were. Tessa knew the area inside and out. She helped me figure out which nearby beach towns were actually worth the day trips and guided me on where to splurge versus where to save, from incredible meals to easy, low-key days exploring. Even the smaller details, like surf lessons with a Tamarindo local and a lively nighttime food market, ended up being some of my favorite memories. The whole trip felt intentional without being overplanned. Everything just worked, and I honestly can\u2019t imagine planning something like that on my own.",
-    author: "Madisun M.",
-    trip: "Costa Rica",
-  },
-];
 
 export default function Home() {
   return (
@@ -334,7 +315,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Testimonials - Google Reviews */}
       <section className="py-12 bg-warm">
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal>
@@ -348,33 +329,9 @@ export default function Home() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((t, i) => (
-              <ScrollReveal key={t.author} delay={i + 1}>
-                <div className="p-8 sm:p-10 h-full border-t border-warm-dark/50">
-                  <div className="flex gap-1 mb-7">
-                    {[...Array(5)].map((_, j) => (
-                      <Star
-                        key={j}
-                        className="h-3 w-3 fill-accent text-accent"
-                      />
-                    ))}
-                  </div>
-                  <p className="font-serif text-base text-text-light leading-relaxed mb-8 italic">
-                    &ldquo;{t.quote}&rdquo;
-                  </p>
-                  <div className="pt-5">
-                    <p className="font-medium text-primary text-sm italic">
-                      {t.author}
-                    </p>
-                    <p className="text-[10px] text-text-light tracking-[0.12em] uppercase mt-1">
-                      {t.trip}
-                    </p>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
+          <ScrollReveal>
+            <GoogleReviewsCarousel />
+          </ScrollReveal>
         </div>
       </section>
 
